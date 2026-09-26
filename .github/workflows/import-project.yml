@@ -18,15 +18,18 @@ jobs:
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
         with:
           ref: main
-          fetch-depth: 1
-      - name: Restore and verify project files
+          fetch-depth: 0
+      - name: Restore and verify exact original project files
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: python3 .github/import/restore.py
-      - name: Publish imported files
+      - name: Publish verified project without force-push
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add --all
           if ! git diff --cached --quiet; then
-            git commit -m 'Import complete UBOR-JAVA R02 project'
+            git commit -m 'Import all 316 original wali R02 project files with integrity verification'
             git push origin HEAD:main
           fi
+          echo "Published commit: $(git rev-parse HEAD)"
