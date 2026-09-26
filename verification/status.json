@@ -1,0 +1,40 @@
+{
+  "release": "R02_WPILIB_SOURCE_INTEGRATION",
+  "date": "2026-09-23",
+  "java": "21.0.11",
+  "core_legacy_assertions": {
+    "status": "PASS",
+    "count": 50,
+    "wpilib": false
+  },
+  "simulation_interface_assertions": {
+    "status": "PASS",
+    "count": 20,
+    "wpilib": false,
+    "plant": "TEST_DOUBLE_NOT_WPILIB"
+  },
+  "parameter_assertions": {
+    "status": "PASS",
+    "count": 9,
+    "wpilib": false
+  },
+  "tcp_loopback": {
+    "status": "PASS",
+    "authenticated_replies": 40,
+    "backend": "LEGACY_FIRST_ORDER"
+  },
+  "java_parse": {
+    "status": "PASS",
+    "files": 37,
+    "type_check": false
+  },
+  "wpilib": {
+    "version": "2026.2.1",
+    "compiled": false,
+    "executed": false,
+    "prepared_assertions": 25,
+    "reason": "Maven unavailable; external artifact download fails; no WPILib binary distribution produced"
+  },
+  "real_hardware_tested": false,
+  "ml_models_tested": false
+}

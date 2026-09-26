@@ -1,0 +1,1 @@
+Install Maven 3.9+ and Java 21, then rerun.

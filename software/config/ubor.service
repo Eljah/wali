@@ -1,0 +1,16 @@
+[Unit]
+Description=UBOR-JAVA supervised robot (manual commissioning only)
+After=network.target
+[Service]
+Type=simple
+User=ubor
+SupplementaryGroups=gpio spi i2c video input
+WorkingDirectory=/opt/ubor/software
+EnvironmentFile=/etc/ubor/secret.env
+Environment=OPENBLAS_NUM_THREADS=1
+ExecStart=/usr/bin/java -Xms256m -Xmx1536m -cp /opt/ubor/software/dist/full/* com.ubor.app.Main --hardware /opt/ubor/software/config/robot.properties /opt/ubor/models 8844
+Restart=no
+TimeoutStopSec=3
+NoNewPrivileges=true
+[Install]
+WantedBy=multi-user.target

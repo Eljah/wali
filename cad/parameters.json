@@ -1,0 +1,38 @@
+{
+  "frame_length": 660,
+  "frame_width": 430,
+  "frame_z": 160,
+  "tube": 20,
+  "wall": 2,
+  "wheel_diameter": 200,
+  "wheel_width": 45,
+  "track": 500,
+  "drive_x": -190,
+  "conveyor_width": 320,
+  "roller_radius": 25,
+  "roller_low": [
+    300,
+    0,
+    85
+  ],
+  "roller_high": [
+    -30,
+    0,
+    445
+  ],
+  "brush_x": 383,
+  "brush_z": 62,
+  "brush_radius": 57,
+  "bin_length": 320,
+  "bin_width": 360,
+  "bin_height": 220,
+  "bin_wall": 3,
+  "bin_center": [
+    -175,
+    0,
+    290
+  ],
+  "gross_mass_design_kg": 30,
+  "max_payload_kg": 4,
+  "max_speed_mps": 0.3
+}

@@ -1,0 +1,40 @@
+{
+  "remote_repository_created": false,
+  "remote_push_performed": false,
+  "bash_syntax": "PASS",
+  "bash_publication_flow": "tested with real local git and mock gh only",
+  "powershell_runtime": "not available; script not executed",
+  "original_r02_files_preserved": 308,
+  "cases": [
+    {
+      "case": "wrong_account",
+      "passed": true,
+      "exit_code": 2,
+      "network": "mock gh, no GitHub calls"
+    },
+    {
+      "case": "not_authenticated",
+      "passed": true,
+      "exit_code": 4,
+      "network": "mock gh, no GitHub calls"
+    },
+    {
+      "case": "existing_remote",
+      "passed": true,
+      "exit_code": 1,
+      "network": "mock gh, no GitHub calls"
+    },
+    {
+      "case": "success_private",
+      "passed": true,
+      "exit_code": 0,
+      "network": "mock gh, no GitHub calls"
+    },
+    {
+      "case": "success_public",
+      "passed": true,
+      "exit_code": 0,
+      "network": "mock gh, no GitHub calls"
+    }
+  ]
+}

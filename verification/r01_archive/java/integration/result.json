@@ -1,0 +1,9 @@
+{
+  "mode":"SIM_ORACLE_NOT_ML",
+  "simulated_seconds":90.0,
+  "collected":3,
+  "remaining":1,
+  "last_reason":"HAZARD_VISION_STOP",
+  "physical_hardware":false,
+  "electrical_circuit_simulation":false
+}

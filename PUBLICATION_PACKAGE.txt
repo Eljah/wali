@@ -1,0 +1,9 @@
+Target: Eljah/wali
+State: PREPARED_LOCALLY_NOT_PUBLISHED
+Source: UBOR_JAVA_R02_WPILIB_FULL.zip
+Source ZIP SHA256: 08315683ec760dd81ab296e0ddc6737bf2105c3df45fea22aa6787034ead747f
+Original files retained byte-for-byte: 308
+No .git directory, account tokens or real credentials are bundled.
+Default repository visibility in scripts: private
+No license was automatically selected.
+WPILib build/execution status remains as documented in R02.

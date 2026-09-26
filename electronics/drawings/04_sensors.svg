@@ -1,0 +1,113 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="420mm" height="297mm" viewBox="0 0 420 297"><rect width="100%" height="100%" fill="white"/><g font-family="DejaVu Sans" fill="#182f39">
+<text x="10" y="12" font-size="4.2">Dry-contact safety sensing / beam inputs / range output</text><text x="10" y="19" font-size="2.2">R01 / canonical connection graph. KiCad ERC and PCB routing NOT performed.</text>
+<rect x="38" y="47.0" width="34" height="14" fill="#eef4f4" stroke="#223d47" stroke-width=".25"/><text x="55" y="43.5" text-anchor="middle" font-size="2.4">SES</text>
+<text x="55" y="65.0" text-anchor="middle" font-size="2">NC healthy; dedicated isolated auxiliary</text>
+<text x="55" y="67.4" text-anchor="middle" font-size="2">pole</text>
+<path d="M 38 54.0 L 27.840000000000003 54.0" stroke="#325859" stroke-width=".2"/><text x="39" y="53.3" text-anchor="start" font-size="1.75">1:1</text>
+<text x="26.840000000000003" y="53.4" text-anchor="end" font-size="1.8">ESTOP_SENSE</text>
+<path d="M 72 54.0 L 82.16 54.0" stroke="#325859" stroke-width=".2"/><text x="71" y="53.3" text-anchor="end" font-size="1.75">2:2</text>
+<text x="83.16" y="53.4" text-anchor="start" font-size="1.8">GND</text>
+<rect x="138" y="47.0" width="34" height="14" fill="#eef4f4" stroke="#223d47" stroke-width=".25"/><text x="155" y="43.5" text-anchor="middle" font-size="2.4">RSES</text>
+<text x="155" y="65.0" text-anchor="middle" font-size="2">10k external pullup</text>
+<path d="M 138 54.0 L 127.84000000000002 54.0" stroke="#325859" stroke-width=".2"/><text x="139" y="53.3" text-anchor="start" font-size="1.75">1:1</text>
+<text x="126.84000000000002" y="53.4" text-anchor="end" font-size="1.8">V3V3</text>
+<path d="M 172 54.0 L 182.16 54.0" stroke="#325859" stroke-width=".2"/><text x="171" y="53.3" text-anchor="end" font-size="1.75">2:2</text>
+<text x="183.16" y="53.4" text-anchor="start" font-size="1.8">ESTOP_SENSE</text>
+<rect x="238" y="47.0" width="34" height="14" fill="#eef4f4" stroke="#223d47" stroke-width=".25"/><text x="255" y="43.5" text-anchor="middle" font-size="2.4">SBU</text>
+<text x="255" y="65.0" text-anchor="middle" font-size="2">NC healthy; separate contact from CLEAR</text>
+<text x="255" y="67.4" text-anchor="middle" font-size="2">chain</text>
+<path d="M 238 54.0 L 227.84 54.0" stroke="#325859" stroke-width=".2"/><text x="239" y="53.3" text-anchor="start" font-size="1.75">1:1</text>
+<text x="226.84" y="53.4" text-anchor="end" font-size="1.8">BUMPER_SENSE</text>
+<path d="M 272 54.0 L 282.15999999999997 54.0" stroke="#325859" stroke-width=".2"/><text x="271" y="53.3" text-anchor="end" font-size="1.75">2:2</text>
+<text x="283.15999999999997" y="53.4" text-anchor="start" font-size="1.8">GND</text>
+<rect x="338" y="47.0" width="34" height="14" fill="#eef4f4" stroke="#223d47" stroke-width=".25"/><text x="355" y="43.5" text-anchor="middle" font-size="2.4">RSBU</text>
+<text x="355" y="65.0" text-anchor="middle" font-size="2">10k external pullup</text>
+<path d="M 338 54.0 L 327.84000000000003 54.0" stroke="#325859" stroke-width=".2"/><text x="339" y="53.3" text-anchor="start" font-size="1.75">1:1</text>
+<text x="326.84000000000003" y="53.4" text-anchor="end" font-size="1.8">V3V3</text>
+<path d="M 372 54.0 L 382.15999999999997 54.0" stroke="#325859" stroke-width=".2"/><text x="371" y="53.3" text-anchor="end" font-size="1.75">2:2</text>
+<text x="383.15999999999997" y="53.4" text-anchor="start" font-size="1.8">BUMPER_SENSE</text>
+<rect x="38" y="85.0" width="34" height="14" fill="#eef4f4" stroke="#223d47" stroke-width=".25"/><text x="55" y="81.5" text-anchor="middle" font-size="2.4">SCL</text>
+<text x="55" y="103.0" text-anchor="middle" font-size="2">NC healthy from validated cliff detector</text>
+<path d="M 38 92.0 L 27.840000000000003 92.0" stroke="#325859" stroke-width=".2"/><text x="39" y="91.3" text-anchor="start" font-size="1.75">1:1</text>
+<text x="26.840000000000003" y="91.4" text-anchor="end" font-size="1.8">CLIFF_SENSE</text>
+<path d="M 72 92.0 L 82.16 92.0" stroke="#325859" stroke-width=".2"/><text x="71" y="91.3" text-anchor="end" font-size="1.75">2:2</text>
+<text x="83.16" y="91.4" text-anchor="start" font-size="1.8">GND</text>
+<rect x="138" y="85.0" width="34" height="14" fill="#eef4f4" stroke="#223d47" stroke-width=".25"/><text x="155" y="81.5" text-anchor="middle" font-size="2.4">RSCL</text>
+<text x="155" y="103.0" text-anchor="middle" font-size="2">10k external pullup</text>
+<path d="M 138 92.0 L 127.84000000000002 92.0" stroke="#325859" stroke-width=".2"/><text x="139" y="91.3" text-anchor="start" font-size="1.75">1:1</text>
+<text x="126.84000000000002" y="91.4" text-anchor="end" font-size="1.8">V3V3</text>
+<path d="M 172 92.0 L 182.16 92.0" stroke="#325859" stroke-width=".2"/><text x="171" y="91.3" text-anchor="end" font-size="1.75">2:2</text>
+<text x="183.16" y="91.4" text-anchor="start" font-size="1.8">CLIFF_SENSE</text>
+<rect x="238" y="85.0" width="34" height="14" fill="#eef4f4" stroke="#223d47" stroke-width=".25"/><text x="255" y="81.5" text-anchor="middle" font-size="2.4">SGU</text>
+<text x="255" y="103.0" text-anchor="middle" font-size="2">NC healthy</text>
+<path d="M 238 92.0 L 227.84 92.0" stroke="#325859" stroke-width=".2"/><text x="239" y="91.3" text-anchor="start" font-size="1.75">1:1</text>
+<text x="226.84" y="91.4" text-anchor="end" font-size="1.8">GUARD_SENSE</text>
+<path d="M 272 92.0 L 282.15999999999997 92.0" stroke="#325859" stroke-width=".2"/><text x="271" y="91.3" text-anchor="end" font-size="1.75">2:2</text>
+<text x="283.15999999999997" y="91.4" text-anchor="start" font-size="1.8">GND</text>
+<rect x="338" y="85.0" width="34" height="14" fill="#eef4f4" stroke="#223d47" stroke-width=".25"/><text x="355" y="81.5" text-anchor="middle" font-size="2.4">RSGU</text>
+<text x="355" y="103.0" text-anchor="middle" font-size="2">10k external pullup</text>
+<path d="M 338 92.0 L 327.84000000000003 92.0" stroke="#325859" stroke-width=".2"/><text x="339" y="91.3" text-anchor="start" font-size="1.75">1:1</text>
+<text x="326.84000000000003" y="91.4" text-anchor="end" font-size="1.8">V3V3</text>
+<path d="M 372 92.0 L 382.15999999999997 92.0" stroke="#325859" stroke-width=".2"/><text x="371" y="91.3" text-anchor="end" font-size="1.75">2:2</text>
+<text x="383.15999999999997" y="91.4" text-anchor="start" font-size="1.8">GUARD_SENSE</text>
+<rect x="38" y="123.0" width="34" height="14" fill="#eef4f4" stroke="#223d47" stroke-width=".25"/><text x="55" y="119.5" text-anchor="middle" font-size="2.4">SFU</text>
+<text x="55" y="141.0" text-anchor="middle" font-size="2">NC healthy; opens when hopper full</text>
+<path d="M 38 130.0 L 27.840000000000003 130.0" stroke="#325859" stroke-width=".2"/><text x="39" y="129.3" text-anchor="start" font-size="1.75">1:1</text>
+<text x="26.840000000000003" y="129.4" text-anchor="end" font-size="1.8">FULL_SENSE</text>
+<path d="M 72 130.0 L 82.16 130.0" stroke="#325859" stroke-width=".2"/><text x="71" y="129.3" text-anchor="end" font-size="1.75">2:2</text>
+<text x="83.16" y="129.4" text-anchor="start" font-size="1.8">GND</text>
+<rect x="138" y="123.0" width="34" height="14" fill="#eef4f4" stroke="#223d47" stroke-width=".25"/><text x="155" y="119.5" text-anchor="middle" font-size="2.4">RSFU</text>
+<text x="155" y="141.0" text-anchor="middle" font-size="2">10k external pullup</text>
+<path d="M 138 130.0 L 127.84000000000002 130.0" stroke="#325859" stroke-width=".2"/><text x="139" y="129.3" text-anchor="start" font-size="1.75">1:1</text>
+<text x="126.84000000000002" y="129.4" text-anchor="end" font-size="1.8">V3V3</text>
+<path d="M 172 130.0 L 182.16 130.0" stroke="#325859" stroke-width=".2"/><text x="171" y="129.3" text-anchor="end" font-size="1.75">2:2</text>
+<text x="183.16" y="129.4" text-anchor="start" font-size="1.8">FULL_SENSE</text>
+<rect x="238" y="123.0" width="34" height="14" fill="#eef4f4" stroke="#223d47" stroke-width=".25"/><text x="255" y="119.5" text-anchor="middle" font-size="2.4">JB0</text>
+<text x="255" y="141.0" text-anchor="middle" font-size="2">Beam receiver / open collector</text>
+<path d="M 238 128.095 L 227.84 128.095" stroke="#325859" stroke-width=".2"/><text x="239" y="127.395" text-anchor="start" font-size="1.75">1:V5</text>
+<text x="226.84" y="127.495" text-anchor="end" font-size="1.8">V5</text>
+<path d="M 238 131.905 L 227.84 131.905" stroke="#325859" stroke-width=".2"/><text x="239" y="131.205" text-anchor="start" font-size="1.75">2:OC_3V3</text>
+<text x="226.84" y="131.305" text-anchor="end" font-size="1.8">INTAKE_BEAM</text>
+<path d="M 272 128.095 L 282.15999999999997 128.095" stroke="#325859" stroke-width=".2"/><text x="271" y="127.395" text-anchor="end" font-size="1.75">3:GND</text>
+<text x="283.15999999999997" y="127.495" text-anchor="start" font-size="1.8">GND</text>
+<rect x="338" y="123.0" width="34" height="14" fill="#eef4f4" stroke="#223d47" stroke-width=".25"/><text x="355" y="119.5" text-anchor="middle" font-size="2.4">RB0</text>
+<text x="355" y="141.0" text-anchor="middle" font-size="2">10k</text>
+<path d="M 338 130.0 L 327.84000000000003 130.0" stroke="#325859" stroke-width=".2"/><text x="339" y="129.3" text-anchor="start" font-size="1.75">1:1</text>
+<text x="326.84000000000003" y="129.4" text-anchor="end" font-size="1.8">V3V3</text>
+<path d="M 372 130.0 L 382.15999999999997 130.0" stroke="#325859" stroke-width=".2"/><text x="371" y="129.3" text-anchor="end" font-size="1.75">2:2</text>
+<text x="383.15999999999997" y="129.4" text-anchor="start" font-size="1.8">INTAKE_BEAM</text>
+<rect x="38" y="161.0" width="34" height="14" fill="#eef4f4" stroke="#223d47" stroke-width=".25"/><text x="55" y="157.5" text-anchor="middle" font-size="2.4">JB1</text>
+<text x="55" y="179.0" text-anchor="middle" font-size="2">Beam receiver / open collector</text>
+<path d="M 38 166.095 L 27.840000000000003 166.095" stroke="#325859" stroke-width=".2"/><text x="39" y="165.395" text-anchor="start" font-size="1.75">1:V5</text>
+<text x="26.840000000000003" y="165.495" text-anchor="end" font-size="1.8">V5</text>
+<path d="M 38 169.905 L 27.840000000000003 169.905" stroke="#325859" stroke-width=".2"/><text x="39" y="169.205" text-anchor="start" font-size="1.75">2:OC_3V3</text>
+<text x="26.840000000000003" y="169.305" text-anchor="end" font-size="1.8">DROP_BEAM</text>
+<path d="M 72 166.095 L 82.16 166.095" stroke="#325859" stroke-width=".2"/><text x="71" y="165.395" text-anchor="end" font-size="1.75">3:GND</text>
+<text x="83.16" y="165.495" text-anchor="start" font-size="1.8">GND</text>
+<rect x="138" y="161.0" width="34" height="14" fill="#eef4f4" stroke="#223d47" stroke-width=".25"/><text x="155" y="157.5" text-anchor="middle" font-size="2.4">RB1</text>
+<text x="155" y="179.0" text-anchor="middle" font-size="2">10k</text>
+<path d="M 138 168.0 L 127.84000000000002 168.0" stroke="#325859" stroke-width=".2"/><text x="139" y="167.3" text-anchor="start" font-size="1.75">1:1</text>
+<text x="126.84000000000002" y="167.4" text-anchor="end" font-size="1.8">V3V3</text>
+<path d="M 172 168.0 L 182.16 168.0" stroke="#325859" stroke-width=".2"/><text x="171" y="167.3" text-anchor="end" font-size="1.75">2:2</text>
+<text x="183.16" y="167.4" text-anchor="start" font-size="1.8">DROP_BEAM</text>
+<rect x="238" y="161.0" width="34" height="14" fill="#eef4f4" stroke="#223d47" stroke-width=".25"/><text x="255" y="157.5" text-anchor="middle" font-size="2.4">RF</text>
+<text x="255" y="179.0" text-anchor="middle" font-size="2">10k external pullup</text>
+<path d="M 238 168.0 L 227.84 168.0" stroke="#325859" stroke-width=".2"/><text x="239" y="167.3" text-anchor="start" font-size="1.75">1:1</text>
+<text x="226.84" y="167.4" text-anchor="end" font-size="1.8">V3V3</text>
+<path d="M 272 168.0 L 282.15999999999997 168.0" stroke="#325859" stroke-width=".2"/><text x="271" y="167.3" text-anchor="end" font-size="1.75">2:2</text>
+<text x="283.15999999999997" y="167.4" text-anchor="start" font-size="1.8">DRV_FAULT_N</text>
+<rect x="338" y="161.0" width="34" height="14" fill="#eef4f4" stroke="#223d47" stroke-width=".25"/><text x="355" y="157.5" text-anchor="middle" font-size="2.4">RK</text>
+<text x="355" y="179.0" text-anchor="middle" font-size="2">10k external pullup</text>
+<path d="M 338 168.0 L 327.84000000000003 168.0" stroke="#325859" stroke-width=".2"/><text x="339" y="167.3" text-anchor="start" font-size="1.75">1:1</text>
+<text x="326.84000000000003" y="167.4" text-anchor="end" font-size="1.8">V3V3</text>
+<path d="M 372 168.0 L 382.15999999999997 168.0" stroke="#325859" stroke-width=".2"/><text x="371" y="167.3" text-anchor="end" font-size="1.75">2:2</text>
+<text x="383.15999999999997" y="167.4" text-anchor="start" font-size="1.8">K1_SENSE</text>
+<rect x="38" y="199.0" width="34" height="14" fill="#eef4f4" stroke="#223d47" stroke-width=".25"/><text x="55" y="195.5" text-anchor="middle" font-size="2.4">JRANGE</text>
+<text x="55" y="217.0" text-anchor="middle" font-size="2">Calibrated analog obstacle sensor</text>
+<path d="M 38 204.095 L 27.840000000000003 204.095" stroke="#325859" stroke-width=".2"/><text x="39" y="203.395" text-anchor="start" font-size="1.75">1:V5</text>
+<text x="26.840000000000003" y="203.495" text-anchor="end" font-size="1.8">V5</text>
+<path d="M 38 207.905 L 27.840000000000003 207.905" stroke="#325859" stroke-width=".2"/><text x="39" y="207.205" text-anchor="start" font-size="1.75">2:OUT_0_3V3</text>
+<text x="26.840000000000003" y="207.305" text-anchor="end" font-size="1.8">RANGE_OUT</text>
+<path d="M 72 204.095 L 82.16 204.095" stroke="#325859" stroke-width=".2"/><text x="71" y="203.395" text-anchor="end" font-size="1.75">3:GND</text>
+<text x="83.16" y="203.495" text-anchor="start" font-size="1.8">GND</text>
+</g></svg>

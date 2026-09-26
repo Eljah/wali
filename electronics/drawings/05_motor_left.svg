@@ -1,0 +1,123 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="420mm" height="297mm" viewBox="0 0 420 297"><rect width="100%" height="100%" fill="white"/><g font-family="DejaVu Sans" fill="#182f39">
+<text x="10" y="12" font-size="4.2">DRV8874 channel 0: left</text><text x="10" y="19" font-size="2.2">R01 / canonical connection graph. KiCad ERC and PCB routing NOT performed.</text>
+<rect x="38" y="59.24000000000001" width="34" height="14" fill="#eef4f4" stroke="#223d47" stroke-width=".25"/><text x="55" y="55.74000000000001" text-anchor="middle" font-size="2.4">FM0</text>
+<text x="55" y="77.24000000000001" text-anchor="middle" font-size="2">4A DC</text>
+<path d="M 38 66.24000000000001 L 27.840000000000003 66.24000000000001" stroke="#325859" stroke-width=".2"/><text x="39" y="65.54" text-anchor="start" font-size="1.75">1:1</text>
+<text x="26.840000000000003" y="65.64000000000001" text-anchor="end" font-size="1.8">VM_BUS</text>
+<path d="M 72 66.24000000000001 L 82.16 66.24000000000001" stroke="#325859" stroke-width=".2"/><text x="71" y="65.54" text-anchor="end" font-size="1.75">2:2</text>
+<text x="83.16" y="65.64000000000001" text-anchor="start" font-size="1.8">M0_VM</text>
+<rect x="138" y="47.00000000000001" width="34" height="38.480000000000004" fill="#eef4f4" stroke="#223d47" stroke-width=".25"/><text x="155" y="43.50000000000001" text-anchor="middle" font-size="2.4">UM0</text>
+<text x="155" y="89.48000000000002" text-anchor="middle" font-size="2">DRV8874 HTSSOP16-PAD</text>
+<path d="M 138 51.00000000000001 L 127.84000000000002 51.00000000000001" stroke="#325859" stroke-width=".2"/><text x="139" y="50.300000000000004" text-anchor="start" font-size="1.75">1:EN</text>
+<text x="126.84000000000002" y="50.400000000000006" text-anchor="end" font-size="1.8">PWM0</text>
+<path d="M 138 54.81000000000001 L 127.84000000000002 54.81000000000001" stroke="#325859" stroke-width=".2"/><text x="139" y="54.11000000000001" text-anchor="start" font-size="1.75">2:PH</text>
+<text x="126.84000000000002" y="54.21000000000001" text-anchor="end" font-size="1.8">DIR0</text>
+<path d="M 138 58.62000000000001 L 127.84000000000002 58.62000000000001" stroke="#325859" stroke-width=".2"/><text x="139" y="57.92000000000001" text-anchor="start" font-size="1.75">3:nSLEEP</text>
+<text x="126.84000000000002" y="58.02000000000001" text-anchor="end" font-size="1.8">RUN_EN</text>
+<path d="M 138 62.43000000000001 L 127.84000000000002 62.43000000000001" stroke="#325859" stroke-width=".2"/><text x="139" y="61.730000000000004" text-anchor="start" font-size="1.75">4:nFAULT</text>
+<text x="126.84000000000002" y="61.830000000000005" text-anchor="end" font-size="1.8">DRV_FAULT_N</text>
+<path d="M 138 66.24000000000001 L 127.84000000000002 66.24000000000001" stroke="#325859" stroke-width=".2"/><text x="139" y="65.54" text-anchor="start" font-size="1.75">5:VREF</text>
+<text x="126.84000000000002" y="65.64000000000001" text-anchor="end" font-size="1.8">M0_VREF</text>
+<path d="M 138 70.05000000000001 L 127.84000000000002 70.05000000000001" stroke="#325859" stroke-width=".2"/><text x="139" y="69.35000000000001" text-anchor="start" font-size="1.75">6:IPROPI</text>
+<text x="126.84000000000002" y="69.45000000000002" text-anchor="end" font-size="1.8">M0_IP</text>
+<path d="M 138 73.86000000000001 L 127.84000000000002 73.86000000000001" stroke="#325859" stroke-width=".2"/><text x="139" y="73.16000000000001" text-anchor="start" font-size="1.75">7:IMODE</text>
+<text x="126.84000000000002" y="73.26000000000002" text-anchor="end" font-size="1.8">GND</text>
+<path d="M 138 77.67000000000002 L 127.84000000000002 77.67000000000002" stroke="#325859" stroke-width=".2"/><text x="139" y="76.97000000000001" text-anchor="start" font-size="1.75">8:OUT1</text>
+<text x="126.84000000000002" y="77.07000000000002" text-anchor="end" font-size="1.8">M0_OUT1</text>
+<path d="M 138 81.48 L 127.84000000000002 81.48" stroke="#325859" stroke-width=".2"/><text x="139" y="80.78" text-anchor="start" font-size="1.75">9:PGND</text>
+<text x="126.84000000000002" y="80.88000000000001" text-anchor="end" font-size="1.8">GND</text>
+<path d="M 172 51.00000000000001 L 182.16 51.00000000000001" stroke="#325859" stroke-width=".2"/><text x="171" y="50.300000000000004" text-anchor="end" font-size="1.75">10:OUT2</text>
+<text x="183.16" y="50.400000000000006" text-anchor="start" font-size="1.8">M0_OUT2</text>
+<path d="M 172 54.81000000000001 L 182.16 54.81000000000001" stroke="#325859" stroke-width=".2"/><text x="171" y="54.11000000000001" text-anchor="end" font-size="1.75">11:VM</text>
+<text x="183.16" y="54.21000000000001" text-anchor="start" font-size="1.8">M0_VM</text>
+<path d="M 172 58.62000000000001 L 182.16 58.62000000000001" stroke="#325859" stroke-width=".2"/><text x="171" y="57.92000000000001" text-anchor="end" font-size="1.75">12:VCP</text>
+<text x="183.16" y="58.02000000000001" text-anchor="start" font-size="1.8">M0_VCP</text>
+<path d="M 172 62.43000000000001 L 182.16 62.43000000000001" stroke="#325859" stroke-width=".2"/><text x="171" y="61.730000000000004" text-anchor="end" font-size="1.75">13:CPH</text>
+<text x="183.16" y="61.830000000000005" text-anchor="start" font-size="1.8">M0_CPH</text>
+<path d="M 172 66.24000000000001 L 182.16 66.24000000000001" stroke="#325859" stroke-width=".2"/><text x="171" y="65.54" text-anchor="end" font-size="1.75">14:CPL</text>
+<text x="183.16" y="65.64000000000001" text-anchor="start" font-size="1.8">M0_CPL</text>
+<path d="M 172 70.05000000000001 L 182.16 70.05000000000001" stroke="#325859" stroke-width=".2"/><text x="171" y="69.35000000000001" text-anchor="end" font-size="1.75">15:GND</text>
+<text x="183.16" y="69.45000000000002" text-anchor="start" font-size="1.8">GND</text>
+<path d="M 172 73.86000000000001 L 182.16 73.86000000000001" stroke="#325859" stroke-width=".2"/><text x="171" y="73.16000000000001" text-anchor="end" font-size="1.75">16:PMODE</text>
+<text x="183.16" y="73.26000000000002" text-anchor="start" font-size="1.8">GND</text>
+<path d="M 172 77.67000000000002 L 182.16 77.67000000000002" stroke="#325859" stroke-width=".2"/><text x="171" y="76.97000000000001" text-anchor="end" font-size="1.75">17:PAD</text>
+<text x="183.16" y="77.07000000000002" text-anchor="start" font-size="1.8">GND</text>
+<rect x="238" y="59.24000000000001" width="34" height="14" fill="#eef4f4" stroke="#223d47" stroke-width=".25"/><text x="255" y="55.74000000000001" text-anchor="middle" font-size="2.4">M0</text>
+<text x="255" y="77.24000000000001" text-anchor="middle" font-size="2">24V brushed gearmotor</text>
+<path d="M 238 66.24000000000001 L 227.84 66.24000000000001" stroke="#325859" stroke-width=".2"/><text x="239" y="65.54" text-anchor="start" font-size="1.75">1:+ / forward</text>
+<text x="226.84" y="65.64000000000001" text-anchor="end" font-size="1.8">M0_OUT1</text>
+<path d="M 272 66.24000000000001 L 282.15999999999997 66.24000000000001" stroke="#325859" stroke-width=".2"/><text x="271" y="65.54" text-anchor="end" font-size="1.75">2:- / reverse</text>
+<text x="283.15999999999997" y="65.64000000000001" text-anchor="start" font-size="1.8">M0_OUT2</text>
+<rect x="338" y="59.24000000000001" width="34" height="14" fill="#eef4f4" stroke="#223d47" stroke-width=".25"/><text x="355" y="55.74000000000001" text-anchor="middle" font-size="2.4">CCP0</text>
+<text x="355" y="77.24000000000001" text-anchor="middle" font-size="2">22nF / 50V</text>
+<path d="M 338 66.24000000000001 L 327.84000000000003 66.24000000000001" stroke="#325859" stroke-width=".2"/><text x="339" y="65.54" text-anchor="start" font-size="1.75">1:1</text>
+<text x="326.84000000000003" y="65.64000000000001" text-anchor="end" font-size="1.8">M0_CPH</text>
+<path d="M 372 66.24000000000001 L 382.15999999999997 66.24000000000001" stroke="#325859" stroke-width=".2"/><text x="371" y="65.54" text-anchor="end" font-size="1.75">2:2</text>
+<text x="383.15999999999997" y="65.64000000000001" text-anchor="start" font-size="1.8">M0_CPL</text>
+<rect x="38" y="109.48" width="34" height="14" fill="#eef4f4" stroke="#223d47" stroke-width=".25"/><text x="55" y="105.98" text-anchor="middle" font-size="2.4">CVCP0</text>
+<text x="55" y="127.48" text-anchor="middle" font-size="2">100nF /16V</text>
+<path d="M 38 116.48 L 27.840000000000003 116.48" stroke="#325859" stroke-width=".2"/><text x="39" y="115.78" text-anchor="start" font-size="1.75">1:1</text>
+<text x="26.840000000000003" y="115.88000000000001" text-anchor="end" font-size="1.8">M0_VCP</text>
+<path d="M 72 116.48 L 82.16 116.48" stroke="#325859" stroke-width=".2"/><text x="71" y="115.78" text-anchor="end" font-size="1.75">2:2</text>
+<text x="83.16" y="115.88000000000001" text-anchor="start" font-size="1.8">M0_VM</text>
+<rect x="138" y="109.48" width="34" height="14" fill="#eef4f4" stroke="#223d47" stroke-width=".25"/><text x="155" y="105.98" text-anchor="middle" font-size="2.4">CVM0</text>
+<text x="155" y="127.48" text-anchor="middle" font-size="2">100nF /50V</text>
+<path d="M 138 116.48 L 127.84000000000002 116.48" stroke="#325859" stroke-width=".2"/><text x="139" y="115.78" text-anchor="start" font-size="1.75">1:1</text>
+<text x="126.84000000000002" y="115.88000000000001" text-anchor="end" font-size="1.8">M0_VM</text>
+<path d="M 172 116.48 L 182.16 116.48" stroke="#325859" stroke-width=".2"/><text x="171" y="115.78" text-anchor="end" font-size="1.75">2:2</text>
+<text x="183.16" y="115.88000000000001" text-anchor="start" font-size="1.8">GND</text>
+<rect x="238" y="109.48" width="34" height="14" fill="#eef4f4" stroke="#223d47" stroke-width=".25"/><text x="255" y="105.98" text-anchor="middle" font-size="2.4">CB0</text>
+<text x="255" y="127.48" text-anchor="middle" font-size="2">470uF /50V</text>
+<path d="M 238 116.48 L 227.84 116.48" stroke="#325859" stroke-width=".2"/><text x="239" y="115.78" text-anchor="start" font-size="1.75">1:1</text>
+<text x="226.84" y="115.88000000000001" text-anchor="end" font-size="1.8">M0_VM</text>
+<path d="M 272 116.48 L 282.15999999999997 116.48" stroke="#325859" stroke-width=".2"/><text x="271" y="115.78" text-anchor="end" font-size="1.75">2:2</text>
+<text x="283.15999999999997" y="115.88000000000001" text-anchor="start" font-size="1.8">GND</text>
+<rect x="338" y="109.48" width="34" height="14" fill="#eef4f4" stroke="#223d47" stroke-width=".25"/><text x="355" y="105.98" text-anchor="middle" font-size="2.4">RIP0</text>
+<text x="355" y="127.48" text-anchor="middle" font-size="2">1.5k /1%</text>
+<path d="M 338 116.48 L 327.84000000000003 116.48" stroke="#325859" stroke-width=".2"/><text x="339" y="115.78" text-anchor="start" font-size="1.75">1:1</text>
+<text x="326.84000000000003" y="115.88000000000001" text-anchor="end" font-size="1.8">M0_IP</text>
+<path d="M 372 116.48 L 382.15999999999997 116.48" stroke="#325859" stroke-width=".2"/><text x="371" y="115.78" text-anchor="end" font-size="1.75">2:2</text>
+<text x="383.15999999999997" y="115.88000000000001" text-anchor="start" font-size="1.8">GND</text>
+<rect x="38" y="147.48000000000002" width="34" height="14" fill="#eef4f4" stroke="#223d47" stroke-width=".25"/><text x="55" y="143.98000000000002" text-anchor="middle" font-size="2.4">RFLT0</text>
+<text x="55" y="165.48000000000002" text-anchor="middle" font-size="2">10k</text>
+<path d="M 38 154.48000000000002 L 27.840000000000003 154.48000000000002" stroke="#325859" stroke-width=".2"/><text x="39" y="153.78000000000003" text-anchor="start" font-size="1.75">1:1</text>
+<text x="26.840000000000003" y="153.88000000000002" text-anchor="end" font-size="1.8">M0_IP</text>
+<path d="M 72 154.48000000000002 L 82.16 154.48000000000002" stroke="#325859" stroke-width=".2"/><text x="71" y="153.78000000000003" text-anchor="end" font-size="1.75">2:2</text>
+<text x="83.16" y="153.88000000000002" text-anchor="start" font-size="1.8">CUR0</text>
+<rect x="138" y="147.48000000000002" width="34" height="14" fill="#eef4f4" stroke="#223d47" stroke-width=".25"/><text x="155" y="143.98000000000002" text-anchor="middle" font-size="2.4">CFLT0</text>
+<text x="155" y="165.48000000000002" text-anchor="middle" font-size="2">100nF</text>
+<path d="M 138 154.48000000000002 L 127.84000000000002 154.48000000000002" stroke="#325859" stroke-width=".2"/><text x="139" y="153.78000000000003" text-anchor="start" font-size="1.75">1:1</text>
+<text x="126.84000000000002" y="153.88000000000002" text-anchor="end" font-size="1.8">CUR0</text>
+<path d="M 172 154.48000000000002 L 182.16 154.48000000000002" stroke="#325859" stroke-width=".2"/><text x="171" y="153.78000000000003" text-anchor="end" font-size="1.75">2:2</text>
+<text x="183.16" y="153.88000000000002" text-anchor="start" font-size="1.8">GND</text>
+<rect x="238" y="147.48000000000002" width="34" height="14" fill="#eef4f4" stroke="#223d47" stroke-width=".25"/><text x="255" y="143.98000000000002" text-anchor="middle" font-size="2.4">RVT0</text>
+<text x="255" y="165.48000000000002" text-anchor="middle" font-size="2">6.19k /1%</text>
+<path d="M 238 154.48000000000002 L 227.84 154.48000000000002" stroke="#325859" stroke-width=".2"/><text x="239" y="153.78000000000003" text-anchor="start" font-size="1.75">1:1</text>
+<text x="226.84" y="153.88000000000002" text-anchor="end" font-size="1.8">V3V3</text>
+<path d="M 272 154.48000000000002 L 282.15999999999997 154.48000000000002" stroke="#325859" stroke-width=".2"/><text x="271" y="153.78000000000003" text-anchor="end" font-size="1.75">2:2</text>
+<text x="283.15999999999997" y="153.88000000000002" text-anchor="start" font-size="1.8">M0_VREF</text>
+<rect x="338" y="147.48000000000002" width="34" height="14" fill="#eef4f4" stroke="#223d47" stroke-width=".25"/><text x="355" y="143.98000000000002" text-anchor="middle" font-size="2.4">RVB0</text>
+<text x="355" y="165.48000000000002" text-anchor="middle" font-size="2">10k /1%</text>
+<path d="M 338 154.48000000000002 L 327.84000000000003 154.48000000000002" stroke="#325859" stroke-width=".2"/><text x="339" y="153.78000000000003" text-anchor="start" font-size="1.75">1:1</text>
+<text x="326.84000000000003" y="153.88000000000002" text-anchor="end" font-size="1.8">M0_VREF</text>
+<path d="M 372 154.48000000000002 L 382.15999999999997 154.48000000000002" stroke="#325859" stroke-width=".2"/><text x="371" y="153.78000000000003" text-anchor="end" font-size="1.75">2:2</text>
+<text x="383.15999999999997" y="153.88000000000002" text-anchor="start" font-size="1.8">GND</text>
+<rect x="38" y="185.48000000000002" width="34" height="14" fill="#eef4f4" stroke="#223d47" stroke-width=".25"/><text x="55" y="181.98000000000002" text-anchor="middle" font-size="2.4">REN0</text>
+<text x="55" y="203.48000000000002" text-anchor="middle" font-size="2">47k</text>
+<path d="M 38 192.48000000000002 L 27.840000000000003 192.48000000000002" stroke="#325859" stroke-width=".2"/><text x="39" y="191.78000000000003" text-anchor="start" font-size="1.75">1:1</text>
+<text x="26.840000000000003" y="191.88000000000002" text-anchor="end" font-size="1.8">PWM0</text>
+<path d="M 72 192.48000000000002 L 82.16 192.48000000000002" stroke="#325859" stroke-width=".2"/><text x="71" y="191.78000000000003" text-anchor="end" font-size="1.75">2:2</text>
+<text x="83.16" y="191.88000000000002" text-anchor="start" font-size="1.8">GND</text>
+<rect x="138" y="185.48000000000002" width="34" height="14" fill="#eef4f4" stroke="#223d47" stroke-width=".25"/><text x="155" y="181.98000000000002" text-anchor="middle" font-size="2.4">RPH0</text>
+<text x="155" y="203.48000000000002" text-anchor="middle" font-size="2">47k</text>
+<path d="M 138 192.48000000000002 L 127.84000000000002 192.48000000000002" stroke="#325859" stroke-width=".2"/><text x="139" y="191.78000000000003" text-anchor="start" font-size="1.75">1:1</text>
+<text x="126.84000000000002" y="191.88000000000002" text-anchor="end" font-size="1.8">DIR0</text>
+<path d="M 172 192.48000000000002 L 182.16 192.48000000000002" stroke="#325859" stroke-width=".2"/><text x="171" y="191.78000000000003" text-anchor="end" font-size="1.75">2:2</text>
+<text x="183.16" y="191.88000000000002" text-anchor="start" font-size="1.8">GND</text>
+<rect x="238" y="185.48000000000002" width="34" height="14" fill="#eef4f4" stroke="#223d47" stroke-width=".25"/><text x="255" y="181.98000000000002" text-anchor="middle" font-size="2.4">CM0</text>
+<text x="255" y="203.48000000000002" text-anchor="middle" font-size="2">10nF /50V motor suppression</text>
+<path d="M 238 192.48000000000002 L 227.84 192.48000000000002" stroke="#325859" stroke-width=".2"/><text x="239" y="191.78000000000003" text-anchor="start" font-size="1.75">1:1</text>
+<text x="226.84" y="191.88000000000002" text-anchor="end" font-size="1.8">M0_OUT1</text>
+<path d="M 272 192.48000000000002 L 282.15999999999997 192.48000000000002" stroke="#325859" stroke-width=".2"/><text x="271" y="191.78000000000003" text-anchor="end" font-size="1.75">2:2</text>
+<text x="283.15999999999997" y="191.88000000000002" text-anchor="start" font-size="1.8">M0_OUT2</text>
+</g></svg>

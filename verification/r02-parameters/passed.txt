@@ -1,0 +1,9 @@
+mass-assumption
+battery-not-FRC-default
+wheel-and-track-contract
+configuration-matches-defaults
+reject-mass.kg=-1
+reject-drive.free.rpm=NaN
+reject-coast.drag.fraction=1.1
+reject-track.width.m=0.8
+reject-unknown.parameter=123

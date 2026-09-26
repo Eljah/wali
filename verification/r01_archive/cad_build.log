@@ -1,0 +1,37 @@
+/opt/pyvenv/lib/python3.13/site-packages/cadquery/utils.py:82: FutureWarning: save will be removed in the next release.
+  warn(f"{f.__name__} will be removed in the next release.", FutureWarning)
+{
+  "status": "CONCEPT_NOT_MANUFACTURING_RELEASE",
+  "part_count": 121,
+  "all_solids_valid": true,
+  "total_solids": 121,
+  "cad_bbox_mm": [
+    809.5,
+    545.14,
+    665.07
+  ],
+  "modeled_mass_estimate_kg": 24.31,
+  "gross_mass_design_kg": 30,
+  "bin_internal_liters": 24.12,
+  "belt_center_distance_mm": 488.3646178829912,
+  "belt_pitch_length_mm": 1143.2336464062414,
+  "belt_angle_degrees": 47.48955292199915,
+  "tractive_force_N": 41.94533808008782,
+  "required_wheel_torque_Nm_with_margin_1_5": 3.145900356006587,
+  "wheel_rpm_at_0_3_mps": 28.64788975654116,
+  "beam_I_mm4": 7872.0,
+  "beam_sigma_MPa": 30.843178353658537,
+  "beam_deflection_mm": 1.6226193829533404,
+  "nominal_energy_Wh": 256.0,
+  "runtime_assuming_80W_h": 2.3040000000000003,
+  "stop_distance_assumption_m": 0.265,
+  "assumptions": [
+    "30 kg gross design load; real weigh-in required",
+    "rolling coefficient 0.03 and 5 deg slope are assumptions",
+    "simple beam calculation, not FEA, fatigue or joint validation",
+    "battery/load mass distribution must be measured",
+    "flexible brush fins contact pickup lip by intention",
+    "bearings/shafts and cleats have idealized fit; fasteners, tension adjustment and all guards need detailing",
+    "no blanket collision-free claim; assembly contacts and soft interference are not evaluated as rigid failures"
+  ]
+}

@@ -1,0 +1,8 @@
+# Preserve R02 bytes and checksums, including original line endings.
+* -text
+*.pdf binary
+*.png binary
+*.jpg binary
+*.jar binary
+*.stl binary
+*.step -diff

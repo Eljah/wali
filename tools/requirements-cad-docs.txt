@@ -1,0 +1,11 @@
+# Versions in the Linux authoring environment; native dependencies are platform-specific.
+cadquery==2.8.0
+cadquery-ocp==7.9.3.1.1
+vtk==9.6.2
+ezdxf==1.4.4
+numpy==2.3.5
+reportlab==4.4.9
+Pillow==12.3.0
+PyMuPDF==1.26.7
+CairoSVG==2.8.2
+svglib==1.6.0

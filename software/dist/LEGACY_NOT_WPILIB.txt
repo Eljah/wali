@@ -1,0 +1,3 @@
+ubor-sim.jar is the verified dependency-free LEGACY_FIRST_ORDER backend.
+The WPILib backend is robot-wpilib; build with mvn -Pwpilib clean verify.
+No WPILib binaries were available in the authoring environment.

@@ -1,0 +1,2 @@
+image,x,y,width,height,label,session,split
+# Replace this comment with measured bounding boxes; one row per object/background patch.

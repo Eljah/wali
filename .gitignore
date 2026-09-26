@@ -1,0 +1,24 @@
+# Build output and IDE state; release dist/ and historical verification/ stay tracked.
+**/target/
+**/out/
+**/.gradle/
+**/.idea/
+**/.vscode/
+*.iml
+.DS_Store
+Thumbs.db
+**/__pycache__/
+*.py[cod]
+.venv/
+# Local credentials and private keys must not be committed.
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+*.keystore
+*.jks
+.git-credentials
+.github-token

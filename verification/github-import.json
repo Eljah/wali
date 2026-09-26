@@ -1,0 +1,18 @@
+{
+  "repository": "Eljah/wali",
+  "branch": "main",
+  "import_parent_commit": "d67f3cda9f2800fdf058d6b32db38f9b728d8e20",
+  "workflow_run_id": "36272178595",
+  "archive_sha256": "9a66c389bd0a0f7488ee5cc6723fb9fcbf9e8fed8d08fbb66c7742066980ac96",
+  "archive_bytes": 5418822,
+  "source_files": 316,
+  "verified_git_index_files": 316,
+  "original_manifest_entries_verified": 307,
+  "source_bytes_preserved": true,
+  "force_push_used": false,
+  "preserved_preexisting_files": [
+    "docs/ORIGINAL_REPOSITORY_README.md"
+  ],
+  "verification_scope": "Publication integrity only; no new WPILib/ML/hardware tests were run.",
+  "historical_reports": "PUBLICATION_CHECKS.json and PUBLICATION_PACKAGE.txt are unchanged pre-publication snapshots."
+}

@@ -1,0 +1,24 @@
+{
+  "platform": "Linux-6.18.44-x86_64-with-glibc2.41",
+  "architecture": "x86_64",
+  "python": "3.13.5",
+  "java": "openjdk version \"21.0.11\" 2026-04-21\nOpenJDK Runtime Environment (build 21.0.11+10-1-deb13u2-Debian)\nOpenJDK 64-Bit Server VM (build 21.0.11+10-1-deb13u2-Debian, mixed mode, sharing)",
+  "maven_available": false,
+  "kicad_cli_available": false,
+  "solidworks_available": false,
+  "python_packages": {
+    "cadquery": "2.8.0",
+    "cadquery-ocp": "7.9.3.1.1",
+    "vtk": "9.6.2",
+    "ezdxf": "1.4.4",
+    "numpy": "2.3.5",
+    "reportlab": "4.4.9",
+    "Pillow": "12.3.0",
+    "PyMuPDF": "1.26.7",
+    "CairoSVG": "2.8.2",
+    "svglib": "1.6.0"
+  },
+  "robot_software_language": "Java",
+  "cad_ecad_docs_authoring_language": "Python",
+  "final_test_status": "50 core/app assertions and 40 TCP command/telemetry exchanges passed"
+}

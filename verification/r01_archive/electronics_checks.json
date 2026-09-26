@@ -1,0 +1,16 @@
+{
+  "components": 141,
+  "named_nets": 100,
+  "child_schematics": 8,
+  "unique_references": true,
+  "pin_numbers_unique": true,
+  "pi_header_no_power_bus_short": true,
+  "four_motor_control_pin_mappings": true,
+  "charge_pump_caps_to_VM": true,
+  "sexpressions_balanced": true,
+  "kicad_erc_run": false,
+  "kicad_gui_opened": false,
+  "pcb_routed": false,
+  "spice_simulated": false,
+  "single_ended_nets": []
+}

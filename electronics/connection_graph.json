@@ -1,0 +1,7532 @@
+{
+  "revision": "R01",
+  "components": [
+    {
+      "ref": "BT1",
+      "value": "8S LiFePO4 / BMS / 25.6V 10Ah",
+      "pins": [
+        {
+          "number": "1",
+          "name": "PACK+",
+          "net": "BAT_RAW",
+          "localx": -22.08,
+          "localy": 0.0
+        },
+        {
+          "number": "2",
+          "name": "PACK-",
+          "net": "GND",
+          "localx": 22.08,
+          "localy": 0.0
+        }
+      ],
+      "note": "Assembled protected pack; charger external; no cell assembly instructions",
+      "uuid": "fc4d9cd3-e0bd-49f3-9fc5-f7cd8ff290bb",
+      "sheet": "01_power"
+    },
+    {
+      "ref": "F1",
+      "value": "15A DC fuse / near pack",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "BAT_RAW",
+          "localx": -22.08,
+          "localy": 0.0
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "BAT_FUSED",
+          "localx": 22.08,
+          "localy": 0.0
+        }
+      ],
+      "note": "",
+      "uuid": "1f4a3c67-97cb-4944-b998-26d290da9ee7",
+      "sheet": "01_power"
+    },
+    {
+      "ref": "S0",
+      "value": "Main DC disconnect",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "BAT_FUSED",
+          "localx": -22.08,
+          "localy": 0.0
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "BAT_SW",
+          "localx": 22.08,
+          "localy": 0.0
+        }
+      ],
+      "note": "",
+      "uuid": "fed39de3-dde1-47e2-8014-13f460efcf23",
+      "sheet": "01_power"
+    },
+    {
+      "ref": "F2",
+      "value": "3A logic branch",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "BAT_SW",
+          "localx": -22.08,
+          "localy": 0.0
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "BUCK_IN",
+          "localx": 22.08,
+          "localy": 0.0
+        }
+      ],
+      "note": "",
+      "uuid": "b1e1acee-d31c-4b72-8e57-5961ec925ddc",
+      "sheet": "01_power"
+    },
+    {
+      "ref": "PS1",
+      "value": "Regulated 5.1V / 5A converter",
+      "pins": [
+        {
+          "number": "1",
+          "name": "IN+",
+          "net": "BUCK_IN",
+          "localx": -22.08,
+          "localy": 1.905
+        },
+        {
+          "number": "2",
+          "name": "IN-",
+          "net": "GND",
+          "localx": -22.08,
+          "localy": -1.905
+        },
+        {
+          "number": "3",
+          "name": "OUT+",
+          "net": "V5",
+          "localx": 22.08,
+          "localy": 1.905
+        },
+        {
+          "number": "4",
+          "name": "OUT-",
+          "net": "GND",
+          "localx": 22.08,
+          "localy": -1.905
+        }
+      ],
+      "note": "Input >=36V; Pi5 compatible USB-C power/advertisement; verify undervoltage",
+      "uuid": "2002e49c-76a0-4ddd-a9fd-4f7fa2d59536",
+      "sheet": "01_power"
+    },
+    {
+      "ref": "JUSB1",
+      "value": "Pi5 USB-C power interface",
+      "pins": [
+        {
+          "number": "1",
+          "name": "V5",
+          "net": "V5",
+          "localx": -22.08,
+          "localy": 0.0
+        },
+        {
+          "number": "2",
+          "name": "GND",
+          "net": "GND",
+          "localx": 22.08,
+          "localy": 0.0
+        }
+      ],
+      "note": "Abstract power connector, NOT a USB-C receptacle footprint or CC wiring",
+      "uuid": "891bbfcb-bd83-48a6-8728-706ababe1f97",
+      "sheet": "01_power"
+    },
+    {
+      "ref": "K1",
+      "value": "24V DC contactor + isolated feedback",
+      "pins": [
+        {
+          "number": "1",
+          "name": "MAIN_IN",
+          "net": "BAT_SW",
+          "localx": -22.08,
+          "localy": 3.81
+        },
+        {
+          "number": "2",
+          "name": "MAIN_OUT",
+          "net": "VM_BUS",
+          "localx": -22.08,
+          "localy": 0.0
+        },
+        {
+          "number": "3",
+          "name": "COIL+",
+          "net": "COIL_PLUS",
+          "localx": -22.08,
+          "localy": -3.81
+        },
+        {
+          "number": "4",
+          "name": "COIL-",
+          "net": "COIL_LOW",
+          "localx": 22.08,
+          "localy": 3.81
+        },
+        {
+          "number": "5",
+          "name": "AUX_NO",
+          "net": "K1_SENSE",
+          "localx": 22.08,
+          "localy": 0.0
+        },
+        {
+          "number": "6",
+          "name": "AUX_COM",
+          "net": "GND",
+          "localx": 22.08,
+          "localy": -3.81
+        }
+      ],
+      "note": "Select >=30V DC breaking rating >=15A; auxiliary contact required; pin numbers are interface labels",
+      "uuid": "36d49cb0-3410-40d7-9109-7521c0d4ac3c",
+      "sheet": "01_power"
+    },
+    {
+      "ref": "S1B",
+      "value": "E-STOP second NC pole",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "BAT_SW",
+          "localx": -22.08,
+          "localy": 0.0
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "COIL_PLUS",
+          "localx": 22.08,
+          "localy": 0.0
+        }
+      ],
+      "note": "",
+      "uuid": "8cbef27c-d6d6-44cd-8854-fa764f4af154",
+      "sheet": "01_power"
+    },
+    {
+      "ref": "Q1",
+      "value": "FQP30N06L / TO-220",
+      "pins": [
+        {
+          "number": "1",
+          "name": "G",
+          "net": "K1_GATE",
+          "localx": -22.08,
+          "localy": 1.905
+        },
+        {
+          "number": "2",
+          "name": "D",
+          "net": "COIL_LOW",
+          "localx": -22.08,
+          "localy": -1.905
+        },
+        {
+          "number": "3",
+          "name": "S",
+          "net": "GND",
+          "localx": 22.08,
+          "localy": 1.905
+        }
+      ],
+      "note": "Driven by 5V AHCT buffer, not directly by 3.3V GPIO",
+      "uuid": "570b30f5-1116-42b8-a204-48bfdc20408a",
+      "sheet": "01_power"
+    },
+    {
+      "ref": "D1",
+      "value": "1N4007 coil diode",
+      "pins": [
+        {
+          "number": "1",
+          "name": "K",
+          "net": "COIL_PLUS",
+          "localx": -22.08,
+          "localy": 0.0
+        },
+        {
+          "number": "2",
+          "name": "A",
+          "net": "COIL_LOW",
+          "localx": 22.08,
+          "localy": 0.0
+        }
+      ],
+      "note": "Measure added release delay; cathode at coil+",
+      "uuid": "78f5b3bf-a10b-49d6-9b24-fbb711dd8c7f",
+      "sheet": "01_power"
+    },
+    {
+      "ref": "RG1",
+      "value": "100R gate",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "K1_GATE_DRIVE",
+          "localx": -22.08,
+          "localy": 0.0
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "K1_GATE",
+          "localx": 22.08,
+          "localy": 0.0
+        }
+      ],
+      "note": "",
+      "uuid": "a26c6e18-6f01-4b55-ac9d-5feee1fb2bae",
+      "sheet": "01_power"
+    },
+    {
+      "ref": "RGS1",
+      "value": "100k gate pulldown",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "K1_GATE",
+          "localx": -22.08,
+          "localy": 0.0
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "GND",
+          "localx": 22.08,
+          "localy": 0.0
+        }
+      ],
+      "note": "",
+      "uuid": "625598a5-5204-4c71-896b-7a2965001022",
+      "sheet": "01_power"
+    },
+    {
+      "ref": "CBULK",
+      "value": "10000uF / 50V low-ESR",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "VM_BUS",
+          "localx": -22.08,
+          "localy": 0.0
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "GND",
+          "localx": 22.08,
+          "localy": 0.0
+        }
+      ],
+      "note": "Bus energy buffer, NOT validated regenerative clamp",
+      "uuid": "3ecfaa32-9c35-41bd-b239-8696927dc3c7",
+      "sheet": "01_power"
+    },
+    {
+      "ref": "RBLEED",
+      "value": "1k / 2W",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "VM_BUS",
+          "localx": -22.08,
+          "localy": 0.0
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "GND",
+          "localx": 22.08,
+          "localy": 0.0
+        }
+      ],
+      "note": "Discharge time is tens of seconds; measure voltage before service",
+      "uuid": "d5e5a2e6-925e-4d95-a68a-9d59c35f1da2",
+      "sheet": "01_power"
+    },
+    {
+      "ref": "SPRE",
+      "value": "Momentary PRECHARGE only",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "BAT_SW",
+          "localx": -22.08,
+          "localy": 0.0
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "PRE_R",
+          "localx": 22.08,
+          "localy": 0.0
+        }
+      ],
+      "note": "",
+      "uuid": "69218ad4-96cd-4554-bf45-d4c596f89ae9",
+      "sheet": "01_power"
+    },
+    {
+      "ref": "RPRE",
+      "value": "22R / pulse >=5J",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "PRE_R",
+          "localx": -22.08,
+          "localy": 0.0
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "VM_BUS",
+          "localx": 22.08,
+          "localy": 0.0
+        }
+      ],
+      "note": "Hold >=1.2 s before physical ARM; release after ARM. Validate inrush and contacts.",
+      "uuid": "6bb5ec7b-0841-4a5b-b5de-7e0ab152c4cb",
+      "sheet": "01_power"
+    },
+    {
+      "ref": "RVTOP",
+      "value": "100k / 0.1%",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "BAT_SW",
+          "localx": -22.08,
+          "localy": 0.0
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "ADC_BAT",
+          "localx": 22.08,
+          "localy": 0.0
+        }
+      ],
+      "note": "",
+      "uuid": "06dd6d72-d130-48ab-874b-9434630d956c",
+      "sheet": "01_power"
+    },
+    {
+      "ref": "RVBOT",
+      "value": "10k / 0.1%",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "ADC_BAT",
+          "localx": -22.08,
+          "localy": 0.0
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "GND",
+          "localx": 22.08,
+          "localy": 0.0
+        }
+      ],
+      "note": "",
+      "uuid": "c278febd-2052-4507-85fa-6e0b98705fcd",
+      "sheet": "01_power"
+    },
+    {
+      "ref": "CV",
+      "value": "10nF",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "ADC_BAT",
+          "localx": -22.08,
+          "localy": 0.0
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "GND",
+          "localx": 22.08,
+          "localy": 0.0
+        }
+      ],
+      "note": "",
+      "uuid": "a6af6b0f-d6d7-4993-9013-d4418c1d8431",
+      "sheet": "01_power"
+    },
+    {
+      "ref": "UWD",
+      "value": "TPS3431 DRB",
+      "pins": [
+        {
+          "number": "1",
+          "name": "VDD",
+          "net": "V3V3",
+          "localx": -22.08,
+          "localy": 7.62
+        },
+        {
+          "number": "2",
+          "name": "CWD",
+          "net": "CWD_SET",
+          "localx": -22.08,
+          "localy": 3.81
+        },
+        {
+          "number": "3",
+          "name": "EN",
+          "net": "V3V3",
+          "localx": -22.08,
+          "localy": 0.0
+        },
+        {
+          "number": "4",
+          "name": "GND",
+          "net": "GND",
+          "localx": -22.08,
+          "localy": -3.8099999999999996
+        },
+        {
+          "number": "5",
+          "name": "SET1",
+          "net": "V3V3",
+          "localx": -22.08,
+          "localy": -7.62
+        },
+        {
+          "number": "6",
+          "name": "WDI",
+          "net": "HEARTBEAT",
+          "localx": 22.08,
+          "localy": 7.62
+        },
+        {
+          "number": "7",
+          "name": "nWDO",
+          "net": "WD_OK",
+          "localx": 22.08,
+          "localy": 3.81
+        },
+        {
+          "number": "8",
+          "name": "ENOUT",
+          "net": "WD_OK",
+          "localx": 22.08,
+          "localy": 0.0
+        },
+        {
+          "number": "9",
+          "name": "PAD",
+          "net": "GND",
+          "localx": 22.08,
+          "localy": -3.8099999999999996
+        }
+      ],
+      "note": "CWD pull-up 10k: timeout nominal200ms,170..230ms; ENOUT tied to WDO",
+      "uuid": "13e7294f-fbe9-4596-a3e5-058fb98cd71e",
+      "sheet": "02_watchdog"
+    },
+    {
+      "ref": "RCWD",
+      "value": "10k",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "V3V3",
+          "localx": -22.08,
+          "localy": 0.0
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "CWD_SET",
+          "localx": 22.08,
+          "localy": 0.0
+        }
+      ],
+      "note": "",
+      "uuid": "4f20b2e8-2627-4e9d-a7e1-ef83c33f0ad2",
+      "sheet": "02_watchdog"
+    },
+    {
+      "ref": "RWDO",
+      "value": "10k",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "V3V3",
+          "localx": -22.08,
+          "localy": 0.0
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "WD_OK",
+          "localx": 22.08,
+          "localy": 0.0
+        }
+      ],
+      "note": "",
+      "uuid": "6a0b020a-62b3-44e3-b37b-73437396f3c2",
+      "sheet": "02_watchdog"
+    },
+    {
+      "ref": "RWD_PD",
+      "value": "100k",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "WD_OK",
+          "localx": -22.08,
+          "localy": 0.0
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "GND",
+          "localx": 22.08,
+          "localy": 0.0
+        }
+      ],
+      "note": "",
+      "uuid": "dab26621-f941-4041-8724-b36350413a07",
+      "sheet": "02_watchdog"
+    },
+    {
+      "ref": "S1A",
+      "value": "E-STOP NC auxiliary",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "WD_OK",
+          "localx": -22.08,
+          "localy": 0.0
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "SAFE_1",
+          "localx": 22.08,
+          "localy": 0.0
+        }
+      ],
+      "note": "",
+      "uuid": "e3a1ac0c-9c08-45d6-bebb-3978270b96e2",
+      "sheet": "02_watchdog"
+    },
+    {
+      "ref": "S3A",
+      "value": "Guard NC",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "SAFE_1",
+          "localx": -22.08,
+          "localy": 0.0
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "SAFE_2",
+          "localx": 22.08,
+          "localy": 0.0
+        }
+      ],
+      "note": "",
+      "uuid": "bf546f3b-7bf4-437b-8d1c-9756d8898c95",
+      "sheet": "02_watchdog"
+    },
+    {
+      "ref": "S4A",
+      "value": "Bumper NC",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "SAFE_2",
+          "localx": -22.08,
+          "localy": 0.0
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "SAFE_3",
+          "localx": 22.08,
+          "localy": 0.0
+        }
+      ],
+      "note": "",
+      "uuid": "e8cc99e4-7fd3-4418-a2fa-b30f414895ce",
+      "sheet": "02_watchdog"
+    },
+    {
+      "ref": "S5A",
+      "value": "Cliff relay NC",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "SAFE_3",
+          "localx": -22.08,
+          "localy": 0.0
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "CLEAR_N",
+          "localx": 22.08,
+          "localy": 0.0
+        }
+      ],
+      "note": "",
+      "uuid": "1d63db5a-f319-4504-9513-671a4ea0dc20",
+      "sheet": "02_watchdog"
+    },
+    {
+      "ref": "RCLR",
+      "value": "100k",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "CLEAR_N",
+          "localx": -22.08,
+          "localy": 0.0
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "GND",
+          "localx": 22.08,
+          "localy": 0.0
+        }
+      ],
+      "note": "",
+      "uuid": "23694b11-9b44-469c-ac21-6dbaae0c70ad",
+      "sheet": "02_watchdog"
+    },
+    {
+      "ref": "UFF",
+      "value": "SN74LVC1G74 DCT/DCU",
+      "pins": [
+        {
+          "number": "1",
+          "name": "CLK",
+          "net": "ARM_EDGE",
+          "localx": -22.08,
+          "localy": 5.715
+        },
+        {
+          "number": "2",
+          "name": "D",
+          "net": "V3V3",
+          "localx": -22.08,
+          "localy": 1.9049999999999998
+        },
+        {
+          "number": "3",
+          "name": "nQ",
+          "net": null,
+          "localx": -22.08,
+          "localy": -1.9050000000000002
+        },
+        {
+          "number": "4",
+          "name": "GND",
+          "net": "GND",
+          "localx": -22.08,
+          "localy": -5.715
+        },
+        {
+          "number": "5",
+          "name": "Q",
+          "net": "HW_ENABLE",
+          "localx": 22.08,
+          "localy": 5.715
+        },
+        {
+          "number": "6",
+          "name": "nCLR",
+          "net": "CLEAR_N",
+          "localx": 22.08,
+          "localy": 1.9049999999999998
+        },
+        {
+          "number": "7",
+          "name": "nPRE",
+          "net": "V3V3",
+          "localx": 22.08,
+          "localy": -1.9050000000000002
+        },
+        {
+          "number": "8",
+          "name": "VCC",
+          "net": "V3V3",
+          "localx": 22.08,
+          "localy": -5.715
+        }
+      ],
+      "note": "A held ARM button cannot rearm after a watchdog clear; power-up reset supplied by ENOUT",
+      "uuid": "9e32531d-48dd-408a-b422-2279086d5190",
+      "sheet": "02_watchdog"
+    },
+    {
+      "ref": "SARM",
+      "value": "Physical ARM NO",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "V3V3",
+          "localx": -22.08,
+          "localy": 0.0
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "ARM_BUTTON",
+          "localx": 22.08,
+          "localy": 0.0
+        }
+      ],
+      "note": "",
+      "uuid": "b4433b6d-c504-41d0-bff1-7c98b57e155d",
+      "sheet": "02_watchdog"
+    },
+    {
+      "ref": "RARM",
+      "value": "10k",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "ARM_BUTTON",
+          "localx": -22.08,
+          "localy": 0.0
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "ARM_RC",
+          "localx": 22.08,
+          "localy": 0.0
+        }
+      ],
+      "note": "",
+      "uuid": "e37213e9-ad25-46ae-976e-08788c3f8f12",
+      "sheet": "02_watchdog"
+    },
+    {
+      "ref": "RARM_PD",
+      "value": "100k",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "ARM_RC",
+          "localx": -22.08,
+          "localy": 0.0
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "GND",
+          "localx": 22.08,
+          "localy": 0.0
+        }
+      ],
+      "note": "",
+      "uuid": "a2a10742-488f-4f54-8ee6-fe48abb0328b",
+      "sheet": "02_watchdog"
+    },
+    {
+      "ref": "CARM",
+      "value": "100nF",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "ARM_RC",
+          "localx": -22.08,
+          "localy": 0.0
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "GND",
+          "localx": 22.08,
+          "localy": 0.0
+        }
+      ],
+      "note": "",
+      "uuid": "264853b8-3cd6-4600-a9fc-985022139241",
+      "sheet": "02_watchdog"
+    },
+    {
+      "ref": "USCH",
+      "value": "SN74LVC1G17",
+      "pins": [
+        {
+          "number": "1",
+          "name": "NC",
+          "net": null,
+          "localx": -22.08,
+          "localy": 3.81
+        },
+        {
+          "number": "2",
+          "name": "A",
+          "net": "ARM_RC",
+          "localx": -22.08,
+          "localy": 0.0
+        },
+        {
+          "number": "3",
+          "name": "GND",
+          "net": "GND",
+          "localx": -22.08,
+          "localy": -3.81
+        },
+        {
+          "number": "4",
+          "name": "Y",
+          "net": "ARM_EDGE",
+          "localx": 22.08,
+          "localy": 3.81
+        },
+        {
+          "number": "5",
+          "name": "VCC",
+          "net": "V3V3",
+          "localx": 22.08,
+          "localy": 0.0
+        }
+      ],
+      "note": "",
+      "uuid": "39b236d6-a299-4e1b-b136-f49dadd59f2c",
+      "sheet": "02_watchdog"
+    },
+    {
+      "ref": "UAND",
+      "value": "SN74LVC1G08",
+      "pins": [
+        {
+          "number": "1",
+          "name": "A",
+          "net": "SOFT_ARM",
+          "localx": -22.08,
+          "localy": 3.81
+        },
+        {
+          "number": "2",
+          "name": "B",
+          "net": "HW_ENABLE",
+          "localx": -22.08,
+          "localy": 0.0
+        },
+        {
+          "number": "3",
+          "name": "GND",
+          "net": "GND",
+          "localx": -22.08,
+          "localy": -3.81
+        },
+        {
+          "number": "4",
+          "name": "Y",
+          "net": "RUN_EN",
+          "localx": 22.08,
+          "localy": 3.81
+        },
+        {
+          "number": "5",
+          "name": "VCC",
+          "net": "V3V3",
+          "localx": 22.08,
+          "localy": 0.0
+        }
+      ],
+      "note": "",
+      "uuid": "9fc4bc2b-f97f-41d5-859e-7b665226f27e",
+      "sheet": "02_watchdog"
+    },
+    {
+      "ref": "UINV",
+      "value": "SN74LVC1G04",
+      "pins": [
+        {
+          "number": "1",
+          "name": "NC",
+          "net": null,
+          "localx": -22.08,
+          "localy": 3.81
+        },
+        {
+          "number": "2",
+          "name": "A",
+          "net": "RUN_EN",
+          "localx": -22.08,
+          "localy": 0.0
+        },
+        {
+          "number": "3",
+          "name": "GND",
+          "net": "GND",
+          "localx": -22.08,
+          "localy": -3.81
+        },
+        {
+          "number": "4",
+          "name": "Y",
+          "net": "PWM_OE",
+          "localx": 22.08,
+          "localy": 3.81
+        },
+        {
+          "number": "5",
+          "name": "VCC",
+          "net": "V3V3",
+          "localx": 22.08,
+          "localy": 0.0
+        }
+      ],
+      "note": "",
+      "uuid": "caa5c555-551e-4168-bc42-d871f5267733",
+      "sheet": "02_watchdog"
+    },
+    {
+      "ref": "UGATE",
+      "value": "SN74AHCT1G125",
+      "pins": [
+        {
+          "number": "1",
+          "name": "nOE",
+          "net": "GND",
+          "localx": -22.08,
+          "localy": 3.81
+        },
+        {
+          "number": "2",
+          "name": "A",
+          "net": "HW_ENABLE",
+          "localx": -22.08,
+          "localy": 0.0
+        },
+        {
+          "number": "3",
+          "name": "GND",
+          "net": "GND",
+          "localx": -22.08,
+          "localy": -3.81
+        },
+        {
+          "number": "4",
+          "name": "Y",
+          "net": "K1_GATE_DRIVE",
+          "localx": 22.08,
+          "localy": 3.81
+        },
+        {
+          "number": "5",
+          "name": "VCC",
+          "net": "V5",
+          "localx": 22.08,
+          "localy": 0.0
+        }
+      ],
+      "note": "TTL input accepts 3.3V; 5V gate drive makes FQP30N06L Rds specification applicable",
+      "uuid": "6dc522b3-d437-4096-b7c0-ca5bd00f1826",
+      "sheet": "02_watchdog"
+    },
+    {
+      "ref": "RSA",
+      "value": "10k",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "SOFT_ARM",
+          "localx": -22.08,
+          "localy": 0.0
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "GND",
+          "localx": 22.08,
+          "localy": 0.0
+        }
+      ],
+      "note": "",
+      "uuid": "2ba11059-ea75-49f7-820c-11f024ffd433",
+      "sheet": "02_watchdog"
+    },
+    {
+      "ref": "RHB",
+      "value": "10k",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "HEARTBEAT",
+          "localx": -22.08,
+          "localy": 0.0
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "GND",
+          "localx": 22.08,
+          "localy": 0.0
+        }
+      ],
+      "note": "",
+      "uuid": "b41f2401-30fc-41bb-bfdc-c74179109d07",
+      "sheet": "02_watchdog"
+    },
+    {
+      "ref": "RSLEEP",
+      "value": "10k",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "RUN_EN",
+          "localx": -22.08,
+          "localy": 0.0
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "GND",
+          "localx": 22.08,
+          "localy": 0.0
+        }
+      ],
+      "note": "",
+      "uuid": "acc1a05c-5687-4210-b63e-529b1d18fc34",
+      "sheet": "02_watchdog"
+    },
+    {
+      "ref": "RHW",
+      "value": "100k",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "HW_ENABLE",
+          "localx": -22.08,
+          "localy": 0.0
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "GND",
+          "localx": 22.08,
+          "localy": 0.0
+        }
+      ],
+      "note": "",
+      "uuid": "567ad55a-56c9-4177-8c87-a60e93eafabc",
+      "sheet": "02_watchdog"
+    },
+    {
+      "ref": "CWD",
+      "value": "100nF at IC",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "V3V3",
+          "localx": -22.08,
+          "localy": 0.0
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "GND",
+          "localx": 22.08,
+          "localy": 0.0
+        }
+      ],
+      "note": "",
+      "uuid": "cae9dce5-1a52-4873-91d9-978a43fe02ef",
+      "sheet": "02_watchdog"
+    },
+    {
+      "ref": "CFF",
+      "value": "100nF at IC",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "V3V3",
+          "localx": -22.08,
+          "localy": 0.0
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "GND",
+          "localx": 22.08,
+          "localy": 0.0
+        }
+      ],
+      "note": "",
+      "uuid": "4cab29a3-5371-4287-bfcd-c0c853caa45a",
+      "sheet": "02_watchdog"
+    },
+    {
+      "ref": "CSCH",
+      "value": "100nF at IC",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "V3V3",
+          "localx": -22.08,
+          "localy": 0.0
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "GND",
+          "localx": 22.08,
+          "localy": 0.0
+        }
+      ],
+      "note": "",
+      "uuid": "5771dcae-df8b-43bf-9a55-4e8233dd1eb8",
+      "sheet": "02_watchdog"
+    },
+    {
+      "ref": "CAND",
+      "value": "100nF at IC",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "V3V3",
+          "localx": -22.08,
+          "localy": 0.0
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "GND",
+          "localx": 22.08,
+          "localy": 0.0
+        }
+      ],
+      "note": "",
+      "uuid": "5fbf52e9-4c35-422b-9e34-1c6b46f8096b",
+      "sheet": "02_watchdog"
+    },
+    {
+      "ref": "CINV",
+      "value": "100nF at IC",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "V3V3",
+          "localx": -22.08,
+          "localy": 0.0
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "GND",
+          "localx": 22.08,
+          "localy": 0.0
+        }
+      ],
+      "note": "",
+      "uuid": "0d49fe9b-4bd3-4b85-9f81-79c6326a9355",
+      "sheet": "02_watchdog"
+    },
+    {
+      "ref": "CGATE",
+      "value": "100nF at IC",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "V5",
+          "localx": -22.08,
+          "localy": 0.0
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "GND",
+          "localx": 22.08,
+          "localy": 0.0
+        }
+      ],
+      "note": "",
+      "uuid": "094be934-a544-465f-b06d-ded1b86f46db",
+      "sheet": "02_watchdog"
+    },
+    {
+      "ref": "JPI",
+      "value": "Raspberry Pi5 40-pin header",
+      "pins": [
+        {
+          "number": "1",
+          "name": "3V3",
+          "net": "V3V3",
+          "localx": -22.08,
+          "localy": 22.86
+        },
+        {
+          "number": "6",
+          "name": "GND",
+          "net": "GND",
+          "localx": -22.08,
+          "localy": 19.05
+        },
+        {
+          "number": "3",
+          "name": "BCM2",
+          "net": "I2C_SDA",
+          "localx": -22.08,
+          "localy": 15.239999999999998
+        },
+        {
+          "number": "5",
+          "name": "BCM3",
+          "net": "I2C_SCL",
+          "localx": -22.08,
+          "localy": 11.43
+        },
+        {
+          "number": "11",
+          "name": "BCM17",
+          "net": "SPI1_CS1",
+          "localx": -22.08,
+          "localy": 7.619999999999999
+        },
+        {
+          "number": "12",
+          "name": "BCM18",
+          "net": "SPI1_CS0",
+          "localx": -22.08,
+          "localy": 3.8099999999999987
+        },
+        {
+          "number": "13",
+          "name": "BCM27",
+          "net": "SOFT_ARM",
+          "localx": -22.08,
+          "localy": 0.0
+        },
+        {
+          "number": "15",
+          "name": "BCM22",
+          "net": "HEARTBEAT",
+          "localx": -22.08,
+          "localy": -3.8100000000000023
+        },
+        {
+          "number": "16",
+          "name": "BCM23",
+          "net": "ESTOP_SENSE",
+          "localx": -22.08,
+          "localy": -7.620000000000001
+        },
+        {
+          "number": "18",
+          "name": "BCM24",
+          "net": "BUMPER_SENSE",
+          "localx": -22.08,
+          "localy": -11.43
+        },
+        {
+          "number": "19",
+          "name": "BCM10",
+          "net": "SPI0_MOSI",
+          "localx": -22.08,
+          "localy": -15.240000000000002
+        },
+        {
+          "number": "21",
+          "name": "BCM9",
+          "net": "SPI0_MISO",
+          "localx": -22.08,
+          "localy": -19.050000000000004
+        },
+        {
+          "number": "22",
+          "name": "BCM25",
+          "net": "CLIFF_SENSE",
+          "localx": -22.08,
+          "localy": -22.86
+        },
+        {
+          "number": "23",
+          "name": "BCM11",
+          "net": "SPI0_SCLK",
+          "localx": 22.08,
+          "localy": 22.86
+        },
+        {
+          "number": "24",
+          "name": "BCM8",
+          "net": "SPI0_CS0",
+          "localx": 22.08,
+          "localy": 19.05
+        },
+        {
+          "number": "26",
+          "name": "BCM7",
+          "net": "SPI0_CS1",
+          "localx": 22.08,
+          "localy": 15.239999999999998
+        },
+        {
+          "number": "29",
+          "name": "BCM5",
+          "net": "GUARD_SENSE",
+          "localx": 22.08,
+          "localy": 11.43
+        },
+        {
+          "number": "31",
+          "name": "BCM6",
+          "net": "FULL_SENSE",
+          "localx": 22.08,
+          "localy": 7.619999999999999
+        },
+        {
+          "number": "32",
+          "name": "BCM12",
+          "net": "INTAKE_BEAM",
+          "localx": 22.08,
+          "localy": 3.8099999999999987
+        },
+        {
+          "number": "33",
+          "name": "BCM13",
+          "net": "DROP_BEAM",
+          "localx": 22.08,
+          "localy": 0.0
+        },
+        {
+          "number": "35",
+          "name": "BCM19",
+          "net": "SPI1_MISO",
+          "localx": 22.08,
+          "localy": -3.8100000000000023
+        },
+        {
+          "number": "36",
+          "name": "BCM16",
+          "net": "DRV_FAULT_N",
+          "localx": 22.08,
+          "localy": -7.620000000000001
+        },
+        {
+          "number": "37",
+          "name": "BCM26",
+          "net": "K1_SENSE",
+          "localx": 22.08,
+          "localy": -11.43
+        },
+        {
+          "number": "38",
+          "name": "BCM20",
+          "net": "SPI1_MOSI",
+          "localx": 22.08,
+          "localy": -15.240000000000002
+        },
+        {
+          "number": "40",
+          "name": "BCM21",
+          "net": "SPI1_SCLK",
+          "localx": 22.08,
+          "localy": -19.050000000000004
+        }
+      ],
+      "note": "Number is physical header pin; BCM is in pin name. Omitted pins not connected; power arrives via USB-C.",
+      "uuid": "8a3f263c-9108-4d4d-a070-b83c5095e702",
+      "sheet": "03_io"
+    },
+    {
+      "ref": "UADC",
+      "value": "MCP3008 / DIP-16",
+      "pins": [
+        {
+          "number": "1",
+          "name": "CH0",
+          "net": "ADC_BAT",
+          "localx": -22.08,
+          "localy": 13.335
+        },
+        {
+          "number": "2",
+          "name": "CH1",
+          "net": "CUR0",
+          "localx": -22.08,
+          "localy": 9.525
+        },
+        {
+          "number": "3",
+          "name": "CH2",
+          "net": "CUR1",
+          "localx": -22.08,
+          "localy": 5.715000000000001
+        },
+        {
+          "number": "4",
+          "name": "CH3",
+          "net": "CUR2",
+          "localx": -22.08,
+          "localy": 1.9050000000000011
+        },
+        {
+          "number": "5",
+          "name": "CH4",
+          "net": "CUR3",
+          "localx": -22.08,
+          "localy": -1.9049999999999994
+        },
+        {
+          "number": "6",
+          "name": "CH5",
+          "net": "RANGE_OUT",
+          "localx": -22.08,
+          "localy": -5.715
+        },
+        {
+          "number": "7",
+          "name": "CH6",
+          "net": "GND",
+          "localx": -22.08,
+          "localy": -9.524999999999999
+        },
+        {
+          "number": "8",
+          "name": "CH7",
+          "net": "GND",
+          "localx": -22.08,
+          "localy": -13.335
+        },
+        {
+          "number": "9",
+          "name": "DGND",
+          "net": "GND",
+          "localx": 22.08,
+          "localy": 13.335
+        },
+        {
+          "number": "10",
+          "name": "nCS",
+          "net": "SPI0_CS0",
+          "localx": 22.08,
+          "localy": 9.525
+        },
+        {
+          "number": "11",
+          "name": "DIN",
+          "net": "SPI0_MOSI",
+          "localx": 22.08,
+          "localy": 5.715000000000001
+        },
+        {
+          "number": "12",
+          "name": "DOUT",
+          "net": "SPI0_MISO",
+          "localx": 22.08,
+          "localy": 1.9050000000000011
+        },
+        {
+          "number": "13",
+          "name": "CLK",
+          "net": "SPI0_SCLK",
+          "localx": 22.08,
+          "localy": -1.9049999999999994
+        },
+        {
+          "number": "14",
+          "name": "AGND",
+          "net": "GND",
+          "localx": 22.08,
+          "localy": -5.715
+        },
+        {
+          "number": "15",
+          "name": "VREF",
+          "net": "V3V3",
+          "localx": 22.08,
+          "localy": -9.524999999999999
+        },
+        {
+          "number": "16",
+          "name": "VDD",
+          "net": "V3V3",
+          "localx": 22.08,
+          "localy": -13.335
+        }
+      ],
+      "note": "",
+      "uuid": "89ecf8d7-cb94-479b-a3e1-9505453aec55",
+      "sheet": "03_io"
+    },
+    {
+      "ref": "UDIR",
+      "value": "MCP23S17 / DIP-28",
+      "pins": [
+        {
+          "number": "9",
+          "name": "VDD",
+          "net": "V3V3",
+          "localx": -22.08,
+          "localy": 11.43
+        },
+        {
+          "number": "10",
+          "name": "VSS",
+          "net": "GND",
+          "localx": -22.08,
+          "localy": 7.619999999999999
+        },
+        {
+          "number": "11",
+          "name": "nCS",
+          "net": "SPI0_CS1",
+          "localx": -22.08,
+          "localy": 3.8099999999999996
+        },
+        {
+          "number": "12",
+          "name": "SCK",
+          "net": "SPI0_SCLK",
+          "localx": -22.08,
+          "localy": 0.0
+        },
+        {
+          "number": "13",
+          "name": "SI",
+          "net": "SPI0_MOSI",
+          "localx": -22.08,
+          "localy": -3.8100000000000005
+        },
+        {
+          "number": "14",
+          "name": "SO",
+          "net": "SPI0_MISO",
+          "localx": -22.08,
+          "localy": -7.620000000000001
+        },
+        {
+          "number": "15",
+          "name": "A0",
+          "net": "GND",
+          "localx": -22.08,
+          "localy": -11.43
+        },
+        {
+          "number": "16",
+          "name": "A1",
+          "net": "GND",
+          "localx": 22.08,
+          "localy": 11.43
+        },
+        {
+          "number": "17",
+          "name": "A2",
+          "net": "GND",
+          "localx": 22.08,
+          "localy": 7.619999999999999
+        },
+        {
+          "number": "18",
+          "name": "nRESET",
+          "net": "DIR_RST",
+          "localx": 22.08,
+          "localy": 3.8099999999999996
+        },
+        {
+          "number": "21",
+          "name": "GPA0",
+          "net": "DIR0",
+          "localx": 22.08,
+          "localy": 0.0
+        },
+        {
+          "number": "22",
+          "name": "GPA1",
+          "net": "DIR1",
+          "localx": 22.08,
+          "localy": -3.8100000000000005
+        },
+        {
+          "number": "23",
+          "name": "GPA2",
+          "net": "DIR2",
+          "localx": 22.08,
+          "localy": -7.620000000000001
+        },
+        {
+          "number": "24",
+          "name": "GPA3",
+          "net": "DIR3",
+          "localx": 22.08,
+          "localy": -11.43
+        }
+      ],
+      "note": "Remaining GPIO are unused inputs; enable pull-ups in software. INT pins unused.",
+      "uuid": "3c3b6503-7f28-41dc-9d20-dfd4108ff0eb",
+      "sheet": "03_io"
+    },
+    {
+      "ref": "RDIR",
+      "value": "10k",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "V3V3",
+          "localx": -22.08,
+          "localy": 0.0
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "DIR_RST",
+          "localx": 22.08,
+          "localy": 0.0
+        }
+      ],
+      "note": "",
+      "uuid": "92de7f30-0e48-499c-8757-3c617fec5098",
+      "sheet": "03_io"
+    },
+    {
+      "ref": "UPWM",
+      "value": "PCA9685 / TSSOP28",
+      "pins": [
+        {
+          "number": "1",
+          "name": "A0",
+          "net": "GND",
+          "localx": -22.08,
+          "localy": 13.335
+        },
+        {
+          "number": "2",
+          "name": "A1",
+          "net": "GND",
+          "localx": -22.08,
+          "localy": 9.525
+        },
+        {
+          "number": "3",
+          "name": "A2",
+          "net": "GND",
+          "localx": -22.08,
+          "localy": 5.715000000000001
+        },
+        {
+          "number": "4",
+          "name": "A3",
+          "net": "GND",
+          "localx": -22.08,
+          "localy": 1.9050000000000011
+        },
+        {
+          "number": "5",
+          "name": "A4",
+          "net": "GND",
+          "localx": -22.08,
+          "localy": -1.9049999999999994
+        },
+        {
+          "number": "6",
+          "name": "LED0",
+          "net": "PWM0",
+          "localx": -22.08,
+          "localy": -5.715
+        },
+        {
+          "number": "7",
+          "name": "LED1",
+          "net": "PWM1",
+          "localx": -22.08,
+          "localy": -9.524999999999999
+        },
+        {
+          "number": "8",
+          "name": "LED2",
+          "net": "PWM2",
+          "localx": -22.08,
+          "localy": -13.335
+        },
+        {
+          "number": "9",
+          "name": "LED3",
+          "net": "PWM3",
+          "localx": 22.08,
+          "localy": 13.335
+        },
+        {
+          "number": "14",
+          "name": "VSS",
+          "net": "GND",
+          "localx": 22.08,
+          "localy": 9.525
+        },
+        {
+          "number": "23",
+          "name": "nOE",
+          "net": "PWM_OE",
+          "localx": 22.08,
+          "localy": 5.715000000000001
+        },
+        {
+          "number": "24",
+          "name": "A5",
+          "net": "GND",
+          "localx": 22.08,
+          "localy": 1.9050000000000011
+        },
+        {
+          "number": "25",
+          "name": "SCL",
+          "net": "I2C_SCL",
+          "localx": 22.08,
+          "localy": -1.9049999999999994
+        },
+        {
+          "number": "26",
+          "name": "SDA",
+          "net": "I2C_SDA",
+          "localx": 22.08,
+          "localy": -5.715
+        },
+        {
+          "number": "27",
+          "name": "EXTCLK",
+          "net": "GND",
+          "localx": 22.08,
+          "localy": -9.524999999999999
+        },
+        {
+          "number": "28",
+          "name": "VDD",
+          "net": "V3V3",
+          "localx": 22.08,
+          "localy": -13.335
+        }
+      ],
+      "note": "Internal oscillator; nominal1017Hz. LED4..15 not connected. No 20kHz claim.",
+      "uuid": "c3db4ab9-d755-414c-921e-ea314256d6c0",
+      "sheet": "03_io"
+    },
+    {
+      "ref": "ROE",
+      "value": "10k",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "V3V3",
+          "localx": -22.08,
+          "localy": 0.0
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "PWM_OE",
+          "localx": 22.08,
+          "localy": 0.0
+        }
+      ],
+      "note": "",
+      "uuid": "7fedce45-d425-4c31-859e-8b4f8358586d",
+      "sheet": "03_io"
+    },
+    {
+      "ref": "UENC0",
+      "value": "LS7366R / DIP14",
+      "pins": [
+        {
+          "number": "1",
+          "name": "fCKO",
+          "net": null,
+          "localx": -22.08,
+          "localy": 11.43
+        },
+        {
+          "number": "2",
+          "name": "fCKi",
+          "net": "ENC_CLK",
+          "localx": -22.08,
+          "localy": 7.619999999999999
+        },
+        {
+          "number": "3",
+          "name": "VSS",
+          "net": "GND",
+          "localx": -22.08,
+          "localy": 3.8099999999999996
+        },
+        {
+          "number": "4",
+          "name": "nSS",
+          "net": "SPI1_CS0",
+          "localx": -22.08,
+          "localy": 0.0
+        },
+        {
+          "number": "5",
+          "name": "SCK",
+          "net": "SPI1_SCLK",
+          "localx": -22.08,
+          "localy": -3.8100000000000005
+        },
+        {
+          "number": "6",
+          "name": "MISO",
+          "net": "SPI1_MISO",
+          "localx": -22.08,
+          "localy": -7.620000000000001
+        },
+        {
+          "number": "7",
+          "name": "MOSI",
+          "net": "SPI1_MOSI",
+          "localx": -22.08,
+          "localy": -11.43
+        },
+        {
+          "number": "8",
+          "name": "nLFLAG",
+          "net": null,
+          "localx": 22.08,
+          "localy": 11.43
+        },
+        {
+          "number": "9",
+          "name": "nDFLAG",
+          "net": null,
+          "localx": 22.08,
+          "localy": 7.619999999999999
+        },
+        {
+          "number": "10",
+          "name": "nINDEX",
+          "net": "V3V3",
+          "localx": 22.08,
+          "localy": 3.8099999999999996
+        },
+        {
+          "number": "11",
+          "name": "B",
+          "net": "ENC0B",
+          "localx": 22.08,
+          "localy": 0.0
+        },
+        {
+          "number": "12",
+          "name": "A",
+          "net": "ENC0A",
+          "localx": 22.08,
+          "localy": -3.8100000000000005
+        },
+        {
+          "number": "13",
+          "name": "CNT_EN",
+          "net": "V3V3",
+          "localx": 22.08,
+          "localy": -7.620000000000001
+        },
+        {
+          "number": "14",
+          "name": "VDD",
+          "net": "V3V3",
+          "localx": 22.08,
+          "localy": -11.43
+        }
+      ],
+      "note": "",
+      "uuid": "c1a184fd-2134-4cc8-85e6-421470e8dbfe",
+      "sheet": "03_io"
+    },
+    {
+      "ref": "JENC0",
+      "value": "Encoder / 3.3V quadrature",
+      "pins": [
+        {
+          "number": "1",
+          "name": "3V3",
+          "net": "V3V3",
+          "localx": -22.08,
+          "localy": 1.905
+        },
+        {
+          "number": "2",
+          "name": "A",
+          "net": "ENC0A",
+          "localx": -22.08,
+          "localy": -1.905
+        },
+        {
+          "number": "3",
+          "name": "B",
+          "net": "ENC0B",
+          "localx": 22.08,
+          "localy": 1.905
+        },
+        {
+          "number": "4",
+          "name": "GND",
+          "net": "GND",
+          "localx": 22.08,
+          "localy": -1.905
+        }
+      ],
+      "note": "2048 effective counts/wheel revolution required by current Java constants; otherwise change and recalibrate.",
+      "uuid": "584eba13-8613-4903-873e-938fa5673b9f",
+      "sheet": "03_io"
+    },
+    {
+      "ref": "UENC1",
+      "value": "LS7366R / DIP14",
+      "pins": [
+        {
+          "number": "1",
+          "name": "fCKO",
+          "net": null,
+          "localx": -22.08,
+          "localy": 11.43
+        },
+        {
+          "number": "2",
+          "name": "fCKi",
+          "net": "ENC_CLK",
+          "localx": -22.08,
+          "localy": 7.619999999999999
+        },
+        {
+          "number": "3",
+          "name": "VSS",
+          "net": "GND",
+          "localx": -22.08,
+          "localy": 3.8099999999999996
+        },
+        {
+          "number": "4",
+          "name": "nSS",
+          "net": "SPI1_CS1",
+          "localx": -22.08,
+          "localy": 0.0
+        },
+        {
+          "number": "5",
+          "name": "SCK",
+          "net": "SPI1_SCLK",
+          "localx": -22.08,
+          "localy": -3.8100000000000005
+        },
+        {
+          "number": "6",
+          "name": "MISO",
+          "net": "SPI1_MISO",
+          "localx": -22.08,
+          "localy": -7.620000000000001
+        },
+        {
+          "number": "7",
+          "name": "MOSI",
+          "net": "SPI1_MOSI",
+          "localx": -22.08,
+          "localy": -11.43
+        },
+        {
+          "number": "8",
+          "name": "nLFLAG",
+          "net": null,
+          "localx": 22.08,
+          "localy": 11.43
+        },
+        {
+          "number": "9",
+          "name": "nDFLAG",
+          "net": null,
+          "localx": 22.08,
+          "localy": 7.619999999999999
+        },
+        {
+          "number": "10",
+          "name": "nINDEX",
+          "net": "V3V3",
+          "localx": 22.08,
+          "localy": 3.8099999999999996
+        },
+        {
+          "number": "11",
+          "name": "B",
+          "net": "ENC1B",
+          "localx": 22.08,
+          "localy": 0.0
+        },
+        {
+          "number": "12",
+          "name": "A",
+          "net": "ENC1A",
+          "localx": 22.08,
+          "localy": -3.8100000000000005
+        },
+        {
+          "number": "13",
+          "name": "CNT_EN",
+          "net": "V3V3",
+          "localx": 22.08,
+          "localy": -7.620000000000001
+        },
+        {
+          "number": "14",
+          "name": "VDD",
+          "net": "V3V3",
+          "localx": 22.08,
+          "localy": -11.43
+        }
+      ],
+      "note": "",
+      "uuid": "d72f87c0-32ff-4519-b94a-e1fc033764fa",
+      "sheet": "03_io"
+    },
+    {
+      "ref": "JENC1",
+      "value": "Encoder / 3.3V quadrature",
+      "pins": [
+        {
+          "number": "1",
+          "name": "3V3",
+          "net": "V3V3",
+          "localx": -22.08,
+          "localy": 1.905
+        },
+        {
+          "number": "2",
+          "name": "A",
+          "net": "ENC1A",
+          "localx": -22.08,
+          "localy": -1.905
+        },
+        {
+          "number": "3",
+          "name": "B",
+          "net": "ENC1B",
+          "localx": 22.08,
+          "localy": 1.905
+        },
+        {
+          "number": "4",
+          "name": "GND",
+          "net": "GND",
+          "localx": 22.08,
+          "localy": -1.905
+        }
+      ],
+      "note": "2048 effective counts/wheel revolution required by current Java constants; otherwise change and recalibrate.",
+      "uuid": "78021d27-3131-4278-be37-54fb4bf8a725",
+      "sheet": "03_io"
+    },
+    {
+      "ref": "X1",
+      "value": "1MHz CMOS oscillator / 3.3V",
+      "pins": [
+        {
+          "number": "1",
+          "name": "OE",
+          "net": "V3V3",
+          "localx": -22.08,
+          "localy": 1.905
+        },
+        {
+          "number": "2",
+          "name": "GND",
+          "net": "GND",
+          "localx": -22.08,
+          "localy": -1.905
+        },
+        {
+          "number": "3",
+          "name": "OUT",
+          "net": "ENC_CLK",
+          "localx": 22.08,
+          "localy": 1.905
+        },
+        {
+          "number": "4",
+          "name": "VDD",
+          "net": "V3V3",
+          "localx": 22.08,
+          "localy": -1.905
+        }
+      ],
+      "note": "Oscillator footprint/package pinout to be selected; interface numbers only.",
+      "uuid": "8ddfe441-1629-4384-b336-9110346af026",
+      "sheet": "03_io"
+    },
+    {
+      "ref": "CADC",
+      "value": "100nF at IC",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "V3V3",
+          "localx": -22.08,
+          "localy": 0.0
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "GND",
+          "localx": 22.08,
+          "localy": 0.0
+        }
+      ],
+      "note": "",
+      "uuid": "c01b4849-081b-43a3-8444-a81137fb09ba",
+      "sheet": "03_io"
+    },
+    {
+      "ref": "CDIR",
+      "value": "100nF at IC",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "V3V3",
+          "localx": -22.08,
+          "localy": 0.0
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "GND",
+          "localx": 22.08,
+          "localy": 0.0
+        }
+      ],
+      "note": "",
+      "uuid": "7b45be8c-46cc-4bfb-ae76-4afca74797f7",
+      "sheet": "03_io"
+    },
+    {
+      "ref": "CPWM",
+      "value": "100nF at IC",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "V3V3",
+          "localx": -22.08,
+          "localy": 0.0
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "GND",
+          "localx": 22.08,
+          "localy": 0.0
+        }
+      ],
+      "note": "",
+      "uuid": "2b122b4d-025d-4e82-994e-dfb927e9c596",
+      "sheet": "03_io"
+    },
+    {
+      "ref": "CENC0",
+      "value": "100nF at IC",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "V3V3",
+          "localx": -22.08,
+          "localy": 0.0
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "GND",
+          "localx": 22.08,
+          "localy": 0.0
+        }
+      ],
+      "note": "",
+      "uuid": "8cd9c937-9894-4554-8ad4-095100f3a7b4",
+      "sheet": "03_io"
+    },
+    {
+      "ref": "CENC1",
+      "value": "100nF at IC",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "V3V3",
+          "localx": -22.08,
+          "localy": 0.0
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "GND",
+          "localx": 22.08,
+          "localy": 0.0
+        }
+      ],
+      "note": "",
+      "uuid": "1b31c982-3b8f-4474-acd5-03295d5368e8",
+      "sheet": "03_io"
+    },
+    {
+      "ref": "CX",
+      "value": "100nF at IC",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "V3V3",
+          "localx": -22.08,
+          "localy": 0.0
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "GND",
+          "localx": 22.08,
+          "localy": 0.0
+        }
+      ],
+      "note": "",
+      "uuid": "c634b211-ee3e-4387-9926-be90b8347543",
+      "sheet": "03_io"
+    },
+    {
+      "ref": "SES",
+      "value": "NC healthy; dedicated isolated auxiliary pole",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "ESTOP_SENSE",
+          "localx": -22.08,
+          "localy": 0.0
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "GND",
+          "localx": 22.08,
+          "localy": 0.0
+        }
+      ],
+      "note": "",
+      "uuid": "b8cd62c9-04a5-49d0-9154-9de7d9c42454",
+      "sheet": "04_sensors"
+    },
+    {
+      "ref": "RSES",
+      "value": "10k external pullup",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "V3V3",
+          "localx": -22.08,
+          "localy": 0.0
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "ESTOP_SENSE",
+          "localx": 22.08,
+          "localy": 0.0
+        }
+      ],
+      "note": "",
+      "uuid": "d4739233-5ec7-463b-9a9b-8e5c0ddc4a54",
+      "sheet": "04_sensors"
+    },
+    {
+      "ref": "SBU",
+      "value": "NC healthy; separate contact from CLEAR chain",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "BUMPER_SENSE",
+          "localx": -22.08,
+          "localy": 0.0
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "GND",
+          "localx": 22.08,
+          "localy": 0.0
+        }
+      ],
+      "note": "",
+      "uuid": "2d01e6aa-945d-4b1e-8b4e-4cd1658cc334",
+      "sheet": "04_sensors"
+    },
+    {
+      "ref": "RSBU",
+      "value": "10k external pullup",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "V3V3",
+          "localx": -22.08,
+          "localy": 0.0
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "BUMPER_SENSE",
+          "localx": 22.08,
+          "localy": 0.0
+        }
+      ],
+      "note": "",
+      "uuid": "1f0b62bc-d000-4d0d-ac5e-6b6e7bdcd489",
+      "sheet": "04_sensors"
+    },
+    {
+      "ref": "SCL",
+      "value": "NC healthy from validated cliff detector",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "CLIFF_SENSE",
+          "localx": -22.08,
+          "localy": 0.0
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "GND",
+          "localx": 22.08,
+          "localy": 0.0
+        }
+      ],
+      "note": "",
+      "uuid": "2f02d0d8-44e8-431b-afc1-673abd82ed78",
+      "sheet": "04_sensors"
+    },
+    {
+      "ref": "RSCL",
+      "value": "10k external pullup",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "V3V3",
+          "localx": -22.08,
+          "localy": 0.0
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "CLIFF_SENSE",
+          "localx": 22.08,
+          "localy": 0.0
+        }
+      ],
+      "note": "",
+      "uuid": "f5de82b1-2935-41aa-bf4b-8910fad40d32",
+      "sheet": "04_sensors"
+    },
+    {
+      "ref": "SGU",
+      "value": "NC healthy",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "GUARD_SENSE",
+          "localx": -22.08,
+          "localy": 0.0
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "GND",
+          "localx": 22.08,
+          "localy": 0.0
+        }
+      ],
+      "note": "",
+      "uuid": "70550711-38e7-4871-960f-983091a67433",
+      "sheet": "04_sensors"
+    },
+    {
+      "ref": "RSGU",
+      "value": "10k external pullup",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "V3V3",
+          "localx": -22.08,
+          "localy": 0.0
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "GUARD_SENSE",
+          "localx": 22.08,
+          "localy": 0.0
+        }
+      ],
+      "note": "",
+      "uuid": "c6b442ee-28fe-4fd4-b075-a0c746bfd522",
+      "sheet": "04_sensors"
+    },
+    {
+      "ref": "SFU",
+      "value": "NC healthy; opens when hopper full",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "FULL_SENSE",
+          "localx": -22.08,
+          "localy": 0.0
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "GND",
+          "localx": 22.08,
+          "localy": 0.0
+        }
+      ],
+      "note": "",
+      "uuid": "dafa4380-4be4-406f-9e18-dcb3123666d2",
+      "sheet": "04_sensors"
+    },
+    {
+      "ref": "RSFU",
+      "value": "10k external pullup",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "V3V3",
+          "localx": -22.08,
+          "localy": 0.0
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "FULL_SENSE",
+          "localx": 22.08,
+          "localy": 0.0
+        }
+      ],
+      "note": "",
+      "uuid": "6e401d69-9309-478e-bd82-3845811ad6bd",
+      "sheet": "04_sensors"
+    },
+    {
+      "ref": "JB0",
+      "value": "Beam receiver / open collector",
+      "pins": [
+        {
+          "number": "1",
+          "name": "V5",
+          "net": "V5",
+          "localx": -22.08,
+          "localy": 1.905
+        },
+        {
+          "number": "2",
+          "name": "OC_3V3",
+          "net": "INTAKE_BEAM",
+          "localx": -22.08,
+          "localy": -1.905
+        },
+        {
+          "number": "3",
+          "name": "GND",
+          "net": "GND",
+          "localx": 22.08,
+          "localy": 1.905
+        }
+      ],
+      "note": "LOW=beam broken; 3.3V-safe open collector, not a 24V push-pull output",
+      "uuid": "a86ce733-a25a-4795-beba-739661762fd1",
+      "sheet": "04_sensors"
+    },
+    {
+      "ref": "RB0",
+      "value": "10k",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "V3V3",
+          "localx": -22.08,
+          "localy": 0.0
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "INTAKE_BEAM",
+          "localx": 22.08,
+          "localy": 0.0
+        }
+      ],
+      "note": "",
+      "uuid": "825dba01-2874-404a-bd26-0f89c04dcf46",
+      "sheet": "04_sensors"
+    },
+    {
+      "ref": "JB1",
+      "value": "Beam receiver / open collector",
+      "pins": [
+        {
+          "number": "1",
+          "name": "V5",
+          "net": "V5",
+          "localx": -22.08,
+          "localy": 1.905
+        },
+        {
+          "number": "2",
+          "name": "OC_3V3",
+          "net": "DROP_BEAM",
+          "localx": -22.08,
+          "localy": -1.905
+        },
+        {
+          "number": "3",
+          "name": "GND",
+          "net": "GND",
+          "localx": 22.08,
+          "localy": 1.905
+        }
+      ],
+      "note": "LOW=beam broken; 3.3V-safe open collector, not a 24V push-pull output",
+      "uuid": "f23b0b9b-c336-494a-bb0b-c38d937bf322",
+      "sheet": "04_sensors"
+    },
+    {
+      "ref": "RB1",
+      "value": "10k",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "V3V3",
+          "localx": -22.08,
+          "localy": 0.0
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "DROP_BEAM",
+          "localx": 22.08,
+          "localy": 0.0
+        }
+      ],
+      "note": "",
+      "uuid": "cf38737a-8a93-4e64-8417-4feccbaf2276",
+      "sheet": "04_sensors"
+    },
+    {
+      "ref": "RF",
+      "value": "10k external pullup",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "V3V3",
+          "localx": -22.08,
+          "localy": 0.0
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "DRV_FAULT_N",
+          "localx": 22.08,
+          "localy": 0.0
+        }
+      ],
+      "note": "",
+      "uuid": "4d60be39-5b57-47c5-88c7-21559d6e86e9",
+      "sheet": "04_sensors"
+    },
+    {
+      "ref": "RK",
+      "value": "10k external pullup",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "V3V3",
+          "localx": -22.08,
+          "localy": 0.0
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "K1_SENSE",
+          "localx": 22.08,
+          "localy": 0.0
+        }
+      ],
+      "note": "",
+      "uuid": "2b01f339-026e-4302-a442-0277fb0b8d92",
+      "sheet": "04_sensors"
+    },
+    {
+      "ref": "JRANGE",
+      "value": "Calibrated analog obstacle sensor",
+      "pins": [
+        {
+          "number": "1",
+          "name": "V5",
+          "net": "V5",
+          "localx": -22.08,
+          "localy": 1.905
+        },
+        {
+          "number": "2",
+          "name": "OUT_0_3V3",
+          "net": "RANGE_OUT",
+          "localx": -22.08,
+          "localy": -1.905
+        },
+        {
+          "number": "3",
+          "name": "GND",
+          "net": "GND",
+          "localx": 22.08,
+          "localy": 1.905
+        }
+      ],
+      "note": "Output must remain0..3.3V with external conditioning. Exact sensor/range curve is a commissioning decision; config rejects missing table.",
+      "uuid": "e7f0890a-e130-4449-9867-e467830c9ccc",
+      "sheet": "04_sensors"
+    },
+    {
+      "ref": "FM0",
+      "value": "4A DC",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "VM_BUS",
+          "localx": -22.08,
+          "localy": 0.0
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "M0_VM",
+          "localx": 22.08,
+          "localy": 0.0
+        }
+      ],
+      "note": "",
+      "uuid": "f968ac90-32c5-41b4-9720-72438eff8184",
+      "sheet": "05_motor_left"
+    },
+    {
+      "ref": "UM0",
+      "value": "DRV8874 HTSSOP16-PAD",
+      "pins": [
+        {
+          "number": "1",
+          "name": "EN",
+          "net": "PWM0",
+          "localx": -22.08,
+          "localy": 15.24
+        },
+        {
+          "number": "2",
+          "name": "PH",
+          "net": "DIR0",
+          "localx": -22.08,
+          "localy": 11.43
+        },
+        {
+          "number": "3",
+          "name": "nSLEEP",
+          "net": "RUN_EN",
+          "localx": -22.08,
+          "localy": 7.62
+        },
+        {
+          "number": "4",
+          "name": "nFAULT",
+          "net": "DRV_FAULT_N",
+          "localx": -22.08,
+          "localy": 3.8100000000000005
+        },
+        {
+          "number": "5",
+          "name": "VREF",
+          "net": "M0_VREF",
+          "localx": -22.08,
+          "localy": 0.0
+        },
+        {
+          "number": "6",
+          "name": "IPROPI",
+          "net": "M0_IP",
+          "localx": -22.08,
+          "localy": -3.8100000000000005
+        },
+        {
+          "number": "7",
+          "name": "IMODE",
+          "net": "GND",
+          "localx": -22.08,
+          "localy": -7.619999999999999
+        },
+        {
+          "number": "8",
+          "name": "OUT1",
+          "net": "M0_OUT1",
+          "localx": -22.08,
+          "localy": -11.430000000000001
+        },
+        {
+          "number": "9",
+          "name": "PGND",
+          "net": "GND",
+          "localx": -22.08,
+          "localy": -15.24
+        },
+        {
+          "number": "10",
+          "name": "OUT2",
+          "net": "M0_OUT2",
+          "localx": 22.08,
+          "localy": 15.24
+        },
+        {
+          "number": "11",
+          "name": "VM",
+          "net": "M0_VM",
+          "localx": 22.08,
+          "localy": 11.43
+        },
+        {
+          "number": "12",
+          "name": "VCP",
+          "net": "M0_VCP",
+          "localx": 22.08,
+          "localy": 7.62
+        },
+        {
+          "number": "13",
+          "name": "CPH",
+          "net": "M0_CPH",
+          "localx": 22.08,
+          "localy": 3.8100000000000005
+        },
+        {
+          "number": "14",
+          "name": "CPL",
+          "net": "M0_CPL",
+          "localx": 22.08,
+          "localy": 0.0
+        },
+        {
+          "number": "15",
+          "name": "GND",
+          "net": "GND",
+          "localx": 22.08,
+          "localy": -3.8100000000000005
+        },
+        {
+          "number": "16",
+          "name": "PMODE",
+          "net": "GND",
+          "localx": 22.08,
+          "localy": -7.619999999999999
+        },
+        {
+          "number": "17",
+          "name": "PAD",
+          "net": "GND",
+          "localx": 22.08,
+          "localy": -11.430000000000001
+        }
+      ],
+      "note": "PMODE=0 PH/EN. IMODE=0 current regulation; verify layout/thermal ratings, 6A peak is NOT continuous.",
+      "uuid": "43da6b15-14ac-41b9-aee6-5c998fd1370c",
+      "sheet": "05_motor_left"
+    },
+    {
+      "ref": "M0",
+      "value": "24V brushed gearmotor",
+      "pins": [
+        {
+          "number": "1",
+          "name": "+ / forward",
+          "net": "M0_OUT1",
+          "localx": -22.08,
+          "localy": 0.0
+        },
+        {
+          "number": "2",
+          "name": "- / reverse",
+          "net": "M0_OUT2",
+          "localx": 22.08,
+          "localy": 0.0
+        }
+      ],
+      "note": "30rpm >=4Nm loaded",
+      "uuid": "84489cbd-bae1-496d-83eb-0212b6bcd38e",
+      "sheet": "05_motor_left"
+    },
+    {
+      "ref": "CCP0",
+      "value": "22nF / 50V",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "M0_CPH",
+          "localx": -22.08,
+          "localy": 0.0
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "M0_CPL",
+          "localx": 22.08,
+          "localy": 0.0
+        }
+      ],
+      "note": "",
+      "uuid": "0b2df693-6dde-4f2e-b226-adf032832ed5",
+      "sheet": "05_motor_left"
+    },
+    {
+      "ref": "CVCP0",
+      "value": "100nF /16V",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "M0_VCP",
+          "localx": -22.08,
+          "localy": 0.0
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "M0_VM",
+          "localx": 22.08,
+          "localy": 0.0
+        }
+      ],
+      "note": "VCP capacitor is to VM, NOT ground",
+      "uuid": "d1a15b3d-899b-4152-b93a-7aa8526e2462",
+      "sheet": "05_motor_left"
+    },
+    {
+      "ref": "CVM0",
+      "value": "100nF /50V",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "M0_VM",
+          "localx": -22.08,
+          "localy": 0.0
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "GND",
+          "localx": 22.08,
+          "localy": 0.0
+        }
+      ],
+      "note": "",
+      "uuid": "b652d1e4-0c5b-425c-bf63-7d9185efbc24",
+      "sheet": "05_motor_left"
+    },
+    {
+      "ref": "CB0",
+      "value": "470uF /50V",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "M0_VM",
+          "localx": -22.08,
+          "localy": 0.0
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "GND",
+          "localx": 22.08,
+          "localy": 0.0
+        }
+      ],
+      "note": "",
+      "uuid": "c6904e1d-9425-4780-93c7-f85520f8f12f",
+      "sheet": "05_motor_left"
+    },
+    {
+      "ref": "RIP0",
+      "value": "1.5k /1%",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "M0_IP",
+          "localx": -22.08,
+          "localy": 0.0
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "GND",
+          "localx": 22.08,
+          "localy": 0.0
+        }
+      ],
+      "note": "",
+      "uuid": "9b818c96-940f-45f8-8622-10707b732778",
+      "sheet": "05_motor_left"
+    },
+    {
+      "ref": "RFLT0",
+      "value": "10k",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "M0_IP",
+          "localx": -22.08,
+          "localy": 0.0
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "CUR0",
+          "localx": 22.08,
+          "localy": 0.0
+        }
+      ],
+      "note": "",
+      "uuid": "81fcd397-e892-471c-b8e5-fee9a18b7772",
+      "sheet": "05_motor_left"
+    },
+    {
+      "ref": "CFLT0",
+      "value": "100nF",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "CUR0",
+          "localx": -22.08,
+          "localy": 0.0
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "GND",
+          "localx": 22.08,
+          "localy": 0.0
+        }
+      ],
+      "note": "Filtered current reflects duty/recirculation; calibrate software thresholds",
+      "uuid": "871dea2a-b095-4c2c-8f1f-b15344187c75",
+      "sheet": "05_motor_left"
+    },
+    {
+      "ref": "RVT0",
+      "value": "6.19k /1%",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "V3V3",
+          "localx": -22.08,
+          "localy": 0.0
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "M0_VREF",
+          "localx": 22.08,
+          "localy": 0.0
+        }
+      ],
+      "note": "",
+      "uuid": "16aeff3e-05a6-41da-9477-429c86a28ee9",
+      "sheet": "05_motor_left"
+    },
+    {
+      "ref": "RVB0",
+      "value": "10k /1%",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "M0_VREF",
+          "localx": -22.08,
+          "localy": 0.0
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "GND",
+          "localx": 22.08,
+          "localy": 0.0
+        }
+      ],
+      "note": "",
+      "uuid": "8b09d46e-0984-43a7-ba17-680562120f49",
+      "sheet": "05_motor_left"
+    },
+    {
+      "ref": "REN0",
+      "value": "47k",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "PWM0",
+          "localx": -22.08,
+          "localy": 0.0
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "GND",
+          "localx": 22.08,
+          "localy": 0.0
+        }
+      ],
+      "note": "",
+      "uuid": "b780b800-7f09-4325-b44b-97d888d24dfc",
+      "sheet": "05_motor_left"
+    },
+    {
+      "ref": "RPH0",
+      "value": "47k",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "DIR0",
+          "localx": -22.08,
+          "localy": 0.0
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "GND",
+          "localx": 22.08,
+          "localy": 0.0
+        }
+      ],
+      "note": "",
+      "uuid": "67ff73f0-0a8b-4532-8dfc-c1dd9a11d3aa",
+      "sheet": "05_motor_left"
+    },
+    {
+      "ref": "CM0",
+      "value": "10nF /50V motor suppression",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "M0_OUT1",
+          "localx": -22.08,
+          "localy": 0.0
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "M0_OUT2",
+          "localx": 22.08,
+          "localy": 0.0
+        }
+      ],
+      "note": "Validate suppression with driver current/EMI; twist motor pair",
+      "uuid": "d01f8453-9d39-4fc4-ace4-dccc509cfb8c",
+      "sheet": "05_motor_left"
+    },
+    {
+      "ref": "FM1",
+      "value": "4A DC",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "VM_BUS",
+          "localx": -22.08,
+          "localy": 0.0
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "M1_VM",
+          "localx": 22.08,
+          "localy": 0.0
+        }
+      ],
+      "note": "",
+      "uuid": "bee9277e-0422-4937-998d-3aea4f2084d9",
+      "sheet": "06_motor_right"
+    },
+    {
+      "ref": "UM1",
+      "value": "DRV8874 HTSSOP16-PAD",
+      "pins": [
+        {
+          "number": "1",
+          "name": "EN",
+          "net": "PWM1",
+          "localx": -22.08,
+          "localy": 15.24
+        },
+        {
+          "number": "2",
+          "name": "PH",
+          "net": "DIR1",
+          "localx": -22.08,
+          "localy": 11.43
+        },
+        {
+          "number": "3",
+          "name": "nSLEEP",
+          "net": "RUN_EN",
+          "localx": -22.08,
+          "localy": 7.62
+        },
+        {
+          "number": "4",
+          "name": "nFAULT",
+          "net": "DRV_FAULT_N",
+          "localx": -22.08,
+          "localy": 3.8100000000000005
+        },
+        {
+          "number": "5",
+          "name": "VREF",
+          "net": "M1_VREF",
+          "localx": -22.08,
+          "localy": 0.0
+        },
+        {
+          "number": "6",
+          "name": "IPROPI",
+          "net": "M1_IP",
+          "localx": -22.08,
+          "localy": -3.8100000000000005
+        },
+        {
+          "number": "7",
+          "name": "IMODE",
+          "net": "GND",
+          "localx": -22.08,
+          "localy": -7.619999999999999
+        },
+        {
+          "number": "8",
+          "name": "OUT1",
+          "net": "M1_OUT1",
+          "localx": -22.08,
+          "localy": -11.430000000000001
+        },
+        {
+          "number": "9",
+          "name": "PGND",
+          "net": "GND",
+          "localx": -22.08,
+          "localy": -15.24
+        },
+        {
+          "number": "10",
+          "name": "OUT2",
+          "net": "M1_OUT2",
+          "localx": 22.08,
+          "localy": 15.24
+        },
+        {
+          "number": "11",
+          "name": "VM",
+          "net": "M1_VM",
+          "localx": 22.08,
+          "localy": 11.43
+        },
+        {
+          "number": "12",
+          "name": "VCP",
+          "net": "M1_VCP",
+          "localx": 22.08,
+          "localy": 7.62
+        },
+        {
+          "number": "13",
+          "name": "CPH",
+          "net": "M1_CPH",
+          "localx": 22.08,
+          "localy": 3.8100000000000005
+        },
+        {
+          "number": "14",
+          "name": "CPL",
+          "net": "M1_CPL",
+          "localx": 22.08,
+          "localy": 0.0
+        },
+        {
+          "number": "15",
+          "name": "GND",
+          "net": "GND",
+          "localx": 22.08,
+          "localy": -3.8100000000000005
+        },
+        {
+          "number": "16",
+          "name": "PMODE",
+          "net": "GND",
+          "localx": 22.08,
+          "localy": -7.619999999999999
+        },
+        {
+          "number": "17",
+          "name": "PAD",
+          "net": "GND",
+          "localx": 22.08,
+          "localy": -11.430000000000001
+        }
+      ],
+      "note": "PMODE=0 PH/EN. IMODE=0 current regulation; verify layout/thermal ratings, 6A peak is NOT continuous.",
+      "uuid": "6ece1508-2b67-4700-8ef7-602c435839f4",
+      "sheet": "06_motor_right"
+    },
+    {
+      "ref": "M1",
+      "value": "24V brushed gearmotor",
+      "pins": [
+        {
+          "number": "1",
+          "name": "+ / forward",
+          "net": "M1_OUT1",
+          "localx": -22.08,
+          "localy": 0.0
+        },
+        {
+          "number": "2",
+          "name": "- / reverse",
+          "net": "M1_OUT2",
+          "localx": 22.08,
+          "localy": 0.0
+        }
+      ],
+      "note": "30rpm >=4Nm loaded",
+      "uuid": "3d4ace27-4812-4715-a250-629de9b4b58b",
+      "sheet": "06_motor_right"
+    },
+    {
+      "ref": "CCP1",
+      "value": "22nF / 50V",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "M1_CPH",
+          "localx": -22.08,
+          "localy": 0.0
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "M1_CPL",
+          "localx": 22.08,
+          "localy": 0.0
+        }
+      ],
+      "note": "",
+      "uuid": "0f5829a4-5fed-49c3-b49a-d2978a8320c5",
+      "sheet": "06_motor_right"
+    },
+    {
+      "ref": "CVCP1",
+      "value": "100nF /16V",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "M1_VCP",
+          "localx": -22.08,
+          "localy": 0.0
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "M1_VM",
+          "localx": 22.08,
+          "localy": 0.0
+        }
+      ],
+      "note": "VCP capacitor is to VM, NOT ground",
+      "uuid": "5f54665c-f2ab-44c2-bb0b-6fe07ce8971c",
+      "sheet": "06_motor_right"
+    },
+    {
+      "ref": "CVM1",
+      "value": "100nF /50V",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "M1_VM",
+          "localx": -22.08,
+          "localy": 0.0
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "GND",
+          "localx": 22.08,
+          "localy": 0.0
+        }
+      ],
+      "note": "",
+      "uuid": "8ad546e0-ee17-4432-9345-bc1497cb643d",
+      "sheet": "06_motor_right"
+    },
+    {
+      "ref": "CB1",
+      "value": "470uF /50V",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "M1_VM",
+          "localx": -22.08,
+          "localy": 0.0
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "GND",
+          "localx": 22.08,
+          "localy": 0.0
+        }
+      ],
+      "note": "",
+      "uuid": "5f441539-e180-4b20-abd3-c5932f9e31b2",
+      "sheet": "06_motor_right"
+    },
+    {
+      "ref": "RIP1",
+      "value": "1.5k /1%",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "M1_IP",
+          "localx": -22.08,
+          "localy": 0.0
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "GND",
+          "localx": 22.08,
+          "localy": 0.0
+        }
+      ],
+      "note": "",
+      "uuid": "0808b815-89bf-4679-bb86-2068ac69c76c",
+      "sheet": "06_motor_right"
+    },
+    {
+      "ref": "RFLT1",
+      "value": "10k",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "M1_IP",
+          "localx": -22.08,
+          "localy": 0.0
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "CUR1",
+          "localx": 22.08,
+          "localy": 0.0
+        }
+      ],
+      "note": "",
+      "uuid": "fc8ae93d-b318-4556-b13c-04fa00c79343",
+      "sheet": "06_motor_right"
+    },
+    {
+      "ref": "CFLT1",
+      "value": "100nF",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "CUR1",
+          "localx": -22.08,
+          "localy": 0.0
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "GND",
+          "localx": 22.08,
+          "localy": 0.0
+        }
+      ],
+      "note": "Filtered current reflects duty/recirculation; calibrate software thresholds",
+      "uuid": "4cf2f4b4-73ec-4b85-a3ea-9e48405a734d",
+      "sheet": "06_motor_right"
+    },
+    {
+      "ref": "RVT1",
+      "value": "6.19k /1%",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "V3V3",
+          "localx": -22.08,
+          "localy": 0.0
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "M1_VREF",
+          "localx": 22.08,
+          "localy": 0.0
+        }
+      ],
+      "note": "",
+      "uuid": "c655cf9e-c6b4-4622-81f7-569a8d9276c6",
+      "sheet": "06_motor_right"
+    },
+    {
+      "ref": "RVB1",
+      "value": "10k /1%",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "M1_VREF",
+          "localx": -22.08,
+          "localy": 0.0
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "GND",
+          "localx": 22.08,
+          "localy": 0.0
+        }
+      ],
+      "note": "",
+      "uuid": "9a7e7fde-e336-4278-87f8-8e91ad71cf32",
+      "sheet": "06_motor_right"
+    },
+    {
+      "ref": "REN1",
+      "value": "47k",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "PWM1",
+          "localx": -22.08,
+          "localy": 0.0
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "GND",
+          "localx": 22.08,
+          "localy": 0.0
+        }
+      ],
+      "note": "",
+      "uuid": "b0b36d03-93b3-4c53-946d-4fe1cac67384",
+      "sheet": "06_motor_right"
+    },
+    {
+      "ref": "RPH1",
+      "value": "47k",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "DIR1",
+          "localx": -22.08,
+          "localy": 0.0
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "GND",
+          "localx": 22.08,
+          "localy": 0.0
+        }
+      ],
+      "note": "",
+      "uuid": "78588595-bc7a-4651-a012-eb23d1a11b15",
+      "sheet": "06_motor_right"
+    },
+    {
+      "ref": "CM1",
+      "value": "10nF /50V motor suppression",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "M1_OUT1",
+          "localx": -22.08,
+          "localy": 0.0
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "M1_OUT2",
+          "localx": 22.08,
+          "localy": 0.0
+        }
+      ],
+      "note": "Validate suppression with driver current/EMI; twist motor pair",
+      "uuid": "98f75c85-1568-429a-90fb-6157d1cb934e",
+      "sheet": "06_motor_right"
+    },
+    {
+      "ref": "FM2",
+      "value": "3A DC",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "VM_BUS",
+          "localx": -22.08,
+          "localy": 0.0
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "M2_VM",
+          "localx": 22.08,
+          "localy": 0.0
+        }
+      ],
+      "note": "",
+      "uuid": "35d2ebd6-b303-4f91-b17e-4025777102af",
+      "sheet": "07_motor_brush"
+    },
+    {
+      "ref": "UM2",
+      "value": "DRV8874 HTSSOP16-PAD",
+      "pins": [
+        {
+          "number": "1",
+          "name": "EN",
+          "net": "PWM2",
+          "localx": -22.08,
+          "localy": 15.24
+        },
+        {
+          "number": "2",
+          "name": "PH",
+          "net": "DIR2",
+          "localx": -22.08,
+          "localy": 11.43
+        },
+        {
+          "number": "3",
+          "name": "nSLEEP",
+          "net": "RUN_EN",
+          "localx": -22.08,
+          "localy": 7.62
+        },
+        {
+          "number": "4",
+          "name": "nFAULT",
+          "net": "DRV_FAULT_N",
+          "localx": -22.08,
+          "localy": 3.8100000000000005
+        },
+        {
+          "number": "5",
+          "name": "VREF",
+          "net": "M2_VREF",
+          "localx": -22.08,
+          "localy": 0.0
+        },
+        {
+          "number": "6",
+          "name": "IPROPI",
+          "net": "M2_IP",
+          "localx": -22.08,
+          "localy": -3.8100000000000005
+        },
+        {
+          "number": "7",
+          "name": "IMODE",
+          "net": "GND",
+          "localx": -22.08,
+          "localy": -7.619999999999999
+        },
+        {
+          "number": "8",
+          "name": "OUT1",
+          "net": "M2_OUT1",
+          "localx": -22.08,
+          "localy": -11.430000000000001
+        },
+        {
+          "number": "9",
+          "name": "PGND",
+          "net": "GND",
+          "localx": -22.08,
+          "localy": -15.24
+        },
+        {
+          "number": "10",
+          "name": "OUT2",
+          "net": "M2_OUT2",
+          "localx": 22.08,
+          "localy": 15.24
+        },
+        {
+          "number": "11",
+          "name": "VM",
+          "net": "M2_VM",
+          "localx": 22.08,
+          "localy": 11.43
+        },
+        {
+          "number": "12",
+          "name": "VCP",
+          "net": "M2_VCP",
+          "localx": 22.08,
+          "localy": 7.62
+        },
+        {
+          "number": "13",
+          "name": "CPH",
+          "net": "M2_CPH",
+          "localx": 22.08,
+          "localy": 3.8100000000000005
+        },
+        {
+          "number": "14",
+          "name": "CPL",
+          "net": "M2_CPL",
+          "localx": 22.08,
+          "localy": 0.0
+        },
+        {
+          "number": "15",
+          "name": "GND",
+          "net": "GND",
+          "localx": 22.08,
+          "localy": -3.8100000000000005
+        },
+        {
+          "number": "16",
+          "name": "PMODE",
+          "net": "GND",
+          "localx": 22.08,
+          "localy": -7.619999999999999
+        },
+        {
+          "number": "17",
+          "name": "PAD",
+          "net": "GND",
+          "localx": 22.08,
+          "localy": -11.430000000000001
+        }
+      ],
+      "note": "PMODE=0 PH/EN. IMODE=0 current regulation; verify layout/thermal ratings, 6A peak is NOT continuous.",
+      "uuid": "4d8a9193-41c9-4a9e-9429-b2550bebfa8d",
+      "sheet": "07_motor_brush"
+    },
+    {
+      "ref": "M2",
+      "value": "24V brushed gearmotor",
+      "pins": [
+        {
+          "number": "1",
+          "name": "+ / forward",
+          "net": "M2_OUT1",
+          "localx": -22.08,
+          "localy": 0.0
+        },
+        {
+          "number": "2",
+          "name": "- / reverse",
+          "net": "M2_OUT2",
+          "localx": 22.08,
+          "localy": 0.0
+        }
+      ],
+      "note": "120rpm brush",
+      "uuid": "52daa2b0-7ec5-4c35-b5f1-e79a7bafdefb",
+      "sheet": "07_motor_brush"
+    },
+    {
+      "ref": "CCP2",
+      "value": "22nF / 50V",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "M2_CPH",
+          "localx": -22.08,
+          "localy": 0.0
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "M2_CPL",
+          "localx": 22.08,
+          "localy": 0.0
+        }
+      ],
+      "note": "",
+      "uuid": "3018a344-48e6-4fd6-8970-3ff25048b563",
+      "sheet": "07_motor_brush"
+    },
+    {
+      "ref": "CVCP2",
+      "value": "100nF /16V",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "M2_VCP",
+          "localx": -22.08,
+          "localy": 0.0
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "M2_VM",
+          "localx": 22.08,
+          "localy": 0.0
+        }
+      ],
+      "note": "VCP capacitor is to VM, NOT ground",
+      "uuid": "c52a60cc-7ed9-45a6-9b35-108d5dfa5132",
+      "sheet": "07_motor_brush"
+    },
+    {
+      "ref": "CVM2",
+      "value": "100nF /50V",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "M2_VM",
+          "localx": -22.08,
+          "localy": 0.0
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "GND",
+          "localx": 22.08,
+          "localy": 0.0
+        }
+      ],
+      "note": "",
+      "uuid": "5c68f5fd-6422-4860-bc8b-e46b027901c2",
+      "sheet": "07_motor_brush"
+    },
+    {
+      "ref": "CB2",
+      "value": "470uF /50V",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "M2_VM",
+          "localx": -22.08,
+          "localy": 0.0
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "GND",
+          "localx": 22.08,
+          "localy": 0.0
+        }
+      ],
+      "note": "",
+      "uuid": "a903d165-78ac-47af-ab13-31c64d6cd973",
+      "sheet": "07_motor_brush"
+    },
+    {
+      "ref": "RIP2",
+      "value": "1.5k /1%",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "M2_IP",
+          "localx": -22.08,
+          "localy": 0.0
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "GND",
+          "localx": 22.08,
+          "localy": 0.0
+        }
+      ],
+      "note": "",
+      "uuid": "fd0757db-6b81-4037-b834-08356d3da95d",
+      "sheet": "07_motor_brush"
+    },
+    {
+      "ref": "RFLT2",
+      "value": "10k",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "M2_IP",
+          "localx": -22.08,
+          "localy": 0.0
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "CUR2",
+          "localx": 22.08,
+          "localy": 0.0
+        }
+      ],
+      "note": "",
+      "uuid": "9742eaf4-d775-4473-895d-0e024dd99edc",
+      "sheet": "07_motor_brush"
+    },
+    {
+      "ref": "CFLT2",
+      "value": "100nF",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "CUR2",
+          "localx": -22.08,
+          "localy": 0.0
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "GND",
+          "localx": 22.08,
+          "localy": 0.0
+        }
+      ],
+      "note": "Filtered current reflects duty/recirculation; calibrate software thresholds",
+      "uuid": "0d7840e1-256b-49cb-a8d2-f0c60927777f",
+      "sheet": "07_motor_brush"
+    },
+    {
+      "ref": "RVT2",
+      "value": "14.3k /1%",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "V3V3",
+          "localx": -22.08,
+          "localy": 0.0
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "M2_VREF",
+          "localx": 22.08,
+          "localy": 0.0
+        }
+      ],
+      "note": "",
+      "uuid": "9dc96bf8-76ec-43b1-ac4a-6ab3a6ed4b6c",
+      "sheet": "07_motor_brush"
+    },
+    {
+      "ref": "RVB2",
+      "value": "10k /1%",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "M2_VREF",
+          "localx": -22.08,
+          "localy": 0.0
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "GND",
+          "localx": 22.08,
+          "localy": 0.0
+        }
+      ],
+      "note": "",
+      "uuid": "ff62789a-d520-4d1a-b812-80253633953b",
+      "sheet": "07_motor_brush"
+    },
+    {
+      "ref": "REN2",
+      "value": "47k",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "PWM2",
+          "localx": -22.08,
+          "localy": 0.0
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "GND",
+          "localx": 22.08,
+          "localy": 0.0
+        }
+      ],
+      "note": "",
+      "uuid": "d40f559a-8257-409d-9843-a5c7eedac4bd",
+      "sheet": "07_motor_brush"
+    },
+    {
+      "ref": "RPH2",
+      "value": "47k",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "DIR2",
+          "localx": -22.08,
+          "localy": 0.0
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "GND",
+          "localx": 22.08,
+          "localy": 0.0
+        }
+      ],
+      "note": "",
+      "uuid": "8c188043-1d32-4469-8b78-25c63f0730c1",
+      "sheet": "07_motor_brush"
+    },
+    {
+      "ref": "CM2",
+      "value": "10nF /50V motor suppression",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "M2_OUT1",
+          "localx": -22.08,
+          "localy": 0.0
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "M2_OUT2",
+          "localx": 22.08,
+          "localy": 0.0
+        }
+      ],
+      "note": "Validate suppression with driver current/EMI; twist motor pair",
+      "uuid": "0d9ca609-9c09-4b2c-9f3b-14e4387588da",
+      "sheet": "07_motor_brush"
+    },
+    {
+      "ref": "FM3",
+      "value": "3A DC",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "VM_BUS",
+          "localx": -22.08,
+          "localy": 0.0
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "M3_VM",
+          "localx": 22.08,
+          "localy": 0.0
+        }
+      ],
+      "note": "",
+      "uuid": "4483efb2-6e4b-4d4c-939d-265b216dac2f",
+      "sheet": "08_motor_belt"
+    },
+    {
+      "ref": "UM3",
+      "value": "DRV8874 HTSSOP16-PAD",
+      "pins": [
+        {
+          "number": "1",
+          "name": "EN",
+          "net": "PWM3",
+          "localx": -22.08,
+          "localy": 15.24
+        },
+        {
+          "number": "2",
+          "name": "PH",
+          "net": "DIR3",
+          "localx": -22.08,
+          "localy": 11.43
+        },
+        {
+          "number": "3",
+          "name": "nSLEEP",
+          "net": "RUN_EN",
+          "localx": -22.08,
+          "localy": 7.62
+        },
+        {
+          "number": "4",
+          "name": "nFAULT",
+          "net": "DRV_FAULT_N",
+          "localx": -22.08,
+          "localy": 3.8100000000000005
+        },
+        {
+          "number": "5",
+          "name": "VREF",
+          "net": "M3_VREF",
+          "localx": -22.08,
+          "localy": 0.0
+        },
+        {
+          "number": "6",
+          "name": "IPROPI",
+          "net": "M3_IP",
+          "localx": -22.08,
+          "localy": -3.8100000000000005
+        },
+        {
+          "number": "7",
+          "name": "IMODE",
+          "net": "GND",
+          "localx": -22.08,
+          "localy": -7.619999999999999
+        },
+        {
+          "number": "8",
+          "name": "OUT1",
+          "net": "M3_OUT1",
+          "localx": -22.08,
+          "localy": -11.430000000000001
+        },
+        {
+          "number": "9",
+          "name": "PGND",
+          "net": "GND",
+          "localx": -22.08,
+          "localy": -15.24
+        },
+        {
+          "number": "10",
+          "name": "OUT2",
+          "net": "M3_OUT2",
+          "localx": 22.08,
+          "localy": 15.24
+        },
+        {
+          "number": "11",
+          "name": "VM",
+          "net": "M3_VM",
+          "localx": 22.08,
+          "localy": 11.43
+        },
+        {
+          "number": "12",
+          "name": "VCP",
+          "net": "M3_VCP",
+          "localx": 22.08,
+          "localy": 7.62
+        },
+        {
+          "number": "13",
+          "name": "CPH",
+          "net": "M3_CPH",
+          "localx": 22.08,
+          "localy": 3.8100000000000005
+        },
+        {
+          "number": "14",
+          "name": "CPL",
+          "net": "M3_CPL",
+          "localx": 22.08,
+          "localy": 0.0
+        },
+        {
+          "number": "15",
+          "name": "GND",
+          "net": "GND",
+          "localx": 22.08,
+          "localy": -3.8100000000000005
+        },
+        {
+          "number": "16",
+          "name": "PMODE",
+          "net": "GND",
+          "localx": 22.08,
+          "localy": -7.619999999999999
+        },
+        {
+          "number": "17",
+          "name": "PAD",
+          "net": "GND",
+          "localx": 22.08,
+          "localy": -11.430000000000001
+        }
+      ],
+      "note": "PMODE=0 PH/EN. IMODE=0 current regulation; verify layout/thermal ratings, 6A peak is NOT continuous.",
+      "uuid": "b7835905-7069-4d69-aa8e-5ad8b0a1395e",
+      "sheet": "08_motor_belt"
+    },
+    {
+      "ref": "M3",
+      "value": "24V brushed gearmotor",
+      "pins": [
+        {
+          "number": "1",
+          "name": "+ / forward",
+          "net": "M3_OUT1",
+          "localx": -22.08,
+          "localy": 0.0
+        },
+        {
+          "number": "2",
+          "name": "- / reverse",
+          "net": "M3_OUT2",
+          "localx": 22.08,
+          "localy": 0.0
+        }
+      ],
+      "note": "45..60rpm conveyor",
+      "uuid": "75e845c9-af5b-4b68-9b9d-fb4d4bd5797b",
+      "sheet": "08_motor_belt"
+    },
+    {
+      "ref": "CCP3",
+      "value": "22nF / 50V",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "M3_CPH",
+          "localx": -22.08,
+          "localy": 0.0
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "M3_CPL",
+          "localx": 22.08,
+          "localy": 0.0
+        }
+      ],
+      "note": "",
+      "uuid": "e45d4759-1bf2-43c7-bf3c-94331be5eeb5",
+      "sheet": "08_motor_belt"
+    },
+    {
+      "ref": "CVCP3",
+      "value": "100nF /16V",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "M3_VCP",
+          "localx": -22.08,
+          "localy": 0.0
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "M3_VM",
+          "localx": 22.08,
+          "localy": 0.0
+        }
+      ],
+      "note": "VCP capacitor is to VM, NOT ground",
+      "uuid": "159346f2-99a3-4317-b29e-f067487bfd90",
+      "sheet": "08_motor_belt"
+    },
+    {
+      "ref": "CVM3",
+      "value": "100nF /50V",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "M3_VM",
+          "localx": -22.08,
+          "localy": 0.0
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "GND",
+          "localx": 22.08,
+          "localy": 0.0
+        }
+      ],
+      "note": "",
+      "uuid": "1dd9d9ff-d32b-4a43-b70f-8b1cd771caf2",
+      "sheet": "08_motor_belt"
+    },
+    {
+      "ref": "CB3",
+      "value": "470uF /50V",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "M3_VM",
+          "localx": -22.08,
+          "localy": 0.0
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "GND",
+          "localx": 22.08,
+          "localy": 0.0
+        }
+      ],
+      "note": "",
+      "uuid": "9d9e3550-2fa3-4a34-a36f-906714419d09",
+      "sheet": "08_motor_belt"
+    },
+    {
+      "ref": "RIP3",
+      "value": "1.5k /1%",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "M3_IP",
+          "localx": -22.08,
+          "localy": 0.0
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "GND",
+          "localx": 22.08,
+          "localy": 0.0
+        }
+      ],
+      "note": "",
+      "uuid": "fd65cff2-88cf-43a3-8f15-becb3b0aa78f",
+      "sheet": "08_motor_belt"
+    },
+    {
+      "ref": "RFLT3",
+      "value": "10k",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "M3_IP",
+          "localx": -22.08,
+          "localy": 0.0
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "CUR3",
+          "localx": 22.08,
+          "localy": 0.0
+        }
+      ],
+      "note": "",
+      "uuid": "f044d721-f7dc-4de2-95e0-5a56822941b6",
+      "sheet": "08_motor_belt"
+    },
+    {
+      "ref": "CFLT3",
+      "value": "100nF",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "CUR3",
+          "localx": -22.08,
+          "localy": 0.0
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "GND",
+          "localx": 22.08,
+          "localy": 0.0
+        }
+      ],
+      "note": "Filtered current reflects duty/recirculation; calibrate software thresholds",
+      "uuid": "712d3661-67ff-427d-9879-64bba48a11db",
+      "sheet": "08_motor_belt"
+    },
+    {
+      "ref": "RVT3",
+      "value": "14.3k /1%",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "V3V3",
+          "localx": -22.08,
+          "localy": 0.0
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "M3_VREF",
+          "localx": 22.08,
+          "localy": 0.0
+        }
+      ],
+      "note": "",
+      "uuid": "83293800-0fbb-4b2c-96e9-0098e037ddd2",
+      "sheet": "08_motor_belt"
+    },
+    {
+      "ref": "RVB3",
+      "value": "10k /1%",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "M3_VREF",
+          "localx": -22.08,
+          "localy": 0.0
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "GND",
+          "localx": 22.08,
+          "localy": 0.0
+        }
+      ],
+      "note": "",
+      "uuid": "0a7c633e-4d9f-4b42-8fce-b84626e08f2e",
+      "sheet": "08_motor_belt"
+    },
+    {
+      "ref": "REN3",
+      "value": "47k",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "PWM3",
+          "localx": -22.08,
+          "localy": 0.0
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "GND",
+          "localx": 22.08,
+          "localy": 0.0
+        }
+      ],
+      "note": "",
+      "uuid": "77f61297-7aaf-48ce-9f13-7fff845ef58a",
+      "sheet": "08_motor_belt"
+    },
+    {
+      "ref": "RPH3",
+      "value": "47k",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "DIR3",
+          "localx": -22.08,
+          "localy": 0.0
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "GND",
+          "localx": 22.08,
+          "localy": 0.0
+        }
+      ],
+      "note": "",
+      "uuid": "ae03b316-7164-4074-97ca-6ceaa7328dcb",
+      "sheet": "08_motor_belt"
+    },
+    {
+      "ref": "CM3",
+      "value": "10nF /50V motor suppression",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "net": "M3_OUT1",
+          "localx": -22.08,
+          "localy": 0.0
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "net": "M3_OUT2",
+          "localx": 22.08,
+          "localy": 0.0
+        }
+      ],
+      "note": "Validate suppression with driver current/EMI; twist motor pair",
+      "uuid": "2cc6899e-ffe7-47c3-8b8d-2fc6bcd43fd8",
+      "sheet": "08_motor_belt"
+    }
+  ],
+  "nets": {
+    "BAT_RAW": [
+      {
+        "ref": "BT1",
+        "pin": "1",
+        "pin_name": "PACK+",
+        "sheet": "01_power"
+      },
+      {
+        "ref": "F1",
+        "pin": "1",
+        "pin_name": "1",
+        "sheet": "01_power"
+      }
+    ],
+    "GND": [
+      {
+        "ref": "BT1",
+        "pin": "2",
+        "pin_name": "PACK-",
+        "sheet": "01_power"
+      },
+      {
+        "ref": "PS1",
+        "pin": "2",
+        "pin_name": "IN-",
+        "sheet": "01_power"
+      },
+      {
+        "ref": "PS1",
+        "pin": "4",
+        "pin_name": "OUT-",
+        "sheet": "01_power"
+      },
+      {
+        "ref": "JUSB1",
+        "pin": "2",
+        "pin_name": "GND",
+        "sheet": "01_power"
+      },
+      {
+        "ref": "K1",
+        "pin": "6",
+        "pin_name": "AUX_COM",
+        "sheet": "01_power"
+      },
+      {
+        "ref": "Q1",
+        "pin": "3",
+        "pin_name": "S",
+        "sheet": "01_power"
+      },
+      {
+        "ref": "RGS1",
+        "pin": "2",
+        "pin_name": "2",
+        "sheet": "01_power"
+      },
+      {
+        "ref": "CBULK",
+        "pin": "2",
+        "pin_name": "2",
+        "sheet": "01_power"
+      },
+      {
+        "ref": "RBLEED",
+        "pin": "2",
+        "pin_name": "2",
+        "sheet": "01_power"
+      },
+      {
+        "ref": "RVBOT",
+        "pin": "2",
+        "pin_name": "2",
+        "sheet": "01_power"
+      },
+      {
+        "ref": "CV",
+        "pin": "2",
+        "pin_name": "2",
+        "sheet": "01_power"
+      },
+      {
+        "ref": "UWD",
+        "pin": "4",
+        "pin_name": "GND",
+        "sheet": "02_watchdog"
+      },
+      {
+        "ref": "UWD",
+        "pin": "9",
+        "pin_name": "PAD",
+        "sheet": "02_watchdog"
+      },
+      {
+        "ref": "RWD_PD",
+        "pin": "2",
+        "pin_name": "2",
+        "sheet": "02_watchdog"
+      },
+      {
+        "ref": "RCLR",
+        "pin": "2",
+        "pin_name": "2",
+        "sheet": "02_watchdog"
+      },
+      {
+        "ref": "UFF",
+        "pin": "4",
+        "pin_name": "GND",
+        "sheet": "02_watchdog"
+      },
+      {
+        "ref": "RARM_PD",
+        "pin": "2",
+        "pin_name": "2",
+        "sheet": "02_watchdog"
+      },
+      {
+        "ref": "CARM",
+        "pin": "2",
+        "pin_name": "2",
+        "sheet": "02_watchdog"
+      },
+      {
+        "ref": "USCH",
+        "pin": "3",
+        "pin_name": "GND",
+        "sheet": "02_watchdog"
+      },
+      {
+        "ref": "UAND",
+        "pin": "3",
+        "pin_name": "GND",
+        "sheet": "02_watchdog"
+      },
+      {
+        "ref": "UINV",
+        "pin": "3",
+        "pin_name": "GND",
+        "sheet": "02_watchdog"
+      },
+      {
+        "ref": "UGATE",
+        "pin": "1",
+        "pin_name": "nOE",
+        "sheet": "02_watchdog"
+      },
+      {
+        "ref": "UGATE",
+        "pin": "3",
+        "pin_name": "GND",
+        "sheet": "02_watchdog"
+      },
+      {
+        "ref": "RSA",
+        "pin": "2",
+        "pin_name": "2",
+        "sheet": "02_watchdog"
+      },
+      {
+        "ref": "RHB",
+        "pin": "2",
+        "pin_name": "2",
+        "sheet": "02_watchdog"
+      },
+      {
+        "ref": "RSLEEP",
+        "pin": "2",
+        "pin_name": "2",
+        "sheet": "02_watchdog"
+      },
+      {
+        "ref": "RHW",
+        "pin": "2",
+        "pin_name": "2",
+        "sheet": "02_watchdog"
+      },
+      {
+        "ref": "CWD",
+        "pin": "2",
+        "pin_name": "2",
+        "sheet": "02_watchdog"
+      },
+      {
+        "ref": "CFF",
+        "pin": "2",
+        "pin_name": "2",
+        "sheet": "02_watchdog"
+      },
+      {
+        "ref": "CSCH",
+        "pin": "2",
+        "pin_name": "2",
+        "sheet": "02_watchdog"
+      },
+      {
+        "ref": "CAND",
+        "pin": "2",
+        "pin_name": "2",
+        "sheet": "02_watchdog"
+      },
+      {
+        "ref": "CINV",
+        "pin": "2",
+        "pin_name": "2",
+        "sheet": "02_watchdog"
+      },
+      {
+        "ref": "CGATE",
+        "pin": "2",
+        "pin_name": "2",
+        "sheet": "02_watchdog"
+      },
+      {
+        "ref": "JPI",
+        "pin": "6",
+        "pin_name": "GND",
+        "sheet": "03_io"
+      },
+      {
+        "ref": "UADC",
+        "pin": "7",
+        "pin_name": "CH6",
+        "sheet": "03_io"
+      },
+      {
+        "ref": "UADC",
+        "pin": "8",
+        "pin_name": "CH7",
+        "sheet": "03_io"
+      },
+      {
+        "ref": "UADC",
+        "pin": "9",
+        "pin_name": "DGND",
+        "sheet": "03_io"
+      },
+      {
+        "ref": "UADC",
+        "pin": "14",
+        "pin_name": "AGND",
+        "sheet": "03_io"
+      },
+      {
+        "ref": "UDIR",
+        "pin": "10",
+        "pin_name": "VSS",
+        "sheet": "03_io"
+      },
+      {
+        "ref": "UDIR",
+        "pin": "15",
+        "pin_name": "A0",
+        "sheet": "03_io"
+      },
+      {
+        "ref": "UDIR",
+        "pin": "16",
+        "pin_name": "A1",
+        "sheet": "03_io"
+      },
+      {
+        "ref": "UDIR",
+        "pin": "17",
+        "pin_name": "A2",
+        "sheet": "03_io"
+      },
+      {
+        "ref": "UPWM",
+        "pin": "1",
+        "pin_name": "A0",
+        "sheet": "03_io"
+      },
+      {
+        "ref": "UPWM",
+        "pin": "2",
+        "pin_name": "A1",
+        "sheet": "03_io"
+      },
+      {
+        "ref": "UPWM",
+        "pin": "3",
+        "pin_name": "A2",
+        "sheet": "03_io"
+      },
+      {
+        "ref": "UPWM",
+        "pin": "4",
+        "pin_name": "A3",
+        "sheet": "03_io"
+      },
+      {
+        "ref": "UPWM",
+        "pin": "5",
+        "pin_name": "A4",
+        "sheet": "03_io"
+      },
+      {
+        "ref": "UPWM",
+        "pin": "14",
+        "pin_name": "VSS",
+        "sheet": "03_io"
+      },
+      {
+        "ref": "UPWM",
+        "pin": "24",
+        "pin_name": "A5",
+        "sheet": "03_io"
+      },
+      {
+        "ref": "UPWM",
+        "pin": "27",
+        "pin_name": "EXTCLK",
+        "sheet": "03_io"
+      },
+      {
+        "ref": "UENC0",
+        "pin": "3",
+        "pin_name": "VSS",
+        "sheet": "03_io"
+      },
+      {
+        "ref": "JENC0",
+        "pin": "4",
+        "pin_name": "GND",
+        "sheet": "03_io"
+      },
+      {
+        "ref": "UENC1",
+        "pin": "3",
+        "pin_name": "VSS",
+        "sheet": "03_io"
+      },
+      {
+        "ref": "JENC1",
+        "pin": "4",
+        "pin_name": "GND",
+        "sheet": "03_io"
+      },
+      {
+        "ref": "X1",
+        "pin": "2",
+        "pin_name": "GND",
+        "sheet": "03_io"
+      },
+      {
+        "ref": "CADC",
+        "pin": "2",
+        "pin_name": "2",
+        "sheet": "03_io"
+      },
+      {
+        "ref": "CDIR",
+        "pin": "2",
+        "pin_name": "2",
+        "sheet": "03_io"
+      },
+      {
+        "ref": "CPWM",
+        "pin": "2",
+        "pin_name": "2",
+        "sheet": "03_io"
+      },
+      {
+        "ref": "CENC0",
+        "pin": "2",
+        "pin_name": "2",
+        "sheet": "03_io"
+      },
+      {
+        "ref": "CENC1",
+        "pin": "2",
+        "pin_name": "2",
+        "sheet": "03_io"
+      },
+      {
+        "ref": "CX",
+        "pin": "2",
+        "pin_name": "2",
+        "sheet": "03_io"
+      },
+      {
+        "ref": "SES",
+        "pin": "2",
+        "pin_name": "2",
+        "sheet": "04_sensors"
+      },
+      {
+        "ref": "SBU",
+        "pin": "2",
+        "pin_name": "2",
+        "sheet": "04_sensors"
+      },
+      {
+        "ref": "SCL",
+        "pin": "2",
+        "pin_name": "2",
+        "sheet": "04_sensors"
+      },
+      {
+        "ref": "SGU",
+        "pin": "2",
+        "pin_name": "2",
+        "sheet": "04_sensors"
+      },
+      {
+        "ref": "SFU",
+        "pin": "2",
+        "pin_name": "2",
+        "sheet": "04_sensors"
+      },
+      {
+        "ref": "JB0",
+        "pin": "3",
+        "pin_name": "GND",
+        "sheet": "04_sensors"
+      },
+      {
+        "ref": "JB1",
+        "pin": "3",
+        "pin_name": "GND",
+        "sheet": "04_sensors"
+      },
+      {
+        "ref": "JRANGE",
+        "pin": "3",
+        "pin_name": "GND",
+        "sheet": "04_sensors"
+      },
+      {
+        "ref": "UM0",
+        "pin": "7",
+        "pin_name": "IMODE",
+        "sheet": "05_motor_left"
+      },
+      {
+        "ref": "UM0",
+        "pin": "9",
+        "pin_name": "PGND",
+        "sheet": "05_motor_left"
+      },
+      {
+        "ref": "UM0",
+        "pin": "15",
+        "pin_name": "GND",
+        "sheet": "05_motor_left"
+      },
+      {
+        "ref": "UM0",
+        "pin": "16",
+        "pin_name": "PMODE",
+        "sheet": "05_motor_left"
+      },
+      {
+        "ref": "UM0",
+        "pin": "17",
+        "pin_name": "PAD",
+        "sheet": "05_motor_left"
+      },
+      {
+        "ref": "CVM0",
+        "pin": "2",
+        "pin_name": "2",
+        "sheet": "05_motor_left"
+      },
+      {
+        "ref": "CB0",
+        "pin": "2",
+        "pin_name": "2",
+        "sheet": "05_motor_left"
+      },
+      {
+        "ref": "RIP0",
+        "pin": "2",
+        "pin_name": "2",
+        "sheet": "05_motor_left"
+      },
+      {
+        "ref": "CFLT0",
+        "pin": "2",
+        "pin_name": "2",
+        "sheet": "05_motor_left"
+      },
+      {
+        "ref": "RVB0",
+        "pin": "2",
+        "pin_name": "2",
+        "sheet": "05_motor_left"
+      },
+      {
+        "ref": "REN0",
+        "pin": "2",
+        "pin_name": "2",
+        "sheet": "05_motor_left"
+      },
+      {
+        "ref": "RPH0",
+        "pin": "2",
+        "pin_name": "2",
+        "sheet": "05_motor_left"
+      },
+      {
+        "ref": "UM1",
+        "pin": "7",
+        "pin_name": "IMODE",
+        "sheet": "06_motor_right"
+      },
+      {
+        "ref": "UM1",
+        "pin": "9",
+        "pin_name": "PGND",
+        "sheet": "06_motor_right"
+      },
+      {
+        "ref": "UM1",
+        "pin": "15",
+        "pin_name": "GND",
+        "sheet": "06_motor_right"
+      },
+      {
+        "ref": "UM1",
+        "pin": "16",
+        "pin_name": "PMODE",
+        "sheet": "06_motor_right"
+      },
+      {
+        "ref": "UM1",
+        "pin": "17",
+        "pin_name": "PAD",
+        "sheet": "06_motor_right"
+      },
+      {
+        "ref": "CVM1",
+        "pin": "2",
+        "pin_name": "2",
+        "sheet": "06_motor_right"
+      },
+      {
+        "ref": "CB1",
+        "pin": "2",
+        "pin_name": "2",
+        "sheet": "06_motor_right"
+      },
+      {
+        "ref": "RIP1",
+        "pin": "2",
+        "pin_name": "2",
+        "sheet": "06_motor_right"
+      },
+      {
+        "ref": "CFLT1",
+        "pin": "2",
+        "pin_name": "2",
+        "sheet": "06_motor_right"
+      },
+      {
+        "ref": "RVB1",
+        "pin": "2",
+        "pin_name": "2",
+        "sheet": "06_motor_right"
+      },
+      {
+        "ref": "REN1",
+        "pin": "2",
+        "pin_name": "2",
+        "sheet": "06_motor_right"
+      },
+      {
+        "ref": "RPH1",
+        "pin": "2",
+        "pin_name": "2",
+        "sheet": "06_motor_right"
+      },
+      {
+        "ref": "UM2",
+        "pin": "7",
+        "pin_name": "IMODE",
+        "sheet": "07_motor_brush"
+      },
+      {
+        "ref": "UM2",
+        "pin": "9",
+        "pin_name": "PGND",
+        "sheet": "07_motor_brush"
+      },
+      {
+        "ref": "UM2",
+        "pin": "15",
+        "pin_name": "GND",
+        "sheet": "07_motor_brush"
+      },
+      {
+        "ref": "UM2",
+        "pin": "16",
+        "pin_name": "PMODE",
+        "sheet": "07_motor_brush"
+      },
+      {
+        "ref": "UM2",
+        "pin": "17",
+        "pin_name": "PAD",
+        "sheet": "07_motor_brush"
+      },
+      {
+        "ref": "CVM2",
+        "pin": "2",
+        "pin_name": "2",
+        "sheet": "07_motor_brush"
+      },
+      {
+        "ref": "CB2",
+        "pin": "2",
+        "pin_name": "2",
+        "sheet": "07_motor_brush"
+      },
+      {
+        "ref": "RIP2",
+        "pin": "2",
+        "pin_name": "2",
+        "sheet": "07_motor_brush"
+      },
+      {
+        "ref": "CFLT2",
+        "pin": "2",
+        "pin_name": "2",
+        "sheet": "07_motor_brush"
+      },
+      {
+        "ref": "RVB2",
+        "pin": "2",
+        "pin_name": "2",
+        "sheet": "07_motor_brush"
+      },
+      {
+        "ref": "REN2",
+        "pin": "2",
+        "pin_name": "2",
+        "sheet": "07_motor_brush"
+      },
+      {
+        "ref": "RPH2",
+        "pin": "2",
+        "pin_name": "2",
+        "sheet": "07_motor_brush"
+      },
+      {
+        "ref": "UM3",
+        "pin": "7",
+        "pin_name": "IMODE",
+        "sheet": "08_motor_belt"
+      },
+      {
+        "ref": "UM3",
+        "pin": "9",
+        "pin_name": "PGND",
+        "sheet": "08_motor_belt"
+      },
+      {
+        "ref": "UM3",
+        "pin": "15",
+        "pin_name": "GND",
+        "sheet": "08_motor_belt"
+      },
+      {
+        "ref": "UM3",
+        "pin": "16",
+        "pin_name": "PMODE",
+        "sheet": "08_motor_belt"
+      },
+      {
+        "ref": "UM3",
+        "pin": "17",
+        "pin_name": "PAD",
+        "sheet": "08_motor_belt"
+      },
+      {
+        "ref": "CVM3",
+        "pin": "2",
+        "pin_name": "2",
+        "sheet": "08_motor_belt"
+      },
+      {
+        "ref": "CB3",
+        "pin": "2",
+        "pin_name": "2",
+        "sheet": "08_motor_belt"
+      },
+      {
+        "ref": "RIP3",
+        "pin": "2",
+        "pin_name": "2",
+        "sheet": "08_motor_belt"
+      },
+      {
+        "ref": "CFLT3",
+        "pin": "2",
+        "pin_name": "2",
+        "sheet": "08_motor_belt"
+      },
+      {
+        "ref": "RVB3",
+        "pin": "2",
+        "pin_name": "2",
+        "sheet": "08_motor_belt"
+      },
+      {
+        "ref": "REN3",
+        "pin": "2",
+        "pin_name": "2",
+        "sheet": "08_motor_belt"
+      },
+      {
+        "ref": "RPH3",
+        "pin": "2",
+        "pin_name": "2",
+        "sheet": "08_motor_belt"
+      }
+    ],
+    "BAT_FUSED": [
+      {
+        "ref": "F1",
+        "pin": "2",
+        "pin_name": "2",
+        "sheet": "01_power"
+      },
+      {
+        "ref": "S0",
+        "pin": "1",
+        "pin_name": "1",
+        "sheet": "01_power"
+      }
+    ],
+    "BAT_SW": [
+      {
+        "ref": "S0",
+        "pin": "2",
+        "pin_name": "2",
+        "sheet": "01_power"
+      },
+      {
+        "ref": "F2",
+        "pin": "1",
+        "pin_name": "1",
+        "sheet": "01_power"
+      },
+      {
+        "ref": "K1",
+        "pin": "1",
+        "pin_name": "MAIN_IN",
+        "sheet": "01_power"
+      },
+      {
+        "ref": "S1B",
+        "pin": "1",
+        "pin_name": "1",
+        "sheet": "01_power"
+      },
+      {
+        "ref": "SPRE",
+        "pin": "1",
+        "pin_name": "1",
+        "sheet": "01_power"
+      },
+      {
+        "ref": "RVTOP",
+        "pin": "1",
+        "pin_name": "1",
+        "sheet": "01_power"
+      }
+    ],
+    "BUCK_IN": [
+      {
+        "ref": "F2",
+        "pin": "2",
+        "pin_name": "2",
+        "sheet": "01_power"
+      },
+      {
+        "ref": "PS1",
+        "pin": "1",
+        "pin_name": "IN+",
+        "sheet": "01_power"
+      }
+    ],
+    "V5": [
+      {
+        "ref": "PS1",
+        "pin": "3",
+        "pin_name": "OUT+",
+        "sheet": "01_power"
+      },
+      {
+        "ref": "JUSB1",
+        "pin": "1",
+        "pin_name": "V5",
+        "sheet": "01_power"
+      },
+      {
+        "ref": "UGATE",
+        "pin": "5",
+        "pin_name": "VCC",
+        "sheet": "02_watchdog"
+      },
+      {
+        "ref": "CGATE",
+        "pin": "1",
+        "pin_name": "1",
+        "sheet": "02_watchdog"
+      },
+      {
+        "ref": "JB0",
+        "pin": "1",
+        "pin_name": "V5",
+        "sheet": "04_sensors"
+      },
+      {
+        "ref": "JB1",
+        "pin": "1",
+        "pin_name": "V5",
+        "sheet": "04_sensors"
+      },
+      {
+        "ref": "JRANGE",
+        "pin": "1",
+        "pin_name": "V5",
+        "sheet": "04_sensors"
+      }
+    ],
+    "VM_BUS": [
+      {
+        "ref": "K1",
+        "pin": "2",
+        "pin_name": "MAIN_OUT",
+        "sheet": "01_power"
+      },
+      {
+        "ref": "CBULK",
+        "pin": "1",
+        "pin_name": "1",
+        "sheet": "01_power"
+      },
+      {
+        "ref": "RBLEED",
+        "pin": "1",
+        "pin_name": "1",
+        "sheet": "01_power"
+      },
+      {
+        "ref": "RPRE",
+        "pin": "2",
+        "pin_name": "2",
+        "sheet": "01_power"
+      },
+      {
+        "ref": "FM0",
+        "pin": "1",
+        "pin_name": "1",
+        "sheet": "05_motor_left"
+      },
+      {
+        "ref": "FM1",
+        "pin": "1",
+        "pin_name": "1",
+        "sheet": "06_motor_right"
+      },
+      {
+        "ref": "FM2",
+        "pin": "1",
+        "pin_name": "1",
+        "sheet": "07_motor_brush"
+      },
+      {
+        "ref": "FM3",
+        "pin": "1",
+        "pin_name": "1",
+        "sheet": "08_motor_belt"
+      }
+    ],
+    "COIL_PLUS": [
+      {
+        "ref": "K1",
+        "pin": "3",
+        "pin_name": "COIL+",
+        "sheet": "01_power"
+      },
+      {
+        "ref": "S1B",
+        "pin": "2",
+        "pin_name": "2",
+        "sheet": "01_power"
+      },
+      {
+        "ref": "D1",
+        "pin": "1",
+        "pin_name": "K",
+        "sheet": "01_power"
+      }
+    ],
+    "COIL_LOW": [
+      {
+        "ref": "K1",
+        "pin": "4",
+        "pin_name": "COIL-",
+        "sheet": "01_power"
+      },
+      {
+        "ref": "Q1",
+        "pin": "2",
+        "pin_name": "D",
+        "sheet": "01_power"
+      },
+      {
+        "ref": "D1",
+        "pin": "2",
+        "pin_name": "A",
+        "sheet": "01_power"
+      }
+    ],
+    "K1_SENSE": [
+      {
+        "ref": "K1",
+        "pin": "5",
+        "pin_name": "AUX_NO",
+        "sheet": "01_power"
+      },
+      {
+        "ref": "JPI",
+        "pin": "37",
+        "pin_name": "BCM26",
+        "sheet": "03_io"
+      },
+      {
+        "ref": "RK",
+        "pin": "2",
+        "pin_name": "2",
+        "sheet": "04_sensors"
+      }
+    ],
+    "K1_GATE": [
+      {
+        "ref": "Q1",
+        "pin": "1",
+        "pin_name": "G",
+        "sheet": "01_power"
+      },
+      {
+        "ref": "RG1",
+        "pin": "2",
+        "pin_name": "2",
+        "sheet": "01_power"
+      },
+      {
+        "ref": "RGS1",
+        "pin": "1",
+        "pin_name": "1",
+        "sheet": "01_power"
+      }
+    ],
+    "K1_GATE_DRIVE": [
+      {
+        "ref": "RG1",
+        "pin": "1",
+        "pin_name": "1",
+        "sheet": "01_power"
+      },
+      {
+        "ref": "UGATE",
+        "pin": "4",
+        "pin_name": "Y",
+        "sheet": "02_watchdog"
+      }
+    ],
+    "PRE_R": [
+      {
+        "ref": "SPRE",
+        "pin": "2",
+        "pin_name": "2",
+        "sheet": "01_power"
+      },
+      {
+        "ref": "RPRE",
+        "pin": "1",
+        "pin_name": "1",
+        "sheet": "01_power"
+      }
+    ],
+    "ADC_BAT": [
+      {
+        "ref": "RVTOP",
+        "pin": "2",
+        "pin_name": "2",
+        "sheet": "01_power"
+      },
+      {
+        "ref": "RVBOT",
+        "pin": "1",
+        "pin_name": "1",
+        "sheet": "01_power"
+      },
+      {
+        "ref": "CV",
+        "pin": "1",
+        "pin_name": "1",
+        "sheet": "01_power"
+      },
+      {
+        "ref": "UADC",
+        "pin": "1",
+        "pin_name": "CH0",
+        "sheet": "03_io"
+      }
+    ],
+    "V3V3": [
+      {
+        "ref": "UWD",
+        "pin": "1",
+        "pin_name": "VDD",
+        "sheet": "02_watchdog"
+      },
+      {
+        "ref": "UWD",
+        "pin": "3",
+        "pin_name": "EN",
+        "sheet": "02_watchdog"
+      },
+      {
+        "ref": "UWD",
+        "pin": "5",
+        "pin_name": "SET1",
+        "sheet": "02_watchdog"
+      },
+      {
+        "ref": "RCWD",
+        "pin": "1",
+        "pin_name": "1",
+        "sheet": "02_watchdog"
+      },
+      {
+        "ref": "RWDO",
+        "pin": "1",
+        "pin_name": "1",
+        "sheet": "02_watchdog"
+      },
+      {
+        "ref": "UFF",
+        "pin": "2",
+        "pin_name": "D",
+        "sheet": "02_watchdog"
+      },
+      {
+        "ref": "UFF",
+        "pin": "7",
+        "pin_name": "nPRE",
+        "sheet": "02_watchdog"
+      },
+      {
+        "ref": "UFF",
+        "pin": "8",
+        "pin_name": "VCC",
+        "sheet": "02_watchdog"
+      },
+      {
+        "ref": "SARM",
+        "pin": "1",
+        "pin_name": "1",
+        "sheet": "02_watchdog"
+      },
+      {
+        "ref": "USCH",
+        "pin": "5",
+        "pin_name": "VCC",
+        "sheet": "02_watchdog"
+      },
+      {
+        "ref": "UAND",
+        "pin": "5",
+        "pin_name": "VCC",
+        "sheet": "02_watchdog"
+      },
+      {
+        "ref": "UINV",
+        "pin": "5",
+        "pin_name": "VCC",
+        "sheet": "02_watchdog"
+      },
+      {
+        "ref": "CWD",
+        "pin": "1",
+        "pin_name": "1",
+        "sheet": "02_watchdog"
+      },
+      {
+        "ref": "CFF",
+        "pin": "1",
+        "pin_name": "1",
+        "sheet": "02_watchdog"
+      },
+      {
+        "ref": "CSCH",
+        "pin": "1",
+        "pin_name": "1",
+        "sheet": "02_watchdog"
+      },
+      {
+        "ref": "CAND",
+        "pin": "1",
+        "pin_name": "1",
+        "sheet": "02_watchdog"
+      },
+      {
+        "ref": "CINV",
+        "pin": "1",
+        "pin_name": "1",
+        "sheet": "02_watchdog"
+      },
+      {
+        "ref": "JPI",
+        "pin": "1",
+        "pin_name": "3V3",
+        "sheet": "03_io"
+      },
+      {
+        "ref": "UADC",
+        "pin": "15",
+        "pin_name": "VREF",
+        "sheet": "03_io"
+      },
+      {
+        "ref": "UADC",
+        "pin": "16",
+        "pin_name": "VDD",
+        "sheet": "03_io"
+      },
+      {
+        "ref": "UDIR",
+        "pin": "9",
+        "pin_name": "VDD",
+        "sheet": "03_io"
+      },
+      {
+        "ref": "RDIR",
+        "pin": "1",
+        "pin_name": "1",
+        "sheet": "03_io"
+      },
+      {
+        "ref": "UPWM",
+        "pin": "28",
+        "pin_name": "VDD",
+        "sheet": "03_io"
+      },
+      {
+        "ref": "ROE",
+        "pin": "1",
+        "pin_name": "1",
+        "sheet": "03_io"
+      },
+      {
+        "ref": "UENC0",
+        "pin": "10",
+        "pin_name": "nINDEX",
+        "sheet": "03_io"
+      },
+      {
+        "ref": "UENC0",
+        "pin": "13",
+        "pin_name": "CNT_EN",
+        "sheet": "03_io"
+      },
+      {
+        "ref": "UENC0",
+        "pin": "14",
+        "pin_name": "VDD",
+        "sheet": "03_io"
+      },
+      {
+        "ref": "JENC0",
+        "pin": "1",
+        "pin_name": "3V3",
+        "sheet": "03_io"
+      },
+      {
+        "ref": "UENC1",
+        "pin": "10",
+        "pin_name": "nINDEX",
+        "sheet": "03_io"
+      },
+      {
+        "ref": "UENC1",
+        "pin": "13",
+        "pin_name": "CNT_EN",
+        "sheet": "03_io"
+      },
+      {
+        "ref": "UENC1",
+        "pin": "14",
+        "pin_name": "VDD",
+        "sheet": "03_io"
+      },
+      {
+        "ref": "JENC1",
+        "pin": "1",
+        "pin_name": "3V3",
+        "sheet": "03_io"
+      },
+      {
+        "ref": "X1",
+        "pin": "1",
+        "pin_name": "OE",
+        "sheet": "03_io"
+      },
+      {
+        "ref": "X1",
+        "pin": "4",
+        "pin_name": "VDD",
+        "sheet": "03_io"
+      },
+      {
+        "ref": "CADC",
+        "pin": "1",
+        "pin_name": "1",
+        "sheet": "03_io"
+      },
+      {
+        "ref": "CDIR",
+        "pin": "1",
+        "pin_name": "1",
+        "sheet": "03_io"
+      },
+      {
+        "ref": "CPWM",
+        "pin": "1",
+        "pin_name": "1",
+        "sheet": "03_io"
+      },
+      {
+        "ref": "CENC0",
+        "pin": "1",
+        "pin_name": "1",
+        "sheet": "03_io"
+      },
+      {
+        "ref": "CENC1",
+        "pin": "1",
+        "pin_name": "1",
+        "sheet": "03_io"
+      },
+      {
+        "ref": "CX",
+        "pin": "1",
+        "pin_name": "1",
+        "sheet": "03_io"
+      },
+      {
+        "ref": "RSES",
+        "pin": "1",
+        "pin_name": "1",
+        "sheet": "04_sensors"
+      },
+      {
+        "ref": "RSBU",
+        "pin": "1",
+        "pin_name": "1",
+        "sheet": "04_sensors"
+      },
+      {
+        "ref": "RSCL",
+        "pin": "1",
+        "pin_name": "1",
+        "sheet": "04_sensors"
+      },
+      {
+        "ref": "RSGU",
+        "pin": "1",
+        "pin_name": "1",
+        "sheet": "04_sensors"
+      },
+      {
+        "ref": "RSFU",
+        "pin": "1",
+        "pin_name": "1",
+        "sheet": "04_sensors"
+      },
+      {
+        "ref": "RB0",
+        "pin": "1",
+        "pin_name": "1",
+        "sheet": "04_sensors"
+      },
+      {
+        "ref": "RB1",
+        "pin": "1",
+        "pin_name": "1",
+        "sheet": "04_sensors"
+      },
+      {
+        "ref": "RF",
+        "pin": "1",
+        "pin_name": "1",
+        "sheet": "04_sensors"
+      },
+      {
+        "ref": "RK",
+        "pin": "1",
+        "pin_name": "1",
+        "sheet": "04_sensors"
+      },
+      {
+        "ref": "RVT0",
+        "pin": "1",
+        "pin_name": "1",
+        "sheet": "05_motor_left"
+      },
+      {
+        "ref": "RVT1",
+        "pin": "1",
+        "pin_name": "1",
+        "sheet": "06_motor_right"
+      },
+      {
+        "ref": "RVT2",
+        "pin": "1",
+        "pin_name": "1",
+        "sheet": "07_motor_brush"
+      },
+      {
+        "ref": "RVT3",
+        "pin": "1",
+        "pin_name": "1",
+        "sheet": "08_motor_belt"
+      }
+    ],
+    "CWD_SET": [
+      {
+        "ref": "UWD",
+        "pin": "2",
+        "pin_name": "CWD",
+        "sheet": "02_watchdog"
+      },
+      {
+        "ref": "RCWD",
+        "pin": "2",
+        "pin_name": "2",
+        "sheet": "02_watchdog"
+      }
+    ],
+    "HEARTBEAT": [
+      {
+        "ref": "UWD",
+        "pin": "6",
+        "pin_name": "WDI",
+        "sheet": "02_watchdog"
+      },
+      {
+        "ref": "RHB",
+        "pin": "1",
+        "pin_name": "1",
+        "sheet": "02_watchdog"
+      },
+      {
+        "ref": "JPI",
+        "pin": "15",
+        "pin_name": "BCM22",
+        "sheet": "03_io"
+      }
+    ],
+    "WD_OK": [
+      {
+        "ref": "UWD",
+        "pin": "7",
+        "pin_name": "nWDO",
+        "sheet": "02_watchdog"
+      },
+      {
+        "ref": "UWD",
+        "pin": "8",
+        "pin_name": "ENOUT",
+        "sheet": "02_watchdog"
+      },
+      {
+        "ref": "RWDO",
+        "pin": "2",
+        "pin_name": "2",
+        "sheet": "02_watchdog"
+      },
+      {
+        "ref": "RWD_PD",
+        "pin": "1",
+        "pin_name": "1",
+        "sheet": "02_watchdog"
+      },
+      {
+        "ref": "S1A",
+        "pin": "1",
+        "pin_name": "1",
+        "sheet": "02_watchdog"
+      }
+    ],
+    "SAFE_1": [
+      {
+        "ref": "S1A",
+        "pin": "2",
+        "pin_name": "2",
+        "sheet": "02_watchdog"
+      },
+      {
+        "ref": "S3A",
+        "pin": "1",
+        "pin_name": "1",
+        "sheet": "02_watchdog"
+      }
+    ],
+    "SAFE_2": [
+      {
+        "ref": "S3A",
+        "pin": "2",
+        "pin_name": "2",
+        "sheet": "02_watchdog"
+      },
+      {
+        "ref": "S4A",
+        "pin": "1",
+        "pin_name": "1",
+        "sheet": "02_watchdog"
+      }
+    ],
+    "SAFE_3": [
+      {
+        "ref": "S4A",
+        "pin": "2",
+        "pin_name": "2",
+        "sheet": "02_watchdog"
+      },
+      {
+        "ref": "S5A",
+        "pin": "1",
+        "pin_name": "1",
+        "sheet": "02_watchdog"
+      }
+    ],
+    "CLEAR_N": [
+      {
+        "ref": "S5A",
+        "pin": "2",
+        "pin_name": "2",
+        "sheet": "02_watchdog"
+      },
+      {
+        "ref": "RCLR",
+        "pin": "1",
+        "pin_name": "1",
+        "sheet": "02_watchdog"
+      },
+      {
+        "ref": "UFF",
+        "pin": "6",
+        "pin_name": "nCLR",
+        "sheet": "02_watchdog"
+      }
+    ],
+    "ARM_EDGE": [
+      {
+        "ref": "UFF",
+        "pin": "1",
+        "pin_name": "CLK",
+        "sheet": "02_watchdog"
+      },
+      {
+        "ref": "USCH",
+        "pin": "4",
+        "pin_name": "Y",
+        "sheet": "02_watchdog"
+      }
+    ],
+    "HW_ENABLE": [
+      {
+        "ref": "UFF",
+        "pin": "5",
+        "pin_name": "Q",
+        "sheet": "02_watchdog"
+      },
+      {
+        "ref": "UAND",
+        "pin": "2",
+        "pin_name": "B",
+        "sheet": "02_watchdog"
+      },
+      {
+        "ref": "UGATE",
+        "pin": "2",
+        "pin_name": "A",
+        "sheet": "02_watchdog"
+      },
+      {
+        "ref": "RHW",
+        "pin": "1",
+        "pin_name": "1",
+        "sheet": "02_watchdog"
+      }
+    ],
+    "ARM_BUTTON": [
+      {
+        "ref": "SARM",
+        "pin": "2",
+        "pin_name": "2",
+        "sheet": "02_watchdog"
+      },
+      {
+        "ref": "RARM",
+        "pin": "1",
+        "pin_name": "1",
+        "sheet": "02_watchdog"
+      }
+    ],
+    "ARM_RC": [
+      {
+        "ref": "RARM",
+        "pin": "2",
+        "pin_name": "2",
+        "sheet": "02_watchdog"
+      },
+      {
+        "ref": "RARM_PD",
+        "pin": "1",
+        "pin_name": "1",
+        "sheet": "02_watchdog"
+      },
+      {
+        "ref": "CARM",
+        "pin": "1",
+        "pin_name": "1",
+        "sheet": "02_watchdog"
+      },
+      {
+        "ref": "USCH",
+        "pin": "2",
+        "pin_name": "A",
+        "sheet": "02_watchdog"
+      }
+    ],
+    "SOFT_ARM": [
+      {
+        "ref": "UAND",
+        "pin": "1",
+        "pin_name": "A",
+        "sheet": "02_watchdog"
+      },
+      {
+        "ref": "RSA",
+        "pin": "1",
+        "pin_name": "1",
+        "sheet": "02_watchdog"
+      },
+      {
+        "ref": "JPI",
+        "pin": "13",
+        "pin_name": "BCM27",
+        "sheet": "03_io"
+      }
+    ],
+    "RUN_EN": [
+      {
+        "ref": "UAND",
+        "pin": "4",
+        "pin_name": "Y",
+        "sheet": "02_watchdog"
+      },
+      {
+        "ref": "UINV",
+        "pin": "2",
+        "pin_name": "A",
+        "sheet": "02_watchdog"
+      },
+      {
+        "ref": "RSLEEP",
+        "pin": "1",
+        "pin_name": "1",
+        "sheet": "02_watchdog"
+      },
+      {
+        "ref": "UM0",
+        "pin": "3",
+        "pin_name": "nSLEEP",
+        "sheet": "05_motor_left"
+      },
+      {
+        "ref": "UM1",
+        "pin": "3",
+        "pin_name": "nSLEEP",
+        "sheet": "06_motor_right"
+      },
+      {
+        "ref": "UM2",
+        "pin": "3",
+        "pin_name": "nSLEEP",
+        "sheet": "07_motor_brush"
+      },
+      {
+        "ref": "UM3",
+        "pin": "3",
+        "pin_name": "nSLEEP",
+        "sheet": "08_motor_belt"
+      }
+    ],
+    "PWM_OE": [
+      {
+        "ref": "UINV",
+        "pin": "4",
+        "pin_name": "Y",
+        "sheet": "02_watchdog"
+      },
+      {
+        "ref": "UPWM",
+        "pin": "23",
+        "pin_name": "nOE",
+        "sheet": "03_io"
+      },
+      {
+        "ref": "ROE",
+        "pin": "2",
+        "pin_name": "2",
+        "sheet": "03_io"
+      }
+    ],
+    "I2C_SDA": [
+      {
+        "ref": "JPI",
+        "pin": "3",
+        "pin_name": "BCM2",
+        "sheet": "03_io"
+      },
+      {
+        "ref": "UPWM",
+        "pin": "26",
+        "pin_name": "SDA",
+        "sheet": "03_io"
+      }
+    ],
+    "I2C_SCL": [
+      {
+        "ref": "JPI",
+        "pin": "5",
+        "pin_name": "BCM3",
+        "sheet": "03_io"
+      },
+      {
+        "ref": "UPWM",
+        "pin": "25",
+        "pin_name": "SCL",
+        "sheet": "03_io"
+      }
+    ],
+    "SPI1_CS1": [
+      {
+        "ref": "JPI",
+        "pin": "11",
+        "pin_name": "BCM17",
+        "sheet": "03_io"
+      },
+      {
+        "ref": "UENC1",
+        "pin": "4",
+        "pin_name": "nSS",
+        "sheet": "03_io"
+      }
+    ],
+    "SPI1_CS0": [
+      {
+        "ref": "JPI",
+        "pin": "12",
+        "pin_name": "BCM18",
+        "sheet": "03_io"
+      },
+      {
+        "ref": "UENC0",
+        "pin": "4",
+        "pin_name": "nSS",
+        "sheet": "03_io"
+      }
+    ],
+    "ESTOP_SENSE": [
+      {
+        "ref": "JPI",
+        "pin": "16",
+        "pin_name": "BCM23",
+        "sheet": "03_io"
+      },
+      {
+        "ref": "SES",
+        "pin": "1",
+        "pin_name": "1",
+        "sheet": "04_sensors"
+      },
+      {
+        "ref": "RSES",
+        "pin": "2",
+        "pin_name": "2",
+        "sheet": "04_sensors"
+      }
+    ],
+    "BUMPER_SENSE": [
+      {
+        "ref": "JPI",
+        "pin": "18",
+        "pin_name": "BCM24",
+        "sheet": "03_io"
+      },
+      {
+        "ref": "SBU",
+        "pin": "1",
+        "pin_name": "1",
+        "sheet": "04_sensors"
+      },
+      {
+        "ref": "RSBU",
+        "pin": "2",
+        "pin_name": "2",
+        "sheet": "04_sensors"
+      }
+    ],
+    "SPI0_MOSI": [
+      {
+        "ref": "JPI",
+        "pin": "19",
+        "pin_name": "BCM10",
+        "sheet": "03_io"
+      },
+      {
+        "ref": "UADC",
+        "pin": "11",
+        "pin_name": "DIN",
+        "sheet": "03_io"
+      },
+      {
+        "ref": "UDIR",
+        "pin": "13",
+        "pin_name": "SI",
+        "sheet": "03_io"
+      }
+    ],
+    "SPI0_MISO": [
+      {
+        "ref": "JPI",
+        "pin": "21",
+        "pin_name": "BCM9",
+        "sheet": "03_io"
+      },
+      {
+        "ref": "UADC",
+        "pin": "12",
+        "pin_name": "DOUT",
+        "sheet": "03_io"
+      },
+      {
+        "ref": "UDIR",
+        "pin": "14",
+        "pin_name": "SO",
+        "sheet": "03_io"
+      }
+    ],
+    "CLIFF_SENSE": [
+      {
+        "ref": "JPI",
+        "pin": "22",
+        "pin_name": "BCM25",
+        "sheet": "03_io"
+      },
+      {
+        "ref": "SCL",
+        "pin": "1",
+        "pin_name": "1",
+        "sheet": "04_sensors"
+      },
+      {
+        "ref": "RSCL",
+        "pin": "2",
+        "pin_name": "2",
+        "sheet": "04_sensors"
+      }
+    ],
+    "SPI0_SCLK": [
+      {
+        "ref": "JPI",
+        "pin": "23",
+        "pin_name": "BCM11",
+        "sheet": "03_io"
+      },
+      {
+        "ref": "UADC",
+        "pin": "13",
+        "pin_name": "CLK",
+        "sheet": "03_io"
+      },
+      {
+        "ref": "UDIR",
+        "pin": "12",
+        "pin_name": "SCK",
+        "sheet": "03_io"
+      }
+    ],
+    "SPI0_CS0": [
+      {
+        "ref": "JPI",
+        "pin": "24",
+        "pin_name": "BCM8",
+        "sheet": "03_io"
+      },
+      {
+        "ref": "UADC",
+        "pin": "10",
+        "pin_name": "nCS",
+        "sheet": "03_io"
+      }
+    ],
+    "SPI0_CS1": [
+      {
+        "ref": "JPI",
+        "pin": "26",
+        "pin_name": "BCM7",
+        "sheet": "03_io"
+      },
+      {
+        "ref": "UDIR",
+        "pin": "11",
+        "pin_name": "nCS",
+        "sheet": "03_io"
+      }
+    ],
+    "GUARD_SENSE": [
+      {
+        "ref": "JPI",
+        "pin": "29",
+        "pin_name": "BCM5",
+        "sheet": "03_io"
+      },
+      {
+        "ref": "SGU",
+        "pin": "1",
+        "pin_name": "1",
+        "sheet": "04_sensors"
+      },
+      {
+        "ref": "RSGU",
+        "pin": "2",
+        "pin_name": "2",
+        "sheet": "04_sensors"
+      }
+    ],
+    "FULL_SENSE": [
+      {
+        "ref": "JPI",
+        "pin": "31",
+        "pin_name": "BCM6",
+        "sheet": "03_io"
+      },
+      {
+        "ref": "SFU",
+        "pin": "1",
+        "pin_name": "1",
+        "sheet": "04_sensors"
+      },
+      {
+        "ref": "RSFU",
+        "pin": "2",
+        "pin_name": "2",
+        "sheet": "04_sensors"
+      }
+    ],
+    "INTAKE_BEAM": [
+      {
+        "ref": "JPI",
+        "pin": "32",
+        "pin_name": "BCM12",
+        "sheet": "03_io"
+      },
+      {
+        "ref": "JB0",
+        "pin": "2",
+        "pin_name": "OC_3V3",
+        "sheet": "04_sensors"
+      },
+      {
+        "ref": "RB0",
+        "pin": "2",
+        "pin_name": "2",
+        "sheet": "04_sensors"
+      }
+    ],
+    "DROP_BEAM": [
+      {
+        "ref": "JPI",
+        "pin": "33",
+        "pin_name": "BCM13",
+        "sheet": "03_io"
+      },
+      {
+        "ref": "JB1",
+        "pin": "2",
+        "pin_name": "OC_3V3",
+        "sheet": "04_sensors"
+      },
+      {
+        "ref": "RB1",
+        "pin": "2",
+        "pin_name": "2",
+        "sheet": "04_sensors"
+      }
+    ],
+    "SPI1_MISO": [
+      {
+        "ref": "JPI",
+        "pin": "35",
+        "pin_name": "BCM19",
+        "sheet": "03_io"
+      },
+      {
+        "ref": "UENC0",
+        "pin": "6",
+        "pin_name": "MISO",
+        "sheet": "03_io"
+      },
+      {
+        "ref": "UENC1",
+        "pin": "6",
+        "pin_name": "MISO",
+        "sheet": "03_io"
+      }
+    ],
+    "DRV_FAULT_N": [
+      {
+        "ref": "JPI",
+        "pin": "36",
+        "pin_name": "BCM16",
+        "sheet": "03_io"
+      },
+      {
+        "ref": "RF",
+        "pin": "2",
+        "pin_name": "2",
+        "sheet": "04_sensors"
+      },
+      {
+        "ref": "UM0",
+        "pin": "4",
+        "pin_name": "nFAULT",
+        "sheet": "05_motor_left"
+      },
+      {
+        "ref": "UM1",
+        "pin": "4",
+        "pin_name": "nFAULT",
+        "sheet": "06_motor_right"
+      },
+      {
+        "ref": "UM2",
+        "pin": "4",
+        "pin_name": "nFAULT",
+        "sheet": "07_motor_brush"
+      },
+      {
+        "ref": "UM3",
+        "pin": "4",
+        "pin_name": "nFAULT",
+        "sheet": "08_motor_belt"
+      }
+    ],
+    "SPI1_MOSI": [
+      {
+        "ref": "JPI",
+        "pin": "38",
+        "pin_name": "BCM20",
+        "sheet": "03_io"
+      },
+      {
+        "ref": "UENC0",
+        "pin": "7",
+        "pin_name": "MOSI",
+        "sheet": "03_io"
+      },
+      {
+        "ref": "UENC1",
+        "pin": "7",
+        "pin_name": "MOSI",
+        "sheet": "03_io"
+      }
+    ],
+    "SPI1_SCLK": [
+      {
+        "ref": "JPI",
+        "pin": "40",
+        "pin_name": "BCM21",
+        "sheet": "03_io"
+      },
+      {
+        "ref": "UENC0",
+        "pin": "5",
+        "pin_name": "SCK",
+        "sheet": "03_io"
+      },
+      {
+        "ref": "UENC1",
+        "pin": "5",
+        "pin_name": "SCK",
+        "sheet": "03_io"
+      }
+    ],
+    "CUR0": [
+      {
+        "ref": "UADC",
+        "pin": "2",
+        "pin_name": "CH1",
+        "sheet": "03_io"
+      },
+      {
+        "ref": "RFLT0",
+        "pin": "2",
+        "pin_name": "2",
+        "sheet": "05_motor_left"
+      },
+      {
+        "ref": "CFLT0",
+        "pin": "1",
+        "pin_name": "1",
+        "sheet": "05_motor_left"
+      }
+    ],
+    "CUR1": [
+      {
+        "ref": "UADC",
+        "pin": "3",
+        "pin_name": "CH2",
+        "sheet": "03_io"
+      },
+      {
+        "ref": "RFLT1",
+        "pin": "2",
+        "pin_name": "2",
+        "sheet": "06_motor_right"
+      },
+      {
+        "ref": "CFLT1",
+        "pin": "1",
+        "pin_name": "1",
+        "sheet": "06_motor_right"
+      }
+    ],
+    "CUR2": [
+      {
+        "ref": "UADC",
+        "pin": "4",
+        "pin_name": "CH3",
+        "sheet": "03_io"
+      },
+      {
+        "ref": "RFLT2",
+        "pin": "2",
+        "pin_name": "2",
+        "sheet": "07_motor_brush"
+      },
+      {
+        "ref": "CFLT2",
+        "pin": "1",
+        "pin_name": "1",
+        "sheet": "07_motor_brush"
+      }
+    ],
+    "CUR3": [
+      {
+        "ref": "UADC",
+        "pin": "5",
+        "pin_name": "CH4",
+        "sheet": "03_io"
+      },
+      {
+        "ref": "RFLT3",
+        "pin": "2",
+        "pin_name": "2",
+        "sheet": "08_motor_belt"
+      },
+      {
+        "ref": "CFLT3",
+        "pin": "1",
+        "pin_name": "1",
+        "sheet": "08_motor_belt"
+      }
+    ],
+    "RANGE_OUT": [
+      {
+        "ref": "UADC",
+        "pin": "6",
+        "pin_name": "CH5",
+        "sheet": "03_io"
+      },
+      {
+        "ref": "JRANGE",
+        "pin": "2",
+        "pin_name": "OUT_0_3V3",
+        "sheet": "04_sensors"
+      }
+    ],
+    "DIR_RST": [
+      {
+        "ref": "UDIR",
+        "pin": "18",
+        "pin_name": "nRESET",
+        "sheet": "03_io"
+      },
+      {
+        "ref": "RDIR",
+        "pin": "2",
+        "pin_name": "2",
+        "sheet": "03_io"
+      }
+    ],
+    "DIR0": [
+      {
+        "ref": "UDIR",
+        "pin": "21",
+        "pin_name": "GPA0",
+        "sheet": "03_io"
+      },
+      {
+        "ref": "UM0",
+        "pin": "2",
+        "pin_name": "PH",
+        "sheet": "05_motor_left"
+      },
+      {
+        "ref": "RPH0",
+        "pin": "1",
+        "pin_name": "1",
+        "sheet": "05_motor_left"
+      }
+    ],
+    "DIR1": [
+      {
+        "ref": "UDIR",
+        "pin": "22",
+        "pin_name": "GPA1",
+        "sheet": "03_io"
+      },
+      {
+        "ref": "UM1",
+        "pin": "2",
+        "pin_name": "PH",
+        "sheet": "06_motor_right"
+      },
+      {
+        "ref": "RPH1",
+        "pin": "1",
+        "pin_name": "1",
+        "sheet": "06_motor_right"
+      }
+    ],
+    "DIR2": [
+      {
+        "ref": "UDIR",
+        "pin": "23",
+        "pin_name": "GPA2",
+        "sheet": "03_io"
+      },
+      {
+        "ref": "UM2",
+        "pin": "2",
+        "pin_name": "PH",
+        "sheet": "07_motor_brush"
+      },
+      {
+        "ref": "RPH2",
+        "pin": "1",
+        "pin_name": "1",
+        "sheet": "07_motor_brush"
+      }
+    ],
+    "DIR3": [
+      {
+        "ref": "UDIR",
+        "pin": "24",
+        "pin_name": "GPA3",
+        "sheet": "03_io"
+      },
+      {
+        "ref": "UM3",
+        "pin": "2",
+        "pin_name": "PH",
+        "sheet": "08_motor_belt"
+      },
+      {
+        "ref": "RPH3",
+        "pin": "1",
+        "pin_name": "1",
+        "sheet": "08_motor_belt"
+      }
+    ],
+    "PWM0": [
+      {
+        "ref": "UPWM",
+        "pin": "6",
+        "pin_name": "LED0",
+        "sheet": "03_io"
+      },
+      {
+        "ref": "UM0",
+        "pin": "1",
+        "pin_name": "EN",
+        "sheet": "05_motor_left"
+      },
+      {
+        "ref": "REN0",
+        "pin": "1",
+        "pin_name": "1",
+        "sheet": "05_motor_left"
+      }
+    ],
+    "PWM1": [
+      {
+        "ref": "UPWM",
+        "pin": "7",
+        "pin_name": "LED1",
+        "sheet": "03_io"
+      },
+      {
+        "ref": "UM1",
+        "pin": "1",
+        "pin_name": "EN",
+        "sheet": "06_motor_right"
+      },
+      {
+        "ref": "REN1",
+        "pin": "1",
+        "pin_name": "1",
+        "sheet": "06_motor_right"
+      }
+    ],
+    "PWM2": [
+      {
+        "ref": "UPWM",
+        "pin": "8",
+        "pin_name": "LED2",
+        "sheet": "03_io"
+      },
+      {
+        "ref": "UM2",
+        "pin": "1",
+        "pin_name": "EN",
+        "sheet": "07_motor_brush"
+      },
+      {
+        "ref": "REN2",
+        "pin": "1",
+        "pin_name": "1",
+        "sheet": "07_motor_brush"
+      }
+    ],
+    "PWM3": [
+      {
+        "ref": "UPWM",
+        "pin": "9",
+        "pin_name": "LED3",
+        "sheet": "03_io"
+      },
+      {
+        "ref": "UM3",
+        "pin": "1",
+        "pin_name": "EN",
+        "sheet": "08_motor_belt"
+      },
+      {
+        "ref": "REN3",
+        "pin": "1",
+        "pin_name": "1",
+        "sheet": "08_motor_belt"
+      }
+    ],
+    "ENC_CLK": [
+      {
+        "ref": "UENC0",
+        "pin": "2",
+        "pin_name": "fCKi",
+        "sheet": "03_io"
+      },
+      {
+        "ref": "UENC1",
+        "pin": "2",
+        "pin_name": "fCKi",
+        "sheet": "03_io"
+      },
+      {
+        "ref": "X1",
+        "pin": "3",
+        "pin_name": "OUT",
+        "sheet": "03_io"
+      }
+    ],
+    "ENC0B": [
+      {
+        "ref": "UENC0",
+        "pin": "11",
+        "pin_name": "B",
+        "sheet": "03_io"
+      },
+      {
+        "ref": "JENC0",
+        "pin": "3",
+        "pin_name": "B",
+        "sheet": "03_io"
+      }
+    ],
+    "ENC0A": [
+      {
+        "ref": "UENC0",
+        "pin": "12",
+        "pin_name": "A",
+        "sheet": "03_io"
+      },
+      {
+        "ref": "JENC0",
+        "pin": "2",
+        "pin_name": "A",
+        "sheet": "03_io"
+      }
+    ],
+    "ENC1B": [
+      {
+        "ref": "UENC1",
+        "pin": "11",
+        "pin_name": "B",
+        "sheet": "03_io"
+      },
+      {
+        "ref": "JENC1",
+        "pin": "3",
+        "pin_name": "B",
+        "sheet": "03_io"
+      }
+    ],
+    "ENC1A": [
+      {
+        "ref": "UENC1",
+        "pin": "12",
+        "pin_name": "A",
+        "sheet": "03_io"
+      },
+      {
+        "ref": "JENC1",
+        "pin": "2",
+        "pin_name": "A",
+        "sheet": "03_io"
+      }
+    ],
+    "M0_VM": [
+      {
+        "ref": "FM0",
+        "pin": "2",
+        "pin_name": "2",
+        "sheet": "05_motor_left"
+      },
+      {
+        "ref": "UM0",
+        "pin": "11",
+        "pin_name": "VM",
+        "sheet": "05_motor_left"
+      },
+      {
+        "ref": "CVCP0",
+        "pin": "2",
+        "pin_name": "2",
+        "sheet": "05_motor_left"
+      },
+      {
+        "ref": "CVM0",
+        "pin": "1",
+        "pin_name": "1",
+        "sheet": "05_motor_left"
+      },
+      {
+        "ref": "CB0",
+        "pin": "1",
+        "pin_name": "1",
+        "sheet": "05_motor_left"
+      }
+    ],
+    "M0_VREF": [
+      {
+        "ref": "UM0",
+        "pin": "5",
+        "pin_name": "VREF",
+        "sheet": "05_motor_left"
+      },
+      {
+        "ref": "RVT0",
+        "pin": "2",
+        "pin_name": "2",
+        "sheet": "05_motor_left"
+      },
+      {
+        "ref": "RVB0",
+        "pin": "1",
+        "pin_name": "1",
+        "sheet": "05_motor_left"
+      }
+    ],
+    "M0_IP": [
+      {
+        "ref": "UM0",
+        "pin": "6",
+        "pin_name": "IPROPI",
+        "sheet": "05_motor_left"
+      },
+      {
+        "ref": "RIP0",
+        "pin": "1",
+        "pin_name": "1",
+        "sheet": "05_motor_left"
+      },
+      {
+        "ref": "RFLT0",
+        "pin": "1",
+        "pin_name": "1",
+        "sheet": "05_motor_left"
+      }
+    ],
+    "M0_OUT1": [
+      {
+        "ref": "UM0",
+        "pin": "8",
+        "pin_name": "OUT1",
+        "sheet": "05_motor_left"
+      },
+      {
+        "ref": "M0",
+        "pin": "1",
+        "pin_name": "+ / forward",
+        "sheet": "05_motor_left"
+      },
+      {
+        "ref": "CM0",
+        "pin": "1",
+        "pin_name": "1",
+        "sheet": "05_motor_left"
+      }
+    ],
+    "M0_OUT2": [
+      {
+        "ref": "UM0",
+        "pin": "10",
+        "pin_name": "OUT2",
+        "sheet": "05_motor_left"
+      },
+      {
+        "ref": "M0",
+        "pin": "2",
+        "pin_name": "- / reverse",
+        "sheet": "05_motor_left"
+      },
+      {
+        "ref": "CM0",
+        "pin": "2",
+        "pin_name": "2",
+        "sheet": "05_motor_left"
+      }
+    ],
+    "M0_VCP": [
+      {
+        "ref": "UM0",
+        "pin": "12",
+        "pin_name": "VCP",
+        "sheet": "05_motor_left"
+      },
+      {
+        "ref": "CVCP0",
+        "pin": "1",
+        "pin_name": "1",
+        "sheet": "05_motor_left"
+      }
+    ],
+    "M0_CPH": [
+      {
+        "ref": "UM0",
+        "pin": "13",
+        "pin_name": "CPH",
+        "sheet": "05_motor_left"
+      },
+      {
+        "ref": "CCP0",
+        "pin": "1",
+        "pin_name": "1",
+        "sheet": "05_motor_left"
+      }
+    ],
+    "M0_CPL": [
+      {
+        "ref": "UM0",
+        "pin": "14",
+        "pin_name": "CPL",
+        "sheet": "05_motor_left"
+      },
+      {
+        "ref": "CCP0",
+        "pin": "2",
+        "pin_name": "2",
+        "sheet": "05_motor_left"
+      }
+    ],
+    "M1_VM": [
+      {
+        "ref": "FM1",
+        "pin": "2",
+        "pin_name": "2",
+        "sheet": "06_motor_right"
+      },
+      {
+        "ref": "UM1",
+        "pin": "11",
+        "pin_name": "VM",
+        "sheet": "06_motor_right"
+      },
+      {
+        "ref": "CVCP1",
+        "pin": "2",
+        "pin_name": "2",
+        "sheet": "06_motor_right"
+      },
+      {
+        "ref": "CVM1",
+        "pin": "1",
+        "pin_name": "1",
+        "sheet": "06_motor_right"
+      },
+      {
+        "ref": "CB1",
+        "pin": "1",
+        "pin_name": "1",
+        "sheet": "06_motor_right"
+      }
+    ],
+    "M1_VREF": [
+      {
+        "ref": "UM1",
+        "pin": "5",
+        "pin_name": "VREF",
+        "sheet": "06_motor_right"
+      },
+      {
+        "ref": "RVT1",
+        "pin": "2",
+        "pin_name": "2",
+        "sheet": "06_motor_right"
+      },
+      {
+        "ref": "RVB1",
+        "pin": "1",
+        "pin_name": "1",
+        "sheet": "06_motor_right"
+      }
+    ],
+    "M1_IP": [
+      {
+        "ref": "UM1",
+        "pin": "6",
+        "pin_name": "IPROPI",
+        "sheet": "06_motor_right"
+      },
+      {
+        "ref": "RIP1",
+        "pin": "1",
+        "pin_name": "1",
+        "sheet": "06_motor_right"
+      },
+      {
+        "ref": "RFLT1",
+        "pin": "1",
+        "pin_name": "1",
+        "sheet": "06_motor_right"
+      }
+    ],
+    "M1_OUT1": [
+      {
+        "ref": "UM1",
+        "pin": "8",
+        "pin_name": "OUT1",
+        "sheet": "06_motor_right"
+      },
+      {
+        "ref": "M1",
+        "pin": "1",
+        "pin_name": "+ / forward",
+        "sheet": "06_motor_right"
+      },
+      {
+        "ref": "CM1",
+        "pin": "1",
+        "pin_name": "1",
+        "sheet": "06_motor_right"
+      }
+    ],
+    "M1_OUT2": [
+      {
+        "ref": "UM1",
+        "pin": "10",
+        "pin_name": "OUT2",
+        "sheet": "06_motor_right"
+      },
+      {
+        "ref": "M1",
+        "pin": "2",
+        "pin_name": "- / reverse",
+        "sheet": "06_motor_right"
+      },
+      {
+        "ref": "CM1",
+        "pin": "2",
+        "pin_name": "2",
+        "sheet": "06_motor_right"
+      }
+    ],
+    "M1_VCP": [
+      {
+        "ref": "UM1",
+        "pin": "12",
+        "pin_name": "VCP",
+        "sheet": "06_motor_right"
+      },
+      {
+        "ref": "CVCP1",
+        "pin": "1",
+        "pin_name": "1",
+        "sheet": "06_motor_right"
+      }
+    ],
+    "M1_CPH": [
+      {
+        "ref": "UM1",
+        "pin": "13",
+        "pin_name": "CPH",
+        "sheet": "06_motor_right"
+      },
+      {
+        "ref": "CCP1",
+        "pin": "1",
+        "pin_name": "1",
+        "sheet": "06_motor_right"
+      }
+    ],
+    "M1_CPL": [
+      {
+        "ref": "UM1",
+        "pin": "14",
+        "pin_name": "CPL",
+        "sheet": "06_motor_right"
+      },
+      {
+        "ref": "CCP1",
+        "pin": "2",
+        "pin_name": "2",
+        "sheet": "06_motor_right"
+      }
+    ],
+    "M2_VM": [
+      {
+        "ref": "FM2",
+        "pin": "2",
+        "pin_name": "2",
+        "sheet": "07_motor_brush"
+      },
+      {
+        "ref": "UM2",
+        "pin": "11",
+        "pin_name": "VM",
+        "sheet": "07_motor_brush"
+      },
+      {
+        "ref": "CVCP2",
+        "pin": "2",
+        "pin_name": "2",
+        "sheet": "07_motor_brush"
+      },
+      {
+        "ref": "CVM2",
+        "pin": "1",
+        "pin_name": "1",
+        "sheet": "07_motor_brush"
+      },
+      {
+        "ref": "CB2",
+        "pin": "1",
+        "pin_name": "1",
+        "sheet": "07_motor_brush"
+      }
+    ],
+    "M2_VREF": [
+      {
+        "ref": "UM2",
+        "pin": "5",
+        "pin_name": "VREF",
+        "sheet": "07_motor_brush"
+      },
+      {
+        "ref": "RVT2",
+        "pin": "2",
+        "pin_name": "2",
+        "sheet": "07_motor_brush"
+      },
+      {
+        "ref": "RVB2",
+        "pin": "1",
+        "pin_name": "1",
+        "sheet": "07_motor_brush"
+      }
+    ],
+    "M2_IP": [
+      {
+        "ref": "UM2",
+        "pin": "6",
+        "pin_name": "IPROPI",
+        "sheet": "07_motor_brush"
+      },
+      {
+        "ref": "RIP2",
+        "pin": "1",
+        "pin_name": "1",
+        "sheet": "07_motor_brush"
+      },
+      {
+        "ref": "RFLT2",
+        "pin": "1",
+        "pin_name": "1",
+        "sheet": "07_motor_brush"
+      }
+    ],
+    "M2_OUT1": [
+      {
+        "ref": "UM2",
+        "pin": "8",
+        "pin_name": "OUT1",
+        "sheet": "07_motor_brush"
+      },
+      {
+        "ref": "M2",
+        "pin": "1",
+        "pin_name": "+ / forward",
+        "sheet": "07_motor_brush"
+      },
+      {
+        "ref": "CM2",
+        "pin": "1",
+        "pin_name": "1",
+        "sheet": "07_motor_brush"
+      }
+    ],
+    "M2_OUT2": [
+      {
+        "ref": "UM2",
+        "pin": "10",
+        "pin_name": "OUT2",
+        "sheet": "07_motor_brush"
+      },
+      {
+        "ref": "M2",
+        "pin": "2",
+        "pin_name": "- / reverse",
+        "sheet": "07_motor_brush"
+      },
+      {
+        "ref": "CM2",
+        "pin": "2",
+        "pin_name": "2",
+        "sheet": "07_motor_brush"
+      }
+    ],
+    "M2_VCP": [
+      {
+        "ref": "UM2",
+        "pin": "12",
+        "pin_name": "VCP",
+        "sheet": "07_motor_brush"
+      },
+      {
+        "ref": "CVCP2",
+        "pin": "1",
+        "pin_name": "1",
+        "sheet": "07_motor_brush"
+      }
+    ],
+    "M2_CPH": [
+      {
+        "ref": "UM2",
+        "pin": "13",
+        "pin_name": "CPH",
+        "sheet": "07_motor_brush"
+      },
+      {
+        "ref": "CCP2",
+        "pin": "1",
+        "pin_name": "1",
+        "sheet": "07_motor_brush"
+      }
+    ],
+    "M2_CPL": [
+      {
+        "ref": "UM2",
+        "pin": "14",
+        "pin_name": "CPL",
+        "sheet": "07_motor_brush"
+      },
+      {
+        "ref": "CCP2",
+        "pin": "2",
+        "pin_name": "2",
+        "sheet": "07_motor_brush"
+      }
+    ],
+    "M3_VM": [
+      {
+        "ref": "FM3",
+        "pin": "2",
+        "pin_name": "2",
+        "sheet": "08_motor_belt"
+      },
+      {
+        "ref": "UM3",
+        "pin": "11",
+        "pin_name": "VM",
+        "sheet": "08_motor_belt"
+      },
+      {
+        "ref": "CVCP3",
+        "pin": "2",
+        "pin_name": "2",
+        "sheet": "08_motor_belt"
+      },
+      {
+        "ref": "CVM3",
+        "pin": "1",
+        "pin_name": "1",
+        "sheet": "08_motor_belt"
+      },
+      {
+        "ref": "CB3",
+        "pin": "1",
+        "pin_name": "1",
+        "sheet": "08_motor_belt"
+      }
+    ],
+    "M3_VREF": [
+      {
+        "ref": "UM3",
+        "pin": "5",
+        "pin_name": "VREF",
+        "sheet": "08_motor_belt"
+      },
+      {
+        "ref": "RVT3",
+        "pin": "2",
+        "pin_name": "2",
+        "sheet": "08_motor_belt"
+      },
+      {
+        "ref": "RVB3",
+        "pin": "1",
+        "pin_name": "1",
+        "sheet": "08_motor_belt"
+      }
+    ],
+    "M3_IP": [
+      {
+        "ref": "UM3",
+        "pin": "6",
+        "pin_name": "IPROPI",
+        "sheet": "08_motor_belt"
+      },
+      {
+        "ref": "RIP3",
+        "pin": "1",
+        "pin_name": "1",
+        "sheet": "08_motor_belt"
+      },
+      {
+        "ref": "RFLT3",
+        "pin": "1",
+        "pin_name": "1",
+        "sheet": "08_motor_belt"
+      }
+    ],
+    "M3_OUT1": [
+      {
+        "ref": "UM3",
+        "pin": "8",
+        "pin_name": "OUT1",
+        "sheet": "08_motor_belt"
+      },
+      {
+        "ref": "M3",
+        "pin": "1",
+        "pin_name": "+ / forward",
+        "sheet": "08_motor_belt"
+      },
+      {
+        "ref": "CM3",
+        "pin": "1",
+        "pin_name": "1",
+        "sheet": "08_motor_belt"
+      }
+    ],
+    "M3_OUT2": [
+      {
+        "ref": "UM3",
+        "pin": "10",
+        "pin_name": "OUT2",
+        "sheet": "08_motor_belt"
+      },
+      {
+        "ref": "M3",
+        "pin": "2",
+        "pin_name": "- / reverse",
+        "sheet": "08_motor_belt"
+      },
+      {
+        "ref": "CM3",
+        "pin": "2",
+        "pin_name": "2",
+        "sheet": "08_motor_belt"
+      }
+    ],
+    "M3_VCP": [
+      {
+        "ref": "UM3",
+        "pin": "12",
+        "pin_name": "VCP",
+        "sheet": "08_motor_belt"
+      },
+      {
+        "ref": "CVCP3",
+        "pin": "1",
+        "pin_name": "1",
+        "sheet": "08_motor_belt"
+      }
+    ],
+    "M3_CPH": [
+      {
+        "ref": "UM3",
+        "pin": "13",
+        "pin_name": "CPH",
+        "sheet": "08_motor_belt"
+      },
+      {
+        "ref": "CCP3",
+        "pin": "1",
+        "pin_name": "1",
+        "sheet": "08_motor_belt"
+      }
+    ],
+    "M3_CPL": [
+      {
+        "ref": "UM3",
+        "pin": "14",
+        "pin_name": "CPL",
+        "sheet": "08_motor_belt"
+      },
+      {
+        "ref": "CCP3",
+        "pin": "2",
+        "pin_name": "2",
+        "sheet": "08_motor_belt"
+      }
+    ]
+  }
+}

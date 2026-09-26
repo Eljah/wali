@@ -1,0 +1,4 @@
+PASS real TCP loopback: 40 authenticated command/telemetry replies
+PASS valid commands enabled simulated actuators
+PASS disconnect disabled within observation after 300 ms (not a precise latency measurement)
+{"mode":"DISARMED","reason":"DEADMAN_OR_LINK","enabled":false,"v":0.0000,"w":0.0000,"battery":25.600,"failure":""}

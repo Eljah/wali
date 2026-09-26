@@ -1,0 +1,10 @@
+{
+  "check": "STEP round-trip with OpenCascade, not SolidWorks",
+  "valid": true,
+  "solid_count": 121,
+  "bbox_mm": [
+    809.5,
+    545.0,
+    665.0
+  ]
+}

@@ -1,0 +1,142 @@
+﻿reference,value_or_procurement_requirement,quantity,sheet,notes
+BT1,8S LiFePO4 / BMS / 25.6V 10Ah,1,01_power,Assembled protected pack; charger external; no cell assembly instructions
+F1,15A DC fuse / near pack,1,01_power,
+S0,Main DC disconnect,1,01_power,
+F2,3A logic branch,1,01_power,
+PS1,Regulated 5.1V / 5A converter,1,01_power,Input >=36V; Pi5 compatible USB-C power/advertisement; verify undervoltage
+JUSB1,Pi5 USB-C power interface,1,01_power,"Abstract power connector, NOT a USB-C receptacle footprint or CC wiring"
+K1,24V DC contactor + isolated feedback,1,01_power,Select >=30V DC breaking rating >=15A; auxiliary contact required; pin numbers are interface labels
+S1B,E-STOP second NC pole,1,01_power,
+Q1,FQP30N06L / TO-220,1,01_power,"Driven by 5V AHCT buffer, not directly by 3.3V GPIO"
+D1,1N4007 coil diode,1,01_power,Measure added release delay; cathode at coil+
+RG1,100R gate,1,01_power,
+RGS1,100k gate pulldown,1,01_power,
+CBULK,10000uF / 50V low-ESR,1,01_power,"Bus energy buffer, NOT validated regenerative clamp"
+RBLEED,1k / 2W,1,01_power,Discharge time is tens of seconds; measure voltage before service
+SPRE,Momentary PRECHARGE only,1,01_power,
+RPRE,22R / pulse >=5J,1,01_power,Hold >=1.2 s before physical ARM; release after ARM. Validate inrush and contacts.
+RVTOP,100k / 0.1%,1,01_power,
+RVBOT,10k / 0.1%,1,01_power,
+CV,10nF,1,01_power,
+UWD,TPS3431 DRB,1,02_watchdog,"CWD pull-up 10k: timeout nominal200ms,170..230ms; ENOUT tied to WDO"
+RCWD,10k,1,02_watchdog,
+RWDO,10k,1,02_watchdog,
+RWD_PD,100k,1,02_watchdog,
+S1A,E-STOP NC auxiliary,1,02_watchdog,
+S3A,Guard NC,1,02_watchdog,
+S4A,Bumper NC,1,02_watchdog,
+S5A,Cliff relay NC,1,02_watchdog,
+RCLR,100k,1,02_watchdog,
+UFF,SN74LVC1G74 DCT/DCU,1,02_watchdog,A held ARM button cannot rearm after a watchdog clear; power-up reset supplied by ENOUT
+SARM,Physical ARM NO,1,02_watchdog,
+RARM,10k,1,02_watchdog,
+RARM_PD,100k,1,02_watchdog,
+CARM,100nF,1,02_watchdog,
+USCH,SN74LVC1G17,1,02_watchdog,
+UAND,SN74LVC1G08,1,02_watchdog,
+UINV,SN74LVC1G04,1,02_watchdog,
+UGATE,SN74AHCT1G125,1,02_watchdog,TTL input accepts 3.3V; 5V gate drive makes FQP30N06L Rds specification applicable
+RSA,10k,1,02_watchdog,
+RHB,10k,1,02_watchdog,
+RSLEEP,10k,1,02_watchdog,
+RHW,100k,1,02_watchdog,
+CWD,100nF at IC,1,02_watchdog,
+CFF,100nF at IC,1,02_watchdog,
+CSCH,100nF at IC,1,02_watchdog,
+CAND,100nF at IC,1,02_watchdog,
+CINV,100nF at IC,1,02_watchdog,
+CGATE,100nF at IC,1,02_watchdog,
+JPI,Raspberry Pi5 40-pin header,1,03_io,Number is physical header pin; BCM is in pin name. Omitted pins not connected; power arrives via USB-C.
+UADC,MCP3008 / DIP-16,1,03_io,
+UDIR,MCP23S17 / DIP-28,1,03_io,Remaining GPIO are unused inputs; enable pull-ups in software. INT pins unused.
+RDIR,10k,1,03_io,
+UPWM,PCA9685 / TSSOP28,1,03_io,Internal oscillator; nominal1017Hz. LED4..15 not connected. No 20kHz claim.
+ROE,10k,1,03_io,
+UENC0,LS7366R / DIP14,1,03_io,
+JENC0,Encoder / 3.3V quadrature,1,03_io,2048 effective counts/wheel revolution required by current Java constants; otherwise change and recalibrate.
+UENC1,LS7366R / DIP14,1,03_io,
+JENC1,Encoder / 3.3V quadrature,1,03_io,2048 effective counts/wheel revolution required by current Java constants; otherwise change and recalibrate.
+X1,1MHz CMOS oscillator / 3.3V,1,03_io,Oscillator footprint/package pinout to be selected; interface numbers only.
+CADC,100nF at IC,1,03_io,
+CDIR,100nF at IC,1,03_io,
+CPWM,100nF at IC,1,03_io,
+CENC0,100nF at IC,1,03_io,
+CENC1,100nF at IC,1,03_io,
+CX,100nF at IC,1,03_io,
+SES,NC healthy; dedicated isolated auxiliary pole,1,04_sensors,
+RSES,10k external pullup,1,04_sensors,
+SBU,NC healthy; separate contact from CLEAR chain,1,04_sensors,
+RSBU,10k external pullup,1,04_sensors,
+SCL,NC healthy from validated cliff detector,1,04_sensors,
+RSCL,10k external pullup,1,04_sensors,
+SGU,NC healthy,1,04_sensors,
+RSGU,10k external pullup,1,04_sensors,
+SFU,NC healthy; opens when hopper full,1,04_sensors,
+RSFU,10k external pullup,1,04_sensors,
+JB0,Beam receiver / open collector,1,04_sensors,"LOW=beam broken; 3.3V-safe open collector, not a 24V push-pull output"
+RB0,10k,1,04_sensors,
+JB1,Beam receiver / open collector,1,04_sensors,"LOW=beam broken; 3.3V-safe open collector, not a 24V push-pull output"
+RB1,10k,1,04_sensors,
+RF,10k external pullup,1,04_sensors,
+RK,10k external pullup,1,04_sensors,
+JRANGE,Calibrated analog obstacle sensor,1,04_sensors,Output must remain0..3.3V with external conditioning. Exact sensor/range curve is a commissioning decision; config rejects missing table.
+FM0,4A DC,1,05_motor_left,
+UM0,DRV8874 HTSSOP16-PAD,1,05_motor_left,"PMODE=0 PH/EN. IMODE=0 current regulation; verify layout/thermal ratings, 6A peak is NOT continuous."
+M0,24V brushed gearmotor,1,05_motor_left,30rpm >=4Nm loaded
+CCP0,22nF / 50V,1,05_motor_left,
+CVCP0,100nF /16V,1,05_motor_left,"VCP capacitor is to VM, NOT ground"
+CVM0,100nF /50V,1,05_motor_left,
+CB0,470uF /50V,1,05_motor_left,
+RIP0,1.5k /1%,1,05_motor_left,
+RFLT0,10k,1,05_motor_left,
+CFLT0,100nF,1,05_motor_left,Filtered current reflects duty/recirculation; calibrate software thresholds
+RVT0,6.19k /1%,1,05_motor_left,
+RVB0,10k /1%,1,05_motor_left,
+REN0,47k,1,05_motor_left,
+RPH0,47k,1,05_motor_left,
+CM0,10nF /50V motor suppression,1,05_motor_left,Validate suppression with driver current/EMI; twist motor pair
+FM1,4A DC,1,06_motor_right,
+UM1,DRV8874 HTSSOP16-PAD,1,06_motor_right,"PMODE=0 PH/EN. IMODE=0 current regulation; verify layout/thermal ratings, 6A peak is NOT continuous."
+M1,24V brushed gearmotor,1,06_motor_right,30rpm >=4Nm loaded
+CCP1,22nF / 50V,1,06_motor_right,
+CVCP1,100nF /16V,1,06_motor_right,"VCP capacitor is to VM, NOT ground"
+CVM1,100nF /50V,1,06_motor_right,
+CB1,470uF /50V,1,06_motor_right,
+RIP1,1.5k /1%,1,06_motor_right,
+RFLT1,10k,1,06_motor_right,
+CFLT1,100nF,1,06_motor_right,Filtered current reflects duty/recirculation; calibrate software thresholds
+RVT1,6.19k /1%,1,06_motor_right,
+RVB1,10k /1%,1,06_motor_right,
+REN1,47k,1,06_motor_right,
+RPH1,47k,1,06_motor_right,
+CM1,10nF /50V motor suppression,1,06_motor_right,Validate suppression with driver current/EMI; twist motor pair
+FM2,3A DC,1,07_motor_brush,
+UM2,DRV8874 HTSSOP16-PAD,1,07_motor_brush,"PMODE=0 PH/EN. IMODE=0 current regulation; verify layout/thermal ratings, 6A peak is NOT continuous."
+M2,24V brushed gearmotor,1,07_motor_brush,120rpm brush
+CCP2,22nF / 50V,1,07_motor_brush,
+CVCP2,100nF /16V,1,07_motor_brush,"VCP capacitor is to VM, NOT ground"
+CVM2,100nF /50V,1,07_motor_brush,
+CB2,470uF /50V,1,07_motor_brush,
+RIP2,1.5k /1%,1,07_motor_brush,
+RFLT2,10k,1,07_motor_brush,
+CFLT2,100nF,1,07_motor_brush,Filtered current reflects duty/recirculation; calibrate software thresholds
+RVT2,14.3k /1%,1,07_motor_brush,
+RVB2,10k /1%,1,07_motor_brush,
+REN2,47k,1,07_motor_brush,
+RPH2,47k,1,07_motor_brush,
+CM2,10nF /50V motor suppression,1,07_motor_brush,Validate suppression with driver current/EMI; twist motor pair
+FM3,3A DC,1,08_motor_belt,
+UM3,DRV8874 HTSSOP16-PAD,1,08_motor_belt,"PMODE=0 PH/EN. IMODE=0 current regulation; verify layout/thermal ratings, 6A peak is NOT continuous."
+M3,24V brushed gearmotor,1,08_motor_belt,45..60rpm conveyor
+CCP3,22nF / 50V,1,08_motor_belt,
+CVCP3,100nF /16V,1,08_motor_belt,"VCP capacitor is to VM, NOT ground"
+CVM3,100nF /50V,1,08_motor_belt,
+CB3,470uF /50V,1,08_motor_belt,
+RIP3,1.5k /1%,1,08_motor_belt,
+RFLT3,10k,1,08_motor_belt,
+CFLT3,100nF,1,08_motor_belt,Filtered current reflects duty/recirculation; calibrate software thresholds
+RVT3,14.3k /1%,1,08_motor_belt,
+RVB3,10k /1%,1,08_motor_belt,
+REN3,47k,1,08_motor_belt,
+RPH3,47k,1,08_motor_belt,
+CM3,10nF /50V motor suppression,1,08_motor_belt,Validate suppression with driver current/EMI; twist motor pair

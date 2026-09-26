@@ -1,0 +1,61 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent><groupId>com.ubor</groupId><artifactId>ubor-java</artifactId><version>0.2.0</version></parent>
+  <artifactId>robot-wpilib</artifactId>
+  <name>UBOR actual WPILib desktop physics backend</name>
+  <properties><wpilib.version>2026.2.1</wpilib.version><wpilib.platform>linuxx86-64</wpilib.platform></properties>
+  <repositories><repository><id>wpilib-release</id><url>https://frcmaven.wpi.edu/artifactory/api/download/release/</url></repository></repositories>
+  <dependencies>
+    <dependency><groupId>com.ubor</groupId><artifactId>robot-app</artifactId><version>${project.version}</version></dependency>
+    <dependency><groupId>edu.wpi.first.wpilibj</groupId><artifactId>wpilibj-java</artifactId><version>${wpilib.version}</version></dependency>
+<dependency><groupId>edu.wpi.first.wpimath</groupId><artifactId>wpimath-java</artifactId><version>${wpilib.version}</version></dependency>
+<dependency><groupId>edu.wpi.first.wpiutil</groupId><artifactId>wpiutil-java</artifactId><version>${wpilib.version}</version></dependency>
+<dependency><groupId>edu.wpi.first.wpiunits</groupId><artifactId>wpiunits-java</artifactId><version>${wpilib.version}</version></dependency>
+<dependency><groupId>edu.wpi.first.hal</groupId><artifactId>hal-java</artifactId><version>${wpilib.version}</version></dependency>
+<dependency><groupId>edu.wpi.first.ntcore</groupId><artifactId>ntcore-java</artifactId><version>${wpilib.version}</version></dependency>
+<dependency><groupId>edu.wpi.first.wpinet</groupId><artifactId>wpinet-java</artifactId><version>${wpilib.version}</version></dependency>
+<dependency><groupId>edu.wpi.first.cscore</groupId><artifactId>cscore-java</artifactId><version>${wpilib.version}</version></dependency>
+<dependency><groupId>edu.wpi.first.cameraserver</groupId><artifactId>cameraserver-java</artifactId><version>${wpilib.version}</version></dependency>
+<dependency><groupId>org.ejml</groupId><artifactId>ejml-simple</artifactId><version>0.44.0</version></dependency>
+<dependency><groupId>com.fasterxml.jackson.core</groupId><artifactId>jackson-annotations</artifactId><version>2.19.2</version></dependency>
+<dependency><groupId>com.fasterxml.jackson.core</groupId><artifactId>jackson-core</artifactId><version>2.19.2</version></dependency>
+<dependency><groupId>com.fasterxml.jackson.core</groupId><artifactId>jackson-databind</artifactId><version>2.19.2</version></dependency>
+<dependency><groupId>us.hebi.quickbuf</groupId><artifactId>quickbuf-runtime</artifactId><version>1.4</version></dependency>
+
+  </dependencies>
+  <profiles>
+    <profile><id>wpi-windows</id><activation><os><family>Windows</family></os></activation><properties><wpilib.platform>windowsx86-64</wpilib.platform></properties></profile>
+    <profile><id>wpi-macos</id><activation><os><family>mac</family></os></activation><properties><wpilib.platform>osxuniversal</wpilib.platform></properties></profile>
+  </profiles>
+  <build><plugins>
+    <plugin><groupId>org.apache.maven.plugins</groupId><artifactId>maven-dependency-plugin</artifactId><executions>
+      <execution><id>desktop-native-archives</id><phase>generate-resources</phase><goals><goal>unpack</goal></goals><configuration><artifactItems>
+      <artifactItem><groupId>edu.wpi.first.wpiutil</groupId><artifactId>wpiutil-cpp</artifactId><version>${wpilib.version}</version><classifier>${wpilib.platform}</classifier><type>zip</type><outputDirectory>${project.build.directory}/native-unpacked/wpiutil</outputDirectory></artifactItem>
+<artifactItem><groupId>edu.wpi.first.wpimath</groupId><artifactId>wpimath-cpp</artifactId><version>${wpilib.version}</version><classifier>${wpilib.platform}</classifier><type>zip</type><outputDirectory>${project.build.directory}/native-unpacked/wpimath</outputDirectory></artifactItem>
+<artifactItem><groupId>edu.wpi.first.wpinet</groupId><artifactId>wpinet-cpp</artifactId><version>${wpilib.version}</version><classifier>${wpilib.platform}</classifier><type>zip</type><outputDirectory>${project.build.directory}/native-unpacked/wpinet</outputDirectory></artifactItem>
+<artifactItem><groupId>edu.wpi.first.ntcore</groupId><artifactId>ntcore-cpp</artifactId><version>${wpilib.version}</version><classifier>${wpilib.platform}</classifier><type>zip</type><outputDirectory>${project.build.directory}/native-unpacked/ntcore</outputDirectory></artifactItem>
+<artifactItem><groupId>edu.wpi.first.hal</groupId><artifactId>hal-cpp</artifactId><version>${wpilib.version}</version><classifier>${wpilib.platform}</classifier><type>zip</type><outputDirectory>${project.build.directory}/native-unpacked/hal</outputDirectory></artifactItem>
+      </artifactItems><includes>**/shared/*.dll,**/shared/*.so,**/shared/*.so.*,**/shared/*.dylib,**/shared/LICENSE*,**/shared/license*</includes></configuration></execution>
+      <execution><id>runtime-classpath</id><phase>package</phase><goals><goal>copy-dependencies</goal></goals><configuration><includeScope>runtime</includeScope><outputDirectory>${project.build.directory}/lib</outputDirectory></configuration></execution>
+    </executions></plugin>
+    <plugin><groupId>org.apache.maven.plugins</groupId><artifactId>maven-antrun-plugin</artifactId><version>3.1.0</version><executions><execution><id>flatten-native-runtime</id><phase>process-resources</phase><goals><goal>run</goal></goals><configuration><target>
+      <mkdir dir="${project.build.directory}/native"/>
+      <copy todir="${project.build.directory}/native" flatten="true"><fileset dir="${project.build.directory}/native-unpacked"><include name="**/*.dll"/><include name="**/*.so"/><include name="**/*.so.*"/><include name="**/*.dylib"/></fileset></copy>
+    </target></configuration></execution></executions></plugin>
+    <plugin><groupId>org.apache.maven.plugins</groupId><artifactId>maven-jar-plugin</artifactId><configuration><archive><manifest><mainClass>com.ubor.wpilib.WpiMain</mainClass></manifest></archive></configuration></plugin>
+    <plugin><groupId>org.codehaus.mojo</groupId><artifactId>exec-maven-plugin</artifactId><executions>
+      <execution><id>physical-parameters-contract</id><phase>test</phase><goals><goal>java</goal></goals><configuration>
+        <mainClass>com.ubor.wpilib.ParametersContract</mainClass><classpathScope>test</classpathScope>
+        <arguments><argument>${project.basedir}/../config/wpilib-sim.properties</argument><argument>${project.build.directory}/parameter-tests</argument></arguments>
+      </configuration></execution>
+      <execution>
+      <id>real-wpilib-integration</id><phase>integration-test</phase><goals><goal>exec</goal></goals><configuration>
+      <executable>java</executable><arguments>
+        <argument>-Djava.awt.headless=true</argument><argument>-Djava.library.path=${project.build.directory}/native</argument>
+        <argument>-cp</argument><classpath/><argument>com.ubor.wpilib.WpiMain</argument>
+        <argument>--verify</argument><argument>${project.build.directory}/wpilib-report</argument>
+      </arguments>
+      <environmentVariables><LD_LIBRARY_PATH>${project.build.directory}/native</LD_LIBRARY_PATH><DYLD_LIBRARY_PATH>${project.build.directory}/native</DYLD_LIBRARY_PATH><PATH>${project.build.directory}/native${path.separator}${env.PATH}</PATH></environmentVariables>
+      </configuration></execution></executions></plugin>
+  </plugins></build>
+</project>
